@@ -7,14 +7,14 @@
 </head>
 <body>
     <h1>Application Form</h1>
-    <form method="post" action="">
+    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
          <fieldset>
             <legend>Personal Information</legend>
             <p>
                 <label for="F_name">First name</label>
-                <input type="text" id="F_name" name="F_name" pattern="^\w{20}$">
+                <input type="text" id="F_name" name="F_name" pattern="^\w$" maxlength="20">
                 <label for="L_name">Last name</label>
-                <input type="text" id="L_name" name="L_name" pattern="^\w{20}$"
+                <input type="text" id="L_name" name="L_name" pattern="^\w$" maxlength="20">
             </p>
             <p>
                 <label for="dob">Date of birth</label>
@@ -97,6 +97,8 @@
                 <textarea id="other_skill" name="other_skill" rows="4" cols="40">other skills</textarea>
             </p>
          </fieldset>
+         <input type="submit" value="Apply"> 
+         <input type="reset" value="Reset form"> 
     </form>
 </body>
 </html>
