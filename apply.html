@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to [Ten cong ty]</title>
+</head>
+<body>
+    <h1>Application Form</h1>
+    <form method="post" action="">
+         <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+                <label for="F_name">First name</label>
+                <input type="text" id="F_name" name="F_name" pattern="^\w{20}$"
+                <label for="L_name">Last name</label>
+                <input type="text" id="L_name" name="L_name" pattern="^\w{20}$"
+            </p>
+            <p>
+                <label for="dob">Date of birth</label>
+                <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="Pdate" placeholder="dd/mm/yyyy"/>
+            </p>
+            <fieldset>
+                <legend>Gender</legend>
+                <p>
+                <input type="radio" id="Female" name="gender" value="Female" required/>
+                <label for="Female">Female</label>
+                <input type="radio" id="Male" name="gender" value="Male" required/>
+                <label for="Male">Male</label>
+                </p>
+            </fieldset>
+         </fieldset>
+    </form>
+</body>
+</html>
