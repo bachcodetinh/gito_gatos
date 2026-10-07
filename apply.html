@@ -12,7 +12,7 @@
             <legend>Personal Information</legend>
             <p>
                 <label for="F_name">First name</label>
-                <input type="text" id="F_name" name="F_name" pattern="^\w{20}$"
+                <input type="text" id="F_name" name="F_name" pattern="^\w{20}$">
                 <label for="L_name">Last name</label>
                 <input type="text" id="L_name" name="L_name" pattern="^\w{20}$"
             </p>
@@ -20,15 +20,82 @@
                 <label for="dob">Date of birth</label>
                 <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="Pdate" placeholder="dd/mm/yyyy"/>
             </p>
-            <fieldset>
+         </fieldset>
+
+         <fieldset>
                 <legend>Gender</legend>
                 <p>
-                <input type="radio" id="Female" name="gender" value="Female" required/>
-                <label for="Female">Female</label>
-                <input type="radio" id="Male" name="gender" value="Male" required/>
-                <label for="Male">Male</label>
+                    <input type="radio" id="Female" name="gender" value="Female" required/>
+                    <label for="Female">Female</label>
+                    <input type="radio" id="Male" name="gender" value="Male" required/>
+                    <label for="Male">Male</label>
                 </p>
+        </fieldset>
+
+        <fieldset>
+                <legend>Contact</legend>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </p>
+                <p>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" pattern="^\d{12}$">
+                </p>
+         </fieldset>
+
+         <fieldset>
+            <legend>Location</legend>
+            <p>
+                <label for="street">Street Address</label>
+                <input type="text" id="street" name="street" pattern="^\{40}$">
+            </p>
+            <p>
+                <label for="suburb">Suburb/Town</label>
+                <input type="text" id="suburb" name="suburb" pattern="^\{40}$">
+            </p>
+            <p>
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="">Please select</option>
+                    <option>VIC</option>
+                    <option>NSW</option>
+                    <option>QLD</option>
+                    <option>NT</option>
+                    <option>WA</option>
+                    <option>SA</option>
+                    <option>TAS</option>
+                    <option>ACT</option>
+                </select>
+            </p>
+            <p>
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" pattern="^\{4}$" maxlength="4">
+            </p>
+         </fieldset>
+
+         <fieldset>
+            <legend>Occupation</legend>
+            <p>
+                <label for="ref_num">Job reference number</label>
+                <input type="text" id="ref_num" name="ref_num" pattern="^\d{5}$" maxlength="5">
+            </p>
+            <fieldset>
+                <legend>Skill list</legend>
+                <input type="checkbox" id="skill1" name="skill[]" value="skill1">
+                <label for="skill1">Skill 1</label>
+                <input type="checkbox" id="skill2" name="skill[]" value="skill2">
+                <label for="skill2">Skill 2</label>
+                <input type="checkbox" id="skill3" name="skill[]" value="skill3">
+                <label for="skill3">Skill 3</label>
+                <input type="checkbox" id="skill4" name="skill[]" value="skill4">
+                <label for="skill4">Skill 4</label>
+                <input type="checkbox" id="skill5" name="skill[]" value="skill5">
+                <label for="skill5">Skill 5</label>
             </fieldset>
+            <p>
+                <textarea id="other_skill" name="other_skill" rows="4" cols="40">other skills</textarea>
+            </p>
          </fieldset>
     </form>
 </body>
