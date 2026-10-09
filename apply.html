@@ -12,9 +12,9 @@
             <legend>Personal Information</legend>
             <p>
                 <label for="F_name">First name</label>
-                <input type="text" id="F_name" name="F_name" pattern="^\w$" maxlength="20">
+                <input type="text" id="F_name" name="F_name" pattern="^\w${0,20}" maxlength="20">
                 <label for="L_name">Last name</label>
-                <input type="text" id="L_name" name="L_name" pattern="^\w{20}$">
+                <input type="text" id="L_name" name="L_name" pattern="^\w${0,20}" maxlength="20">
             </p>
             <p>
                 <label for="dob">Date of birth</label>
@@ -40,7 +40,7 @@
                 </p>
                 <p>
                     <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" pattern="^\d{12}$">
+                    <input type="text" id="phone" name="phone" pattern="^\d{8,12}$" maxlength="20">
                 </p>
          </fieldset>
 
@@ -48,11 +48,11 @@
             <legend>Location</legend>
             <p>
                 <label for="street">Street Address</label>
-                <input type="text" id="street" name="street" pattern="^\{40}$">
+                <input type="text" id="street" name="street" pattern="^\{40}$" maxlength="40">
             </p>
             <p>
                 <label for="suburb">Suburb/Town</label>
-                <input type="text" id="suburb" name="suburb" pattern="^\{40}$">
+                <input type="text" id="suburb" name="suburb" pattern="^\{40}$" maxlength="40">
             </p>
             <p>
                 <label for="state">State</label>
