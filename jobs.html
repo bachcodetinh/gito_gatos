@@ -1,97 +1,204 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs - Creative Digital Media Agency</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs - Meowdia Agency</title>
+
+  <link rel="stylesheet" href="ngan-folder/ngan-style.css">
+
+  <style>
+    .job-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      margin: 10px auto 0;
+      background-color: rgb(255, 210, 0);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Creative Digital Media Agency</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <aside>
-            <h2>Benefits</h2>
-            <p>At Creative Digital Media Agency, we value creativity and work-life balance. Here are some perks of joining our team:</p>
-            <ul>
-                <li>Flexible working hours.</li>
-                <li>Open work environment, always encouraging innovative ideas.</li>
-                <li>Providing modern equipment (MacBook, external monitors) to support work to the fullest.</li>
-                <li>Regular team building activities and skill development workshops.</li>
-            </ul>
-        </aside>
-        <h1>Available Positions</h1>
-        <section>
-            <h2>Front-End Developer</h2>
-            <p><strong>Reference Code:</strong> FED01</p>
-            <p><strong>Job Description:</strong> We are looking for a passionate Front-End Developer to build interactive, responsive websites for our diverse client projects.</p>
-            <p><strong>Salary:</strong> ko co luong dau em oi </p>
-            <p><strong>Reporting Line:</strong> Reports directly to the Lead Web Developer.</p>
+  <!-- HEADER: logo + navigation + hero -->
+  <header id="top" class="hero">
+    <div class="nav-row">
+      <a href="index.html" class="logo-link">
+        <img src= "ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+      </a>
 
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html" class="active" aria-current="page">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <form class="nav-search" action="#" role="search">
+          <input type="search" id="search-box" name="search" placeholder="Search">
+          <button type="submit">
+            <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
+          </button>
+        </form>
+      </nav>
 
-            <h3>Key Responsibilities</h3>
-            <ol>
-                <li>Develop user interface features using HTML5, CSS3 and JavaScript.</li>
-                <li>Collaborate closely with the design team to translate graphic designs into actual web interfaces.</li>
-                <li>Optimize websites to ensure fast loading times and the best possible user experience.</li>
-            </ol>
-            <h3>Essential Requirements</h3>
-            <ul>
-                <li>Proficient in HTML, CSS, and pure JavaScript.</li>
-                <li>Has practical experience with Responsive Web Design (works well on all devices).</li>
-                <li>Strong problem-solving skills and ability to work well in a team.</li>
-            </ul>
-            <h3>Preferred Requirements</h3>
-            <ul>
-                <li>Has basic knowledge of search engine optimization (SEO).</li>
-                <li>Has experience using Git and GitHub for source code management.</li>
-            </ul>
+      <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
+    </div>
 
+    <div class="hero-text">
+      <!-- "OUR TEAM" is a link to the About page -->
+      <h1>JOIN <a href="about.html" class="highlight">OUR TEAM</a></h1>
+      <!-- Inline CSS -->
+      <p class="hero-sub">Are you the <span style="color: rgb(255, 210, 0);">purr-fect cat</span><br>we're missing?</p>
+    </div>
+  </header>
 
-            <p><a href="apply.html">Apply for this position</a></p>
+  <!-- MAIN CONTENT -->
+  <main class="jobs-layout">
+
+    <!--  ASIDE: Benefits -->
+    <aside class="benefits">
+      <h2>Benefits</h2>
+      <ul>
+        <li>Flexible working hours.</li>
+        <li>Open work environment, always encouraging innovative ideas.</li>
+        <li>Providing modern equipment (MacBook, external monitors) to support work to the fullest.</li>
+        <li>Regular team building activities and skill development workshops.</li>
+      </ul>
+    </aside>
+
+    <!-- Available positions -->
+    <section class="positions" aria-labelledby="positions-heading">
+      <h2 id="positions-heading" class="pill-heading">Available Positions</h2>
+
+      <!-- Hidden radio buttons -->
+      <input type="radio" name="job" id="tab-fed" class="tab-radio" checked>
+      <input type="radio" name="job" id="tab-uid" class="tab-radio">
+
+      <!-- Switch bar: clicking a label checks its radio button -->
+      <div class="switch-bar">
+        <label for="tab-fed">Front-End Developer</label>
+        <label for="tab-uid">UI Designer</label>
+        <span class="slider"></span>
+      </div>
+
+      <!-- JOB 1: Front-End Developer -->
+      <article class="job" id="job-fed">
+        <h3 class="job-title">Front-End Developer</h3>
+        <p class="job-desc">We are looking for a Front-End Developer to build interactive, responsive websites for our diverse client projects.</p>
+
+        <ul class="job-tags">
+          <li>Ref code: FED01</li>
+          <li>1,500.0 AUD/month</li>
+          <li>Reports to: Technical Lead</li>
+          <li>Senior</li>
+        </ul>
+
+        <section class="job-part">
+          <h4 class="yellow-text">Key Responsibilities</h4>
+          <ol>
+            <li>Develop user interface features using HTML5, CSS3 and JavaScript.</li>
+            <li>Collaborate closely with the design team to translate graphic designs into actual web interfaces.</li>
+            <li>Optimize websites to ensure fast loading times and the best possible user experience.</li>
+          </ol>
         </section>
-        <section>
-            <h2>UI/UX Designer</h2>
-            <p><strong>Reference Code:</strong> UXD02</p>
-            <p><strong>Job Description:</strong> Join our creative team to design visually appealing and user-friendly interfaces for our web and digital products.</p>
-            <p><strong>Salary:</strong> ko co luong dau em oi </p>
-            <p><strong>Reporting Line:</strong> Reports directly to the Creative Director.</p>
 
-
-            <h3>Key Responsibilities</h3>
-            <ol>
-                <li>Conduct user research and analyze feedback to improve the user experience.</li>
-                <li>Create wireframes, storyboards, user flows, and site maps for web projects.</li>
-                <li>Design visual interface components such as menus, tabs, and widgets.</li>
-            </ol>
-            <h3>Essential Requirements</h3>
-            <ul>
-                <li>Has experience in UI/UX design with a clear portfolio demonstrating web design skills.</li>
-                <li>Proficient in design software such as Figma, Adobe XD or Sketch.</li>
-                <li>Deep understanding of user-centered design principles (User-Centered Design).
-            </ul>
-            <h3>Preferred Requirements</h3>
-            <ul>
-                <li>Has basic knowledge of implementing HTML5 and CSS3 from designs.</li>
-                <li>Has experience working in an agency environment, which is a significant advantage.</li>
-            </ul>
-           
-            <p><a href="apply.html">Apply for this position</a></p>
+        <section class="job-part">
+          <h4>Essential <span class="yellow-text">Requirements</span></h4>
+          <ul>
+            <li>Proficient in HTML, CSS, and pure JavaScript.</li>
+            <li>Has practical experience with Responsive Web Design (works well on all devices).</li>
+            <li>Strong problem-solving and teamwork skills.</li>
+          </ul>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Creative Digital Media Agency. All rights reserved.</p>
-    </footer>
+
+        <section class="job-part">
+          <h4>Preferred <span class="yellow-text">Requirements</span></h4>
+          <ul>
+            <li>Has basic knowledge of search engine optimization (SEO).</li>
+            <li>Has experience using Git and GitHub for source code management.</li>
+          </ul>
+        </section>
+
+        <a href="apply.html" class="apply-button">Apply now</a>
+      </article>
+
+      <!-- JOB 2: UI Designer -->
+      <article class="job" id="job-uid">
+        <h3 class="job-title">UI Designer</h3>
+        <p class="job-desc">Join our creative team to design visually appealing, interactive, and intuitive interfaces for our web and digital products.</p>
+
+        <ul class="job-tags">
+          <li>Ref code: UID02</li>
+          <li>1,200.0 AUD/month</li>
+          <li>Reports to: Creative Director</li>
+          <li>Senior</li>
+        </ul>
+
+        <section class="job-part">
+          <h4 class="yellow-text">Key Responsibilities</h4>
+          <ol>
+            <li>Collaborate with UX designers and product teams to translate wireframes and user flows into high-fidelity visual designs.</li>
+            <li>Create high-quality mockups, interactive prototypes, and maintain design systems/style guides for web projects.</li>
+            <li>Design and refine visual interface components such as menus, tabs, icons, and widgets, ensuring visual consistency across all screens.</li>
+          </ol>
+        </section>
+
+        <section class="job-part">
+          <h4>Essential <span class="yellow-text">Requirements</span></h4>
+          <ul>
+            <li>Proven experience in UI design with a strong portfolio demonstrating web design, aesthetics, and visual skills.</li>
+            <li>Proficient in design software such as Figma, Adobe XD or Sketch.</li>
+            <li>Deep understanding of visual design principles (including typography, color theory, layout, and grid systems).</li>
+          </ul>
+        </section>
+
+        <section class="job-part">
+          <h4>Preferred <span class="yellow-text">Requirements</span></h4>
+          <ul>
+            <li>Has basic knowledge of implementing HTML5 and CSS3 from designs.</li>
+            <li>Has experience working in an agency environment, which is a significant advantage.</li>
+          </ul>
+        </section>
+
+        <a href="apply.html" class="apply-btn">Apply now</a>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Bottom links -->
+  <nav class="bottom-nav" aria-label="Page links">
+    <a href="index.html">Home</a>
+    <a href="#top">Back to top</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <img src="ngan-folder/catface-ngan.png" alt="" class="footer-cat">
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="ngan-folder/logo-ngan.svg" alt="" class="footer-logo">
+      <p class="footer-name">EOWDIA</p>
+    </div>
+
+    <div class="footer-col">
+      <h2>Contact us</h2>
+      <p><a href="mailto:meowdia@company.com">meowdia@company.com</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h2>See more</h2>
+      <ul>
+        <li><a href="https://github.com/bachcodetinh/gito_gatos">GitHub Repository</a></li>
+        <li><a href="#">Jira Scrum Board</a></li>
+        <li><a href="#">Figma Design Board</a></li>
+      </ul>
+    </div>
+
+    <p class="copyright">&copy; 2026 Meowdia Agency. All rights reserved.</p>
+    <p class="credit">Instructed by Trung Kiếm Lâm #2611</p>
+  </footer>
+
 </body>
 </html>
-
-
-
