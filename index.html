@@ -5,73 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Duong">
     <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section_title {
+            display: inline-block;
+            background-color: rgb(122, 226, 207);
+            color: rgb(6, 32, 43);
+            font-family: 'FZ Orcish VietHoa', sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            padding: 10px 40px;
+            border-radius: 25px;
+            margin: 40px auto;
+        }
+
+        .layout_table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        .layout_table th, .layout_table td {
+            border: none;
+            padding: 15px;
+            vertical-align: top;
+        }
+
+        .layout_table thead th {
+            width: 33.33%;
+            font-family: 'FZ Orcish VietHoa', sans-serif;
+            color: rgb(7, 122, 125);
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .layout_table td {
+            font-family: 'FS Nokio', sans-serif;
+            color: rgb(6, 32, 43);
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .layout_table .full_row_heading {
+            font-family: 'FZ Orcish VietHoa', sans-serif;
+            color: rgb(7, 122, 125);
+            font-size: 22px;
+            font-weight: 400;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .layout_table .center_text {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .product_gallery {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .product_gallery img {
+            width: 280px;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="apply.html">Apply</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="index.html">Index</a>
-            <a href="about.html">About</a>
-            <form>
-                <input type="search" placeholder="Search this site...">
-                <button type="submit">Search</button>
-            </form>
-        </nav>
-        <img src="https://st2.depositphotos.com/5205783/7801/v/450/depositphotos_78017774-stock-illustration-logo-abstract-triangle-vector.jpg" alt="placeholder" style="width: 120px; height: auto;">
-        <h1>Company Name</h1>
-        <p>Company Slogan</p>
+        <div class="nav_menu">
+            <details>
+                <summary><img src="images/dog-paw.png" alt="placeholdernavlogo"></summary>
+                <nav class="nav_bar">
+                    <a href="index.html">Home</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="about.html">About</a>
+                    <form>
+                        <input type="search" placeholder="Search this site...">
+                        <button type="submit">Search</button>
+                    </form>
+                </nav>
+            </details>
+        </div>
+        <img src="images/logo.png" alt="meowdia_logo">
+        <h1>
+            You give us<br>
+            Pawsome ideas<br>
+            We bring<br>
+            Meow-velous products
+        </h1>
     </header>
     <main>
-        <h2>What We Do</h2>
-        <table>
-            <caption>To Understand Us</caption>
+        <h2 class="section_title">What we do</h2>
+        <table class="layout_table">
             <thead>
                 <tr>
-                    <th scope="col">Our Vision</th>
-                    <th scope="col">Our Goal</th>
-                    <th scope="col">Our Purpose</th>
+                    <th scope="col">Our vision</th>
+                    <th scope="col">Our mission</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Lorem ipsum dolor sit amet consectetur adipiscing elit.</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipiscing elit.</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipiscing elit.</td>
+                    <td>The Coding of Creativity to Life: To become the leading digital agency where creativity meets perfectly with front-end development, turning visionary ideas into reality.</td>
+                    <td>Fostering Digital Success for Our Clients: Through our use of collaborative teamwork, we are able to build top-notch web products that will ensure our clients have an excellent digital presence.</td>
                 </tr>
                 <tr>
-                    <td>Lorem ipsum dolor sit amet consectetur adipiscing elit.</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipiscing elit.</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipiscing elit.</td>
+                    <th colspan="3" class="full_row_heading">Why Meowdia?</th>
+                </tr>
+                <tr>
+                    <td colspan="3" class="center_text">Design & development Meet Here: We have found a way to combine creativity and development without having to compromise on one or the other. We cycle quickly through iterations to ensure designs turn out flawless.</td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                    <th colspan="3">Our Action</th>
-                </tr>
-                <tr>
-                    <td colspan="3">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</td>
-                </tr>
-            </tfoot>
         </table>
-        <br>
-        <div style="display: inline-block;">  
-            <img src="https://placehold.net/building.svg" alt="placeholder" style="width: 80px; height: auto;">
-            <img src="https://placehold.net/building.svg" alt="placeholder" style="width: 80px; height: auto;">
-            <img src="https://placehold.net/building.svg" alt="placeholder" style="width: 80px; height: auto;">
+        <h2 class="section_title">Our products</h2>
+        <div class="product_gallery">  
+            <img src="images/product.png" alt="product mockups">
+            <img src="images/product.png" alt="product mockups">
+            <img src="images/product.png" alt="product mockups">
         </div>
     </main>
+    <img src="images/catface.png" alt="footer_cat" style="width: 70%; height: auto; display: block; margin: 0 auto;">
     <footer>
-        <h3>Socials:</h3>
-        <div class="socials">
-            <a href="https://btyenngan6608.atlassian.net/?continue=https%3A%2F%2Fbtyenngan6608.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10003&atlOrigin=eyJpIjoiNzcwMDkyODBjMzhhNDBiMzlmOGE4MTE5MDMwYjI2MjkiLCJwIjoiamlyYS1zb2Z0d2FyZSJ9" target="_blank">Company Jira</a>
-            <br>
-            <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">Company GitHub</a>
-            <br>
-            <a href="mailto:company@cool.com">company@cool.com</a>
+    <div class="footer_main">
+        <div class="footer_logo">
+            <img src="images/logo.png" alt="meowdia_logo">
         </div>
-        <br>
-        &copy; 2026 gito_gatos
-    </footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+            </div>
+            
+            <div class="footer_column">
+                <h3>See me</h3>
+                <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Board</a>
+                <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        &copy; 2026 Meowdia Agency. All rights reserved.
+    </div>
+</footer>
 </body>
 </html>
