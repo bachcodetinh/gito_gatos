@@ -1,0 +1,3 @@
+p, h1, h2, li, label, strong {
+    color: var(--text-bright-color);
+}

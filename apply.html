@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mon Le">
+    <meta name="description" content="This page is an application form for a job at Meowdia company.">
+
+    <link href="mon_css/root_style.css" rel="stylesheet">
+    <link href="mon_css/apply_style.css" rel="stylesheet">
+
     <title>Apply to Meowdia</title>
+
+    <style>
+        body {
+            background: repeating-linear-gradient(35deg, var(--bg-secondary-color), var(--bg-primary-color), var(--bg-secondary-color), var(--bg-primary-color), var(--bg-secondary-color));
+        }
+    </style>
 </head>
 
 <body>
-    <fieldset>
+    <header>
+        <a id="top"></a>
         <nav id="nav">
             <details>
                 <summary>Menu</summary>
@@ -24,9 +36,9 @@
         <p>Please complete all fields below, Other skills is optional.</p>
         <h2>Closing date: 24 December 2026</h2>
         <h2>Location: Middle Street, Faker District, Summoner’s Rift City, T1 Nation.</h2>
-    </fieldset>
+    </header>
 
-    <fieldset>
+    <section>
         <h2>Our Recruitment Process</h2>
         <ol>
             <li>Submit the application: complete the form below.</li>
@@ -35,7 +47,7 @@
             <li>Interview: shortlisted applicants are contacted to arrange an interview.</li>
             <li>Outcome: all applicants are notified of the outcome 1 week after the interview.</li>
         </ol>
-    </fieldset>
+    </section>
 
     <fieldset>
         <h2>Collection Notice</h2>
@@ -57,204 +69,201 @@
     <fieldset>
         <h2>Form</h2>
         <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+
             <h2>Personal Information</h2>
-            <>
-                <label for="F_name">First name</label>
-                <input type="text" id="F_name" name="F_name" pattern="^w$" maxlength="20">
-                <p>Letters only, up to 20 characters</p>
-                <label for="L_name">Last name</label>
-                <input type="text" id="L_name" name="L_name" pattern="^w$" maxlength="20">
-                <p>Letters only, up to 20 characters</p>
-                </p>
-                <p>
-                    <label for="dob">Date of birth</label>
-                    <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="Pdate" placeholder="dd/mm/yyyy" />
-                </p>
-                <p>
-                <p>Gender</p>
+
+            <label for="F_name">First name</label>
+            <input type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
+            <p>Letters only, up to 20 characters</p>
+
+            <label for="L_name">Last name</label>
+            <input type="text" id="L_name" name="L_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
+            <p>Letters only, up to 20 characters</p>
+
+            <label for="dob">Date of birth</label>
+            <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="bdate" placeholder="dd/mm/yyyy" required>
+            <p>Used to verify you meet the legal working-age requirement</p>
+
+            <fieldset>
+                <legend>Gender</legend>
                 <input type="radio" id="Female" name="gender" value="Female" required />
                 <label for="Female">Female</label>
                 <input type="radio" id="Male" name="gender" value="Male" required />
                 <label for="Male">Male</label>
-                <p>Used to verify you meet the legal working-age requirement</p>
+            </fieldset>
+
+            <h2>Contact & Location</h2>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <p>Where you receive the result</p>
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" pattern="^\d{8,12}$" maxlength="12" required>
+            <p>8 to 12 digits, no space</p>
+
+            <label for="street">Street Address</label>
+            <input type="text" id="street" name="street" maxlength="40" required>
+            <p>Up to 40 characters</p>
+
+            <label for="suburb">Suburb/Town</label>
+            <input type="text" id="suburb" name="suburb" maxlength="40" required>
+            <p>Up to 40 characters</p>
+
+            <label for="state">State</label>
+            <select name="state" id="state" required>
+                <option value="">Please select</option>
+                <option>VIC</option>
+                <option>NSW</option>
+                <option>QLD</option>
+                <option>NT</option>
+                <option>WA</option>
+                <option>SA</option>
+                <option>TAS</option>
+                <option>ACT</option>
+            </select>
+
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" pattern="^\d{4}$" maxlength="4" required>
+            <p>4 digits</p>
+
+            <h2>Position & SKills</h2>
+            <label for="ref_num">Job reference number</label>
+            <input type="text" id="ref_num" name="ref_num" maxlength="5" required>
+            <p>Front-end Developer: FED01</p>
+            <p>UI/UX Designer: UXD02</p>
+
+            <details>
+                <summary>
+                    <h2>Design</h2>
+                </summary>
+                <p>Select all that apply</p>
+                <p>
+                    <input type="checkbox" id="skill_des1" name="skill_des[]" value="skill_des1">
+                    <label for="skill_des1">Figma (auto layout, components, variants)</label>
                 </p>
+                <p>
+                    <input type="checkbox" id="skill_des2" name="skill_des[]" value="skill_des2">
+                    <label for="skill_des2">Adobe Creative Suite (Photoshop, Illustrator)</label>
                 </p>
+                <p>
+                    <input type="checkbox" id="skill_des3" name="skill_des[]" value="skill_des3">
+                    <label for="skill_des3">Wireframing & Interactive Prototyping</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des4" name="skill_des[]" value="skill_des4">
+                    <label for="skill_des4">Design Systems, Component Libraries & Style Guides</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des5" name="skill_des[]" value="skill_des5">
+                    <label for="skill_des5">Typography, Color Theory & Layout</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des6" name="skill_des[]" value="skill_des6">
+                    <label for="skill_des6">Accessibility (WCAG) & Inclusive Design</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des7" name="skill_des[]" value="skill_des7">
+                    <label for="skill_des7">Responsive Web Design</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des8" name="skill_des[]" value="skill_des8">
+                    <label for="skill_des8">Brand Identity & Visual Branding</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des9" name="skill_des[]" value="skill_des9">
+                    <label for="skill_des9">Motion Design & Micro-interactions</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des10" name="skill_des[]" value="skill_des10">
+                    <label for="skill_des10">User Research & Usability Testing</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des11" name="skill_des[]" value="skill_des11">
+                    <label for="skill_des11">Design-to-Developer Handoff</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_des12" name="skill_des[]" value="skill_des12">
+                    <label for="skill_des12">Presenting Concepts to Clients</label>
+                </p>
+            </details>
 
+            <details>
+                <summary>
+                    <h2>Front-end</h2>
+                </summary>
+                <p>Select all that apply</p>
+                <p>
+                    <input type="checkbox" id="skill_fed1" name="skill_fed[]" value="skill_fed1">
+                    <label for="skill_fed1">Semantic HTML5</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed2" name="skill_fed[]" value="skill_fed2">
+                    <label for="skill_fed2">CSS3 & Sass (SCSS)</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed3" name="skill_fed[]" value="skill_fed3">
+                    <label for="skill_fed3">Responsive Web Design</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed4" name="skill_fed[]" value="skill_fed4">
+                    <label for="skill_fed4">Cross-browser Compatibility</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed5" name="skill_fed[]" value="skill_fed5">
+                    <label for="skill_fed5">JavaScript (ES6+) & TypeScript</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed6" name="skill_fed[]" value="skill_fed6">
+                    <label for="skill_fed6">Front-end Frameworks (React, Vue)</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed7" name="skill_fed[]" value="skill_fed7">
+                    <label for="skill_fed7">Accessibility (WCAG) & SEO</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed8" name="skill_fed[]" value="skill_fed8">
+                    <label for="skill_fed8">Web Performance Optimization</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed9" name="skill_fed[]" value="skill_fed9">
+                    <label for="skill_fed9">CMS Platforms (WordPress)</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed10" name="skill_fed[]" value="skill_fed10">
+                    <label for="skill_fed10">Git & GitHub Version Control</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed11" name="skill_fed[]" value="skill_fed11">
+                    <label for="skill_fed11">Testing & Debugging</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed12" name="skill_fed[]" value="skill_fed12">
+                    <label for="skill_fed12">Agile Workflow & Jira</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="skill_fed13" name="skill_fed[]" value="skill_fed13">
+                    <label for="skill_fed13">Client Communication & Requirements Gathering</label>
+                </p>
+            </details>
 
-                <h2>Contact & Location</h2>
+            <textarea id="other_skill" name="other_skill" rows="4" cols="40">other skills</textarea>
+            <p>
+                <input type="checkbox" id="consent" value="consent" required>
+                <label for="consent">I have read the Collection Notice above and consent to Meowdia using the
+                    information I provide in this form to assess my application.</label>
+            </p>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <p>Where you receive the result</p>
-
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" pattern="^d{8,12}$" maxlength="20">
-                <p>8 to 12 digits, no space</p>
-
-                <label for="street">Street Address</label>
-                <input type="text" id="street" name="street" maxlength="40">
-                <p>Up to 40 characters</p>
-
-                <label for="suburb">Suburb/Town</label>
-                <input type="text" id="suburb" name="suburb" maxlength="40">
-                <p>Up to 40 characters</p>
-
-
-                <label for="state">State</label>
-                <select name="state" id="state">
-                    <option value="">Please select</option>
-                    <option>VIC</option>
-                    <option>NSW</option>
-                    <option>QLD</option>
-                    <option>NT</option>
-                    <option>WA</option>
-                    <option>SA</option>
-                    <option>TAS</option>
-                    <option>ACT</option>
-                </select>
-
-                <label for="postcode">Postcode</label>
-                <input type="text" id="postcode" name="postcode" pattern="^\{4}$" maxlength="4">
-                <p>4 digits</p>
-
-
-                <h2>Position & SKills</h2>
-                <label for="ref_num">Job reference number</label>
-                <input type="text" id="ref_num" name="ref_num" maxlength="5">
-                <p>Front-end Developer: FED01</p>
-                <p>UI/UX Designer: UXD02</p>
-
-                <details>
-                    <summary>
-                        <h2>Design</h2>
-                    </summary>
-                    <p>Select all that apply</p>
-                    <p>
-                        <input type="checkbox" id="skill_des1" name="skill_des[]" value="skill_des1">
-                        <label for="skill_des1">Figma (auto layout, components, variants)</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des2" name="skill_des[]" value="skill_des2">
-                        <label for="skill_des2">Adobe Creative Suite (Photoshop, Illustrator)</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des3" name="skill_des[]" value="skill_des3">
-                        <label for="skill_des3">Wireframing & Interactive Prototyping</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des4" name="skill_des[]" value="skill_des4">
-                        <label for="skill_des4">Design Systems, Component Libraries & Style Guides</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des5" name="skill_des[]" value="skill_des5">
-                        <label for="skill_des5">Typography, Color Theory & Layout</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des6" name="skill_des[]" value="skill_des6">
-                        <label for="skill_des6">Accessibility (WCAG) & Inclusive Design</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des7" name="skill_des[]" value="skill_des7">
-                        <label for="skill_des7">Responsive Web Design</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des8" name="skill_des[]" value="skill_des8">
-                        <label for="skill_des8">Brand Identity & Visual Branding</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des9" name="skill_des[]" value="skill_des9">
-                        <label for="skill_des9">Motion Design & Micro-interactions</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des10" name="skill_des[]" value="skill_des10">
-                        <label for="skill_des10">User Research & Usability Testing</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skil_des11" name="skill_des[]" value="skill_des11">
-                        <label for="skill_des11">Design-to-Developer Handoff</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_des12" name="skill_des[]" value="skill_des12">
-                        <label for="skill_des12">Presenting Concepts to Clients</label>
-                    </p>
-                </details>
-
-                <details>
-                    <summary>
-                        <h2>Front-end</h2>
-                    </summary>
-                    <p>Select all that apply</p>
-                    <p>
-                        <input type="checkbox" id="skill_fed1" name="skill_fed[]" value="skill_fed1">
-                        <label for="skill_fed1">Semantic HTML5</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed2" name="skill_fed[]" value="skill_fed2">
-                        <label for="skill_fed2">CSS3 & Sass (SCSS)</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed3" name="skill_fed[]" value="skill_fed3">
-                        <label for="skill_fed3">Responsive Web Design</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed4" name="skill_fed[]" value="skill_fed4">
-                        <label for="skill_fed4">Cross-browser Compatibility</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed5" name="skill_fed[]" value="skill_fed5">
-                        <label for="skill_fed5">JavaScript (ES6+) & TypeScript</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed6" name="skill_fed[]" value="skill_fed6">
-                        <label for="skill_fed6">Front-end Frameworks (React, Vue)</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed7" name="skill_fed[]" value="skill_fed7">
-                        <label for="skill_fed7">Accessibility (WCAG) & SEO</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed8" name="skill_fed[]" value="skill_fed8">
-                        <label for="skill_fed8">Web Performance Optimization</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed9" name="skill_fed[]" value="skill_fed9">
-                        <label for="skill_fed9">CMS Platforms (WordPress)</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed10" name="skill_fed[]" value="skill_fed10">
-                        <label for="skill_fed10">Git & GitHub Version Control</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed11" name="skill_fed[]" value="skill_fed11">
-                        <label for="skill_fed11">Testing & Debugging</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed12" name="skill_fed[]" value="skill_fed12">
-                        <label for="skill_fed12">Agile Workflow & Jira</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="skill_fed13" name="skill_fed[]" value="skill_fed13">
-                        <label for="skill_fed13">Client Communication & Requirements Gathering</label>
-                    </p>
-                </details>
-
-                <textarea id="other_skill" name="other_skill" rows="4" cols="40">other skills</textarea>
-                <P>
-                    <input type="checkbox" id="consent" name="consent[]" value="consent">
-                    <label for="consent">I have read the Collection Notice above and consent to Meowdia using the
-                        information I provide in this form to assess my application.</label>
-                </P>
-
-                <input type="submit" value="Apply">
-                <input type="reset" value="Reset form">
+            <input type="submit" value="Apply">
+            <input type="reset" value="Reset form">
         </form>
     </fieldset>
     <div>
         <a href="./jobs.html">Return to Jobs</a>
-        <a href="./apply.html">Back to top</a>
+        <a href="#top">Back to Top</a>
         <a href="./about.html">About Meowdia</a>
     </div>
-    <fieldset>
+    <footer>
         <h2>Contact Us</h2>
         <p>
             <a href="mailto:meowdia@company.com">meowdia@company.com</a>
@@ -268,7 +277,7 @@
             <a href="https://bachcodetinh.github.io/gito_gatos/">Live site</a>
         </p>
         <p>
-            <a href="https://github.com/bachcodetinh/gito_gatos.git">GitHub Repository</a>
+            <a href="https://github.com/bachcodetinh/gito_gatos">GitHub Repository</a>
         </p>
         <p>
             <a
@@ -283,7 +292,7 @@
 
         <p>© 2026 Meowdia Agency. All rights reserved.</p>
         <p>Instructed by Trung Kiểm Lâm #2611</p>
-    </fieldset>
+    </footer>
 </body>
 
 </html>
