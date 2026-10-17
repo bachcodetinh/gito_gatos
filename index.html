@@ -6,80 +6,16 @@
     <meta name="author" content="Duong">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <style>
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .section_title {
-            display: inline-block;
-            background-color: rgb(122, 226, 207);
-            color: rgb(6, 32, 43);
-            font-family: 'FZ Orcish VietHoa', sans-serif;
-            font-size: 28px;
-            font-weight: 400;
-            padding: 10px 40px;
-            border-radius: 25px;
-            margin: 40px auto;
-        }
-
-        .layout_table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-        }
-
-        .layout_table th, .layout_table td {
-            border: none;
-            padding: 15px;
-            vertical-align: top;
-        }
-
-        .layout_table thead th {
-            width: 33.33%;
-            font-family: 'FZ Orcish VietHoa', sans-serif;
-            color: rgb(7, 122, 125);
-            font-size: 22px;
-            font-weight: 400;
+        div + img {
             margin: 0;
         }
 
-        .layout_table td {
-            font-family: 'FS Nokio', sans-serif;
-            color: rgb(6, 32, 43);
-            font-size: 15px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .layout_table .full_row_heading {
-            font-family: 'FZ Orcish VietHoa', sans-serif;
-            color: rgb(7, 122, 125);
-            font-size: 22px;
-            font-weight: 400;
-            padding-top: 30px;
-            text-align: center;
-        }
-
-        .layout_table .center_text {
-            text-align: center;
-            max-width: 800px;
-        }
-
-        .product_gallery {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 20px;
-        }
-
-        .product_gallery img {
-            width: 280px;
-            height: auto;
-            display: block;
+        .logoname {
+            font-family: var(--headerfont);
+            font-size: 2.7em;
+            letter-spacing: var(--default-letter-spacing);
         }
     </style>
 </head>
@@ -87,78 +23,91 @@
     <header>
         <div class="nav_menu">
             <details>
-                <summary><img src="images/dog-paw.png" alt="placeholdernavlogo"></summary>
+                <summary><img src="images/Paw.svg" alt="nav_button" style="height: 27px; width: auto;"></summary>
                 <nav class="nav_bar">
-                    <a href="index.html">Home</a>
+                    <a class="active" href="index.html">Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About</a>
-                    <form>
-                        <input type="search" placeholder="Search this site...">
-                        <button type="submit">Search</button>
+                    <form>Search
+                        <input type="search" placeholder="">
+                        <button type="submit"><img src="images/maginifying-glass-navbar.svg" alt="search_button"></button>
                     </form>
                 </nav>
             </details>
         </div>
-        <img src="images/logo.png" alt="meowdia_logo">
+        <img src="images/logo.svg" alt="meowdia_logo">
         <h1>
-            You give us<br>
-            Pawsome ideas<br>
-            We bring<br>
-            Meow-velous products
+            YOU GIVE US<br>
+            <span style="font-size: 1.35em;"><span style="color: var(--secondarycolor);">PAWSOME</span> IDEAS<br></span>
+            <br>
+            WE BRING<br>
+            <span style="font-size: 1.35em;"><span style="color: var(--secondarycolor);">PURR-FECT</span> PRODUCTS</span>
         </h1>
     </header>
     <main>
-        <h2 class="section_title">What we do</h2>
-        <table class="layout_table">
-            <thead>
-                <tr>
-                    <th scope="col">Our vision</th>
-                    <th scope="col">Our mission</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>The Coding of Creativity to Life: To become the leading digital agency where creativity meets perfectly with front-end development, turning visionary ideas into reality.</td>
-                    <td>Fostering Digital Success for Our Clients: Through our use of collaborative teamwork, we are able to build top-notch web products that will ensure our clients have an excellent digital presence.</td>
-                </tr>
-                <tr>
-                    <th colspan="3" class="full_row_heading">Why Meowdia?</th>
-                </tr>
-                <tr>
-                    <td colspan="3" class="center_text">Design & development Meet Here: We have found a way to combine creativity and development without having to compromise on one or the other. We cycle quickly through iterations to ensure designs turn out flawless.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2 class="section_title">Our products</h2>
-        <div class="product_gallery">  
-            <img src="images/product.png" alt="product mockups">
-            <img src="images/product.png" alt="product mockups">
-            <img src="images/product.png" alt="product mockups">
-        </div>
+        <div class="who_we_are_card">
+        <h2 class="section_title">Who We Are</h2>
+            <div class="intro_text">
+                <img src="images/logo.svg" alt="meowdia_logo">
+                <span class="logoname">EOWDIA</span> is a creative digital media agency. We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
+            </div>
+                <table class="layout_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Our Vision</th>
+                            <th scope="col">Our Mission</th>
+                            <th scope="col">Why Meowdia?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bringing Creativity to Life.</strong> To become the leading digital agency where creativity meets front-end development, turning visionary ideas into reality.</td>
+                            <td><strong>Fostering Digital Success</strong> for our clients. Through collaborative teamwork, we build top-notch web products that give our clients an excellent digital presence.</td>
+                            <td><strong>Design and development meet here.</strong> We combine creativity and code without compromising either, and we iterate quickly so every design is ready for launch.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                <div class="navigation_buttons">
+                    <button type="button">Back to top</button>
+                    <button type="button">Explore Careers</button>
+                </div>
     </main>
-    <img src="images/catface.png" alt="footer_cat" style="width: 70%; height: auto; display: block; margin: 0 auto;">
-    <footer>
-    <div class="footer_main">
-        <div class="footer_logo">
-            <img src="images/logo.png" alt="meowdia_logo">
-        </div>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+    
+    <img src="images/catface.png" alt="footer_cat" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+    
+    <footer class="meowdia_footer">
+        <div class="footer_main">
+            <div class="footer_left">
+                <div class="footer_logo">
+                    <img src="images/logo.svg" alt="meowdia_logo">
+                    <span class="logoname">EOWDIA</span>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Meowdia Agency. All rights reserved.
+                </div>
             </div>
-            
-            <div class="footer_column">
-                <h3>See me</h3>
-                <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Board</a>
-                <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
+            <div class="footer_right">
+                <div class="footer_columns">
+                    <div class="footer_column contact_col">
+                        <h3>Contact us</h3>
+                        <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+                        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
+                    </div>
+                    <div class="footer_column see_more_col">
+                        <h3>See more</h3>
+                        <a href="#" target="_blank">Live Site</a>
+                        <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
+                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum Board</a>
+                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6" target="_blank">Figma Design Board</a>
+                    </div>
+                </div>
+                <div class="instructor_credit">
+                    Instructed by Trung Kiểm Lâm #2611
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer_bottom">
-        &copy; 2026 Meowdia Agency. All rights reserved.
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
