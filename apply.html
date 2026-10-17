@@ -1,60 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply to [Ten cong ty]</title>
+    <meta name="author" content="Mon Le">
+    <title>Apply to Meowdia</title>
 </head>
+
 <body>
-    <h1>Application Form</h1>
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-         <fieldset>
-            <legend>Personal Information</legend>
-            <p>
+    <fieldset>
+        <nav id="nav">
+            <details>
+                <summary>Menu</summary>
+                <p class="nav"><a href="./index.html">Home</a></p>
+                <p class="nav"><a href="./jobs.html">Jobs</a> </p>
+                <p class="nav"><a href="./apply.html">Apply</a></p>
+                <p class="nav"><a href="./about.html">About</a></p>
+            </details>
+        </nav>
+        <h1>Application Form</h1>
+        <p>Your journey with Meowdia starts here!</p>
+        <p>Please complete all fields below, Other skills is optional.</p>
+        <h2>Closing date: 24 December 2026</h2>
+        <h2>Location: Middle Street, Faker District, Summoner’s Rift City, T1 Nation.</h2>
+    </fieldset>
+
+    <fieldset>
+        <h2>Our Recruitment Process</h2>
+        <ol>
+            <li>Submit the application: complete the form below.</li>
+            <li>Confirmation: we wil email you within 10 business days to confirm if we have recieved it.</li>
+            <li>Screening: our recruitment team reviews applications against the position requrements.</li>
+            <li>Interview: shortlisted applicants are contacted to arrange an interview.</li>
+            <li>Outcome: all applicants are notified of the outcome 1 week after the interview.</li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <h2>Collection Notice</h2>
+        <strong>Who we are</strong>
+        <p>Meowdia collects this information.</p>
+        <p>Contact: meowdia_hr@company.com</p>
+        <strong>Why we collect it</strong>
+        <p>To assess your suitability for the position and to contact you about the application.</p>
+        <strong>Who sees it</strong>
+        <p>Only our recruitment team and the hiring manager. We do not share it with third parties or send it overseas.
+        </p>
+        <strong>If you do not provide it</strong>
+        <p>We cannot consider your application.</p>
+        <strong>How long we keep it</strong>
+        <p>2 months after the position closes, then it is securely deleted.</p>
+        <strong>Your rights</strong>
+        <p>You can ask to view, correct or delete your information at any time by contacting meowdia_hr@company.com</p>
+    </fieldset>
+    <fieldset>
+        <h2>Form</h2>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <h2>Personal Information</h2>
+            <>
                 <label for="F_name">First name</label>
-                <input type="text" id="F_name" name="F_name" pattern="^\w${0,20}" maxlength="20">
+                <input type="text" id="F_name" name="F_name" pattern="^w$" maxlength="20">
+                <p>Letters only, up to 20 characters</p>
                 <label for="L_name">Last name</label>
-                <input type="text" id="L_name" name="L_name" pattern="^\w${0,20}" maxlength="20">
-            </p>
-            <p>
-                <label for="dob">Date of birth</label>
-                <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="Pdate" placeholder="dd/mm/yyyy"/>
-            </p>
-         </fieldset>
-
-         <fieldset>
-                <legend>Gender</legend>
-                <p>
-                    <input type="radio" id="Female" name="gender" value="Female" required/>
-                    <label for="Female">Female</label>
-                    <input type="radio" id="Male" name="gender" value="Male" required/>
-                    <label for="Male">Male</label>
-                </p>
-        </fieldset>
-
-        <fieldset>
-                <legend>Contact</legend>
-                <p>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                <input type="text" id="L_name" name="L_name" pattern="^w$" maxlength="20">
+                <p>Letters only, up to 20 characters</p>
                 </p>
                 <p>
-                    <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" pattern="^\d{8,12}$" maxlength="20">
+                    <label for="dob">Date of birth</label>
+                    <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="Pdate" placeholder="dd/mm/yyyy" />
                 </p>
-         </fieldset>
+                <p>
+                <p>Gender</p>
+                <input type="radio" id="Female" name="gender" value="Female" required />
+                <label for="Female">Female</label>
+                <input type="radio" id="Male" name="gender" value="Male" required />
+                <label for="Male">Male</label>
+                <p>Used to verify you meet the legal working-age requirement</p>
+                </p>
+                </p>
 
-         <fieldset>
-            <legend>Location</legend>
-            <p>
+
+                <h2>Contact & Location</h2>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <p>Where you receive the result</p>
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" pattern="^d{8,12}$" maxlength="20">
+                <p>8 to 12 digits, no space</p>
+
                 <label for="street">Street Address</label>
-                <input type="text" id="street" name="street" pattern="^\{40}$" maxlength="40">
-            </p>
-            <p>
+                <input type="text" id="street" name="street" maxlength="40">
+                <p>Up to 40 characters</p>
+
                 <label for="suburb">Suburb/Town</label>
-                <input type="text" id="suburb" name="suburb" pattern="^\{40}$" maxlength="40">
-            </p>
-            <p>
+                <input type="text" id="suburb" name="suburb" maxlength="40">
+                <p>Up to 40 characters</p>
+
+
                 <label for="state">State</label>
                 <select name="state" id="state">
                     <option value="">Please select</option>
@@ -67,38 +112,178 @@
                     <option>TAS</option>
                     <option>ACT</option>
                 </select>
-            </p>
-            <p>
+
                 <label for="postcode">Postcode</label>
                 <input type="text" id="postcode" name="postcode" pattern="^\{4}$" maxlength="4">
-            </p>
-         </fieldset>
+                <p>4 digits</p>
 
-         <fieldset>
-            <legend>Occupation</legend>
-            <p>
+
+                <h2>Position & SKills</h2>
                 <label for="ref_num">Job reference number</label>
-                <input type="text" id="ref_num" name="ref_num" pattern="^\d{5}$" maxlength="5">
-            </p>
-            <fieldset>
-                <legend>Skill list</legend>
-                <input type="checkbox" id="skill1" name="skill[]" value="skill1">
-                <label for="skill1">Skill 1</label>
-                <input type="checkbox" id="skill2" name="skill[]" value="skill2">
-                <label for="skill2">Skill 2</label>
-                <input type="checkbox" id="skill3" name="skill[]" value="skill3">
-                <label for="skill3">Skill 3</label>
-                <input type="checkbox" id="skill4" name="skill[]" value="skill4">
-                <label for="skill4">Skill 4</label>
-                <input type="checkbox" id="skill5" name="skill[]" value="skill5">
-                <label for="skill5">Skill 5</label>
-            </fieldset>
-            <p>
+                <input type="text" id="ref_num" name="ref_num" maxlength="5">
+                <p>Front-end Developer: FED01</p>
+                <p>UI/UX Designer: UXD02</p>
+
+                <details>
+                    <summary>
+                        <h2>Design</h2>
+                    </summary>
+                    <p>Select all that apply</p>
+                    <p>
+                        <input type="checkbox" id="skill_des1" name="skill_des[]" value="skill_des1">
+                        <label for="skill_des1">Figma (auto layout, components, variants)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des2" name="skill_des[]" value="skill_des2">
+                        <label for="skill_des2">Adobe Creative Suite (Photoshop, Illustrator)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des3" name="skill_des[]" value="skill_des3">
+                        <label for="skill_des3">Wireframing & Interactive Prototyping</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des4" name="skill_des[]" value="skill_des4">
+                        <label for="skill_des4">Design Systems, Component Libraries & Style Guides</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des5" name="skill_des[]" value="skill_des5">
+                        <label for="skill_des5">Typography, Color Theory & Layout</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des6" name="skill_des[]" value="skill_des6">
+                        <label for="skill_des6">Accessibility (WCAG) & Inclusive Design</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des7" name="skill_des[]" value="skill_des7">
+                        <label for="skill_des7">Responsive Web Design</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des8" name="skill_des[]" value="skill_des8">
+                        <label for="skill_des8">Brand Identity & Visual Branding</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des9" name="skill_des[]" value="skill_des9">
+                        <label for="skill_des9">Motion Design & Micro-interactions</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des10" name="skill_des[]" value="skill_des10">
+                        <label for="skill_des10">User Research & Usability Testing</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skil_des11" name="skill_des[]" value="skill_des11">
+                        <label for="skill_des11">Design-to-Developer Handoff</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des12" name="skill_des[]" value="skill_des12">
+                        <label for="skill_des12">Presenting Concepts to Clients</label>
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        <h2>Front-end</h2>
+                    </summary>
+                    <p>Select all that apply</p>
+                    <p>
+                        <input type="checkbox" id="skill_fed1" name="skill_fed[]" value="skill_fed1">
+                        <label for="skill_fed1">Semantic HTML5</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed2" name="skill_fed[]" value="skill_fed2">
+                        <label for="skill_fed2">CSS3 & Sass (SCSS)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed3" name="skill_fed[]" value="skill_fed3">
+                        <label for="skill_fed3">Responsive Web Design</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed4" name="skill_fed[]" value="skill_fed4">
+                        <label for="skill_fed4">Cross-browser Compatibility</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed5" name="skill_fed[]" value="skill_fed5">
+                        <label for="skill_fed5">JavaScript (ES6+) & TypeScript</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed6" name="skill_fed[]" value="skill_fed6">
+                        <label for="skill_fed6">Front-end Frameworks (React, Vue)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed7" name="skill_fed[]" value="skill_fed7">
+                        <label for="skill_fed7">Accessibility (WCAG) & SEO</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed8" name="skill_fed[]" value="skill_fed8">
+                        <label for="skill_fed8">Web Performance Optimization</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed9" name="skill_fed[]" value="skill_fed9">
+                        <label for="skill_fed9">CMS Platforms (WordPress)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed10" name="skill_fed[]" value="skill_fed10">
+                        <label for="skill_fed10">Git & GitHub Version Control</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed11" name="skill_fed[]" value="skill_fed11">
+                        <label for="skill_fed11">Testing & Debugging</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed12" name="skill_fed[]" value="skill_fed12">
+                        <label for="skill_fed12">Agile Workflow & Jira</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed13" name="skill_fed[]" value="skill_fed13">
+                        <label for="skill_fed13">Client Communication & Requirements Gathering</label>
+                    </p>
+                </details>
+
                 <textarea id="other_skill" name="other_skill" rows="4" cols="40">other skills</textarea>
-            </p>
-         </fieldset>
-         <input type="submit" value="Apply"> 
-         <input type="reset" value="Reset form"> 
-    </form>
+                <P>
+                    <input type="checkbox" id="consent" name="consent[]" value="consent">
+                    <label for="consent">I have read the Collection Notice above and consent to Meowdia using the
+                        information I provide in this form to assess my application.</label>
+                </P>
+
+                <input type="submit" value="Apply">
+                <input type="reset" value="Reset form">
+        </form>
+    </fieldset>
+    <div>
+        <a href="./jobs.html">Return to Jobs</a>
+        <a href="./apply.html">Back to top</a>
+        <a href="./about.html">About Meowdia</a>
+    </div>
+    <fieldset>
+        <h2>Contact Us</h2>
+        <p>
+            <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+        </p>
+        <p>
+            <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
+        </p>
+
+        <h2>See More</h2>
+        <p>
+            <a href="https://bachcodetinh.github.io/gito_gatos/">Live site</a>
+        </p>
+        <p>
+            <a href="https://github.com/bachcodetinh/gito_gatos.git">GitHub Repository</a>
+        </p>
+        <p>
+            <a
+                href="https://btyenngan6608.atlassian.net/jira/software/projects/COS26P1/boards/4/calendar?atlOrigin=eyJpIjoiMTViMDA5OTVlYWY4NGMxNzgxMjIzZWE0NDkyYWYwZWQiLCJwIjoiaiJ9">Jira
+                Scrum Board</a>
+        </p>
+        <p>
+            <a
+                href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?node-id=74-296&t=ngCQpk1ezZlVMU0e-1">Figma
+                Design Board</a>
+        </p>
+
+        <p>© 2026 Meowdia Agency. All rights reserved.</p>
+        <p>Instructed by Trung Kiểm Lâm #2611</p>
+    </fieldset>
 </body>
+
 </html>
