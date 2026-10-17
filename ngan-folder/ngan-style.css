@@ -316,15 +316,6 @@ aside.benefits ul {
   color: rgb(255, 210, 0);
 }
 
-
-/* Keyboard focus on the hidden radio shows an outline on its label */
-#tab-fed:focus-visible ~ .switch-bar label[for="tab-fed"],
-#tab-uid:focus-visible ~ .switch-bar label[for="tab-uid"] {
-  outline: 3px solid rgb(255, 210, 0);
-  outline-offset: 3px;
-  border-radius: 40px;
-}
-
 .job {
   display: none;
 }
