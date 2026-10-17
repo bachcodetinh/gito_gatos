@@ -168,7 +168,6 @@ a {
 .nav-search button {
   border: none;
   background: transparent;
-  cursor: pointer;
 }
 
 .nav-search button img {
@@ -288,8 +287,7 @@ aside.benefits ul {
   padding: 8px 0;
   text-align: center;
   font-family: "iCiel Pony";
-  font-size: 1.4rem;
-  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 /* Yellow rounded box that slides left / right */
@@ -316,15 +314,6 @@ aside.benefits ul {
   color: rgb(255, 210, 0);
 }
 
-
-/* Keyboard focus on the hidden radio shows an outline on its label */
-#tab-fed:focus-visible ~ .switch-bar label[for="tab-fed"],
-#tab-uid:focus-visible ~ .switch-bar label[for="tab-uid"] {
-  outline: 3px solid rgb(255, 210, 0);
-  outline-offset: 3px;
-  border-radius: 40px;
-}
-
 .job {
   display: none;
 }
@@ -336,7 +325,6 @@ aside.benefits ul {
 }
 
 /* Job card */
-
 .job {
   padding: 30px 60px 40px;
   border: 3px solid rgb(255, 210, 0);
@@ -453,7 +441,6 @@ aside.benefits ul {
   font-size: 1rem;
 }
 
-
 .footer-brand {
   display: flex;
   align-items: flex-end;
@@ -512,4 +499,3 @@ aside.benefits ul {
   grid-column: 2 / 4;
   text-align: right;
 }
-
