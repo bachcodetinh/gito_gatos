@@ -168,7 +168,6 @@ a {
 .nav-search button {
   border: none;
   background: transparent;
-  cursor: pointer;
 }
 
 .nav-search button img {
@@ -289,7 +288,6 @@ aside.benefits ul {
   text-align: center;
   font-family: "iCiel Pony";
   font-size: 1.4rem;
-  cursor: pointer;
 }
 
 /* Yellow rounded box that slides left / right */
