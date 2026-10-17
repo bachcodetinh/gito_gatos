@@ -1,3 +1,16 @@
+<!-- 
+
+filename: apply.html
+author: le ba cao minh
+
+created: October 8, 2026
+last modified: October 17, 2026
+description: html file for apply page
+
+AI acknowledgement: Cao Minh use Claude for cross checking requirements with project descriptions
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,37 +36,38 @@
     <header>
         <a id="top"></a>
         <nav id="nav">
-            <details>
-                <summary>Menu</summary>
-                <p class="nav"><a href="./index.html">Home</a></p>
-                <p class="nav"><a href="./jobs.html">Jobs</a> </p>
-                <p class="nav"><a href="./apply.html">Apply</a></p>
-                <p class="nav"><a href="./about.html">About</a></p>
-            </details>
+            <p class="nav"><a href="./index.html">Home</a></p>
+            <p class="nav"><a href="./jobs.html">Jobs</a> </p>
+            <p class="nav"><a href="./apply.html">Apply</a></p>
+            <p class="nav"><a href="./about.html">About</a></p>
+            <p class="nav"><a href="">Search</a></p>
         </nav>
-        <h1>Application Form</h1>
+        <h1 class="accent">Application</h1>
+        <h1>Form</h1>
         <p>Your journey with Meowdia starts here!</p>
         <p>Please complete all fields below, Other skills is optional.</p>
-        <h2>Closing date: 24 December 2026</h2>
-        <h2>Location: Middle Street, Faker District, Summoner’s Rift City, T1 Nation.</h2>
+        <h2><strong>Closing date:</strong> 24 December 2026</h2>
+        <h2><strong>Location:</strong> Middle Street, Faker District, Summoner’s Rift City, T1 Nation.</h2>
     </header>
 
     <section>
         <h2>Our Recruitment Process</h2>
         <ol>
-            <li>Submit the application: complete the form below.</li>
-            <li>Confirmation: we wil email you within 10 business days to confirm if we have recieved it.</li>
-            <li>Screening: our recruitment team reviews applications against the position requrements.</li>
-            <li>Interview: shortlisted applicants are contacted to arrange an interview.</li>
-            <li>Outcome: all applicants are notified of the outcome 1 week after the interview.</li>
+            <li><strong>Submit the application:</strong> complete the form below.</li>
+            <li><strong>Confirmation:</strong> we will email you within 10 business days to confirm if we have received
+                it.</li>
+            <li><strong>Screening:</strong> our recruitment team reviews applications against the position requirements.
+            </li>
+            <li><strong>Interview:</strong> shortlisted applicants are contacted to arrange an interview.</li>
+            <li><strong>Outcome:</strong> all applicants are notified of the outcome 1 week after the interview.</li>
         </ol>
     </section>
 
-    <fieldset>
+    <section>
         <h2>Collection Notice</h2>
         <strong>Who we are</strong>
         <p>Meowdia collects this information.</p>
-        <p>Contact: meowdia_hr@company.com</p>
+        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
         <strong>Why we collect it</strong>
         <p>To assess your suitability for the position and to contact you about the application.</p>
         <strong>Who sees it</strong>
@@ -65,8 +79,9 @@
         <p>2 months after the position closes, then it is securely deleted.</p>
         <strong>Your rights</strong>
         <p>You can ask to view, correct or delete your information at any time by contacting meowdia_hr@company.com</p>
-    </fieldset>
-    <fieldset>
+    </section>
+
+    <section>
         <h2>Form</h2>
         <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
 
@@ -127,9 +142,9 @@
             <input type="text" id="postcode" name="postcode" pattern="^\d{4}$" maxlength="4" required>
             <p>4 digits</p>
 
-            <h2>Position & SKills</h2>
+            <h2>Position & Skills</h2>
             <label for="ref_num">Job reference number</label>
-            <input type="text" id="ref_num" name="ref_num" maxlength="5" required>
+            <input type="text" id="ref_num" name="ref_num" pattern="^[A-Z]{3}[0-9]{2}$" maxlength="5" required>
             <p>Front-end Developer: FED01</p>
             <p>UI/UX Designer: UXD02</p>
 
@@ -247,7 +262,10 @@
                 </p>
             </details>
 
-            <textarea id="other_skill" name="other_skill" rows="4" cols="40">other skills</textarea>
+            <label for="other_skill">Other Skills Optional</label>
+            <textarea id="other_skill" name="other_skill" rows="4"
+                cols="40">Type anything that you think is valuable for this position...</textarea>
+
             <p>
                 <input type="checkbox" id="consent" value="consent" required>
                 <label for="consent">I have read the Collection Notice above and consent to Meowdia using the
@@ -257,38 +275,43 @@
             <input type="submit" value="Apply">
             <input type="reset" value="Reset form">
         </form>
-    </fieldset>
+    </section>
     <div>
         <a href="./jobs.html">Return to Jobs</a>
         <a href="#top">Back to Top</a>
         <a href="./about.html">About Meowdia</a>
     </div>
     <footer>
-        <h2>Contact Us</h2>
-        <p>
-            <a href="mailto:meowdia@company.com">meowdia@company.com</a>
-        </p>
-        <p>
-            <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
-        </p>
+        <div>
+            <h2>Contact Us</h2>
+            <p>
+                <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+            </p>
+            <p>
+                <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
+            </p>
+        </div>
+        <div>
+            <h2>See More</h2>
+            <p>
+                <a href="https://bachcodetinh.github.io/gito_gatos/">Live site</a>
+            </p>
+            <p>
+                <a href="https://github.com/bachcodetinh/gito_gatos">GitHub Repository</a>
+            </p>
+            <p>
+                <a
+                    href="https://btyenngan6608.atlassian.net/jira/software/projects/COS26P1/boards/4/calendar?atlOrigin=eyJpIjoiMTViMDA5OTVlYWY4NGMxNzgxMjIzZWE0NDkyYWYwZWQiLCJwIjoiaiJ9">Jira
+                    Scrum Board</a>
+            </p>
+            <p>
+                <a
+                    href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?node-id=74-296&t=ngCQpk1ezZlVMU0e-1">Figma
+                    Design Board</a>
+            </p>
+        </div>
 
-        <h2>See More</h2>
-        <p>
-            <a href="https://bachcodetinh.github.io/gito_gatos/">Live site</a>
-        </p>
-        <p>
-            <a href="https://github.com/bachcodetinh/gito_gatos">GitHub Repository</a>
-        </p>
-        <p>
-            <a
-                href="https://btyenngan6608.atlassian.net/jira/software/projects/COS26P1/boards/4/calendar?atlOrigin=eyJpIjoiMTViMDA5OTVlYWY4NGMxNzgxMjIzZWE0NDkyYWYwZWQiLCJwIjoiaiJ9">Jira
-                Scrum Board</a>
-        </p>
-        <p>
-            <a
-                href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?node-id=74-296&t=ngCQpk1ezZlVMU0e-1">Figma
-                Design Board</a>
-        </p>
+
 
         <p>© 2026 Meowdia Agency. All rights reserved.</p>
         <p>Instructed by Trung Kiểm Lâm #2611</p>
