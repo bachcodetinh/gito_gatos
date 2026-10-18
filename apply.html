@@ -35,24 +35,35 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 <body>
     <header>
         <a id="top"></a>
-        <nav id="nav">
+        <a href="./index.html" id="header_logo"><img src="images/logo.svg" alt="Meowdia Logo" /></a>
+        <nav id="nav" class="norm_text">
             <p class="nav"><a href="./index.html">Home</a></p>
             <p class="nav"><a href="./jobs.html">Jobs</a> </p>
-            <p class="nav"><a href="./apply.html">Apply</a></p>
+            <p class="nav_apply" id="nav_apply"><a href="./apply.html">Apply</a></p>
             <p class="nav"><a href="./about.html">About</a></p>
             <p class="nav"><a href="">Search</a></p>
         </nav>
-        <h1 class="accent">Application</h1>
-        <h1>Form</h1>
-        <p>Your journey with Meowdia starts here!</p>
-        <p>Please complete all fields below, Other skills is optional.</p>
-        <h2><strong>Closing date:</strong> 24 December 2026</h2>
-        <h2><strong>Location:</strong> Middle Street, Faker District, Summoner’s Rift City, T1 Nation.</h2>
+        <div id="slogan">
+            <h1 class="accent">APPLICATION</h1>
+            <h1>FORM</h1>
+        </div>
+        <div id="header_des" class="norm_text">
+            <p>Your journey with Meowdia starts here!</p>
+            <p>Please complete all fields below, Other skills is optional.</p>
+        </div>
+        <div id="header_info" class="imp_text">
+            <p><strong>Closing date:</strong> 24 December 2026</p>
+            <p><strong>Location:</strong> Middle Street, Faker District, Summoner’s Rift City, T1 Nation</p>
+        </div>
+        <h2>
+
+        </h2>
     </header>
 
-    <section>
-        <h2>Our Recruitment Process</h2>
-        <ol>
+    <section id="recruit_process">
+        <h2 class="heading">Our Recruitment Process</h2>
+        <div class="yel_bar"></div>
+        <ol class="mid_text" id="re_pro_list">
             <li><strong>Submit the application:</strong> complete the form below.</li>
             <li><strong>Confirmation:</strong> we will email you within 10 business days to confirm if we have received
                 it.</li>
@@ -64,28 +75,40 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     </section>
 
     <section>
-        <h2>Collection Notice</h2>
-        <strong>Who we are</strong>
-        <p>Meowdia collects this information.</p>
-        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
-        <strong>Why we collect it</strong>
-        <p>To assess your suitability for the position and to contact you about the application.</p>
-        <strong>Who sees it</strong>
-        <p>Only our recruitment team and the hiring manager. We do not share it with third parties or send it overseas.
-        </p>
-        <strong>If you do not provide it</strong>
-        <p>We cannot consider your application.</p>
-        <strong>How long we keep it</strong>
-        <p>2 months after the position closes, then it is securely deleted.</p>
-        <strong>Your rights</strong>
-        <p>You can ask to view, correct or delete your information at any time by contacting meowdia_hr@company.com</p>
+        <h2 class="heading">Collection Notice</h2>
+        <div class="yel_bar"></div>
+        <div>
+            <strong class="sub_heading">Who we are</strong>
+            <p class="norm_text">Meowdia collects this information.</p>
+            <a href=" mailto:meowdia_hr@company.com" class="norm_text">meowdia_hr@company.com</a>
+
+            <strong class="sub_heading">Why we collect it</strong>
+            <p class="norm_text">To assess your suitability for the position and to contact you about the application.
+            </p>
+
+            <strong class="sub_heading">Who sees it</strong>
+            <p class="norm_text">Only our recruitment team and the hiring manager. We do not share it with third parties
+                or send it overseas.</p>
+            <strong class="sub_heading">If you do not provide it</strong>
+            <p class="norm_text">We cannot consider your application.</p>
+
+            <strong class="sub_heading">How long we keep it</strong>
+            <p class="norm_text">2 months after the position closes, then it is securely deleted.</p>
+            
+            <strong class="sub_heading">Your rights</strong>
+            <p class="norm_text">You can ask to view, correct or delete your information at any time by contacting
+                meowdia_hr@company.com</p>
+        </div>
+
     </section>
 
     <section>
-        <h2>Form</h2>
+        <h2 class="heading">Form</h2>
+        <div class="yel_bar"></div>
         <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
 
             <h2>Personal Information</h2>
+            
 
             <label for="F_name">First name</label>
             <input type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
@@ -100,11 +123,11 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             <p>Used to verify you meet the legal working-age requirement</p>
 
             <fieldset>
-                <legend>Gender</legend>
+                <legend class="norm_text">Gender</legend>
                 <input type="radio" id="Female" name="gender" value="Female" required />
-                <label for="Female">Female</label>
+                <label for="Female" class="norm_text">Female</label>
                 <input type="radio" id="Male" name="gender" value="Male" required />
-                <label for="Male">Male</label>
+                <label for="Male" class="norm_text">Male</label>
             </fieldset>
 
             <h2>Contact & Location</h2>
