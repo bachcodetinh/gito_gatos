@@ -6,8 +6,12 @@
     <meta name="author" content="Duong">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="duong_css/index/index.css">
     <style>
+        header {
+            margin: 1.8em;
+        }
+
         div + img {
             margin: 0;
         }
@@ -20,7 +24,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="top">
         <div class="nav_menu">
             <details>
                 <summary><img src="images/Paw.svg" alt="nav_button" style="height: 27px; width: auto;"></summary>
@@ -47,32 +51,41 @@
     </header>
     <main>
         <div class="who_we_are_card">
-        <h2 class="section_title">Who We Are</h2>
+        <h2 class="section_title underline_title">Who We Are</h2>
             <div class="intro_text">
                 <img src="images/logo.svg" alt="meowdia_logo">
                 <span class="logoname">EOWDIA</span> is a creative digital media agency. We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
             </div>
-                <table class="layout_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Our Vision</th>
-                            <th scope="col">Our Mission</th>
-                            <th scope="col">Why Meowdia?</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Bringing Creativity to Life.</strong> To become the leading digital agency where creativity meets front-end development, turning visionary ideas into reality.</td>
-                            <td><strong>Fostering Digital Success</strong> for our clients. Through collaborative teamwork, we build top-notch web products that give our clients an excellent digital presence.</td>
-                            <td><strong>Design and development meet here.</strong> We combine creativity and code without compromising either, and we iterate quickly so every design is ready for launch.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <table class="layout_table">
+                <thead>
+                    <tr>
+                        <th scope="col">Our Vision</th>
+                        <th scope="col">Our Mission</th>
+                        <th scope="col">Why Meowdia?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bringing Creativity to Life.</strong> To become the leading digital agency where creativity meets front-end development, turning visionary ideas into reality.</td>
+                        <td><strong>Fostering Digital Success</strong> for our clients. Through collaborative teamwork, we build top-notch web products that give our clients an excellent digital presence.</td>
+                        <td><strong>Design and development meet here.</strong> We combine creativity and code without compromising either, and we iterate quickly so every design is ready for launch.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="who_we_are_card">
+            <h2 class="section_title underline_title">Our Products</h2>
+            <div class="product_gallery">
+                <img src="duong_css/index/images/1888160_26.jpg" alt="Product Mockup 1">
+                <img src="duong_css/index/images/1888160_31.jpg" alt="Product Mockup 2">
+                <img src="duong_css/index/images/Screenshot (319).png" alt="Product Mockup 3">
+                <img src="duong_css/index/images/Screenshot (343).png" alt="Product Mockup 4">
             </div>
-                <div class="navigation_buttons">
-                    <button type="button">Back to top</button>
-                    <button type="button">Explore Careers</button>
-                </div>
+        </div>
+        <div class="navigation_buttons">
+            <a href="#top" class="nav_btn">Back to top</a>
+            <a href="jobs.html" class="nav_btn">Explore Careers</a>
+        </div>
     </main>
     
     <img src="images/catface.png" alt="footer_cat" style="width: 80%; height: auto; display: block; margin: 0 auto;">
