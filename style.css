@@ -81,6 +81,11 @@ Varibles that wil be used across all 4 pages, in order from top to bottom:
     --default-letter-spacing: 0.08em;
 }
 
+/* Making the scroll smooth */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Background */
 body {
     background-color: rgb(0, 0, 0); /* Fallback color */
