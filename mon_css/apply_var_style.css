@@ -1,0 +1,58 @@
+:root {
+
+    /* Dimensions */
+    --margin-outer: 50px;
+    --margin-inner: 30px;
+
+    /* Fonts */
+
+    --important-font-size:  2rem;
+}
+
+/* Universal font setup */
+
+.slogan {
+    font-family: var(--iciel-font);
+    font-size: var(--slogan-font-size);
+}
+
+.norm_text {
+    font-family: var(--nokio-font);
+    font-size: var(--body-font-size);
+}
+
+.imp_text {
+    font-family: var(--nokio-font);
+    font-size: var(--important-font-size);
+}
+
+p,
+h1,
+h2,
+li,
+label,
+legend {
+    color: var(--main-color);
+    letter-spacing: var(--iciel-letter-spacing);
+}
+
+.accent,
+strong {
+    color: var(--secondary-color);
+}
+
+
+.heading {
+    font: var(--heading-text-style);
+}
+
+.sub_heading {
+    font: var(--subheading-text-style)
+}
+
+header,
+section,
+footer {
+    border: 3px solid var(--secondary-color);
+    border-radius: 40px;
+}
