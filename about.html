@@ -4,72 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Duong">
-    <title>About</title>
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="duong_css/about/about.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="apply.html">Apply</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="index.html">Index</a>
-            <a href="about.html">About</a>
-            <form>
-                <input type="search" placeholder="Search this site...">
-                <button type="submit">Search</button>
-            </form>
-        </nav>
-        <img src="https://st2.depositphotos.com/5205783/7801/v/450/depositphotos_78017774-stock-illustration-logo-abstract-triangle-vector.jpg" alt="placeholder" style="width: 120px; height: auto;">
-        <h1>Company Name</h1>
-        <p>Company Slogan</p>
-    </header>
-    <main>
-        <h2>About Us</h2>
-        <figure>
-            <img src="https://placehold.net/building.svg" alt="placeholder" style="width: 160px; height: auto;">
-            <figcaption>Our Team Photo</figcaption>
-        </figure>
-        <ul>
-            <li><strong>Group: </strong>Gito_gatos
-                <ul>
-                    <li><strong>Class: </strong>COS10026 (Sem 1 AY 26-27)</li>
-                    <li><strong>Schedule:</strong>
-                        <ul>
-                            <li>Monday: 1pm to 4pm</li>
-                            <li>Wednesday: 8am to 12pm</li>
-                            <li>Wednesday: 1pm to 4pm</li>
-                            <li>Friday: 8am to 12pm</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <h3>Contributors &amp; Quotes</h3>
-        <dl>
-            <dt>Lê Bá Cao Minh:</dt>
-            <dd><strong>Tech lead (Git Master)</strong>, Developer, style.css, apply.html</dd>
-            <dd lang="vi">&quot;<em>Đi Dookki gọi một phần mì tương tư về em.</em>&quot;</dd>
-            <dd>&laquo;<em>Going to Dookki, ordering a portion of noodles longing for you.</em>&raquo;</dd>
-            <dt>Bùi Thuỵ Yến Ngân:</dt>
-            <dd><strong>Project Manager (Scrum Master)</strong>, Developer, style.css, jobs.html</dd>
-            <dd lang="vi">&quot;<em>Nếu phương án A không thành công, bảng chữ cái vẫn còn 25 chữ cái nữa.</em>&quot;</dd>
-            <dd>&laquo;<em>If plan A doesn't work, the alphabet has 25 more letters.</em>&raquo;</dd>
-            <dt>Nguyễn Hoàng Đăng Dương:</dt>
-            <dd>Developer, style.css, index.html, about.html</dd>
-            <dd lang="vi">&quot;<em>Tới đâu thì tới.</em>&quot;</dd>
-            <dd>&laquo;<em>Whatever happens, happens.</em>&raquo;</dd>
-        </dl>
-    </main>
-    <footer>
-        <h3>Socials:</h3>
-        <div class="socials">
-            Jira: <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">gitos_gatos Board</a>
-            <br>
-            GitHub: <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">gito_gatos Repository</a>
-            <br>
-            Gmail: <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+    <header id="top">
+        <div class="nav_menu">
+            <details>
+                <summary><img src="images/Paw.svg" alt="nav button" style="height: 27px; width: auto;"></summary>
+                <nav class="nav_bar">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="about.html">About</a>
+                    <form>Search
+                        <input type="search" placeholder="">
+                        <button type="submit"><img src="images/maginifying-glass-navbar.svg" alt="search button"></button>
+                    </form>
+                </nav>
+            </details>
         </div>
-        <br>
-        &copy; 2026 gito_gatos
+        <img src="images/logo.svg" alt="meowdia logo">
+        
+        <div class="header-main-content">
+            <div class="header-text">
+                <h1>ABOUT <br><span class="highlight-text">OUR TEAM</span></h1>
+                <div class="team-meta-list">
+                    <ul>
+                        <li><strong>Group:</strong> Gito_gatos</li>
+                        <li><strong>Class:</strong> COS10026 (Sem 1 AY 26-27)</li>
+                        <li><strong>Schedule:</strong></li>
+                        <ul>
+                            <li>Mon - Sun | 9am - 9pm</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <figure class="main-group-photo">
+                <img src="duong_css/about/images/gitogatos.png" alt="gito_gatos group photo">
+                <figcaption>Our Team Photo</figcaption>
+            </figure>
+        </div>
+    </header>
+    
+    <main>
+        <div class="team-profiles-container">
+        
+            <div class="profile-card">
+                <h2 class="member-name">Bùi Thuỵ Yến Ngân</h2>
+                <div class="card-body">
+                    <div class="member-info">
+                        <h3>Contribution</h3>
+                        <dl>
+                            <dt>Roles</dt>
+                            <dd>Project Manager (Scrum Master), Developer, UI/UX co-designer</dd>
+                            <dt>Sections</dt>
+                            <dd>jobs.html</dd>
+                        </dl>
+                        <h3>Personal Information</h3>
+                        <dl>
+                            <dt>Full name</dt>
+                            <dd>Bùi Thuỵ Yến Ngân</dd>
+                            <dt>Nick name</dt>
+                            <dd>Bơ</dd>
+                            <dt>Student ID</dt>
+                            <dd>104203362</dd>
+                            <dt>Email Swinburne</dt>
+                            <dd>104203362@student.swin.edu.au</dd>
+                            <dt>Quote (Vi)</dt>
+                            <dd lang="vi">&quot;Nếu phương án A không thành công, bảng chữ cái vẫn còn 25 chữ cái nữa.&quot;</dd>
+                            <dt>Quote (En)</dt>
+                            <dd>&laquo;If plan A doesn't work, the alphabet has 25 more letters.&raquo;</dd>
+                        </dl>
+                    </div>
+                    <div class="member-photo-box">
+                        <img src="https://placehold.co" alt="Bùi Thuỵ Yến Ngân">
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-card image-left">
+                <h2 class="member-name">Nguyễn Hoàng Đăng Dương</h2>
+                <div class="card-body">
+                    <div class="member-info">
+                        <h3>Contribution</h3>
+                        <dl>
+                            <dt>Roles</dt>
+                            <dd>Developer</dd>
+                            <dt>Sections</dt>
+                            <dd>index.html, about.html, style.css</dd>
+                        </dl>
+                        <h3>Personal Information</h3>
+                        <dl>
+                            <dt>Full name</dt>
+                            <dd>Nguyễn Hoàng Đăng Dương</dd>
+                            <dt>Nick name</dt>
+                            <dd>Deymuum</dd>
+                            <dt>Student ID</dt>
+                            <dd>104192930</dd>
+                            <dt>Email Swinburne</dt>
+                            <dd>104192930@student.swin.edu.au</dd>
+                            <dt>Quote (Vi)</dt>
+                            <dd lang="vi">&quot;Tới đâu thì tới.&quot;</dd>
+                            <dt>Quote (En)</dt>
+                            <dd>&laquo;Whatever happens, happens.&raquo;</dd>
+                        </dl>
+                    </div>
+                    <div class="member-photo-box">
+                        <img src="https://placehold.co" alt="Nguyễn Hoàng Đăng Dương">
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <h2 class="member-name">Lê Bá Cao Minh</h2>
+                <div class="card-body">
+                    <div class="member-info">
+                        <h3>Contribution</h3>
+                        <dl>
+                            <dt>Roles</dt>
+                            <dd>Tech Lead (Git Master), Developer, UI/UX co-designer</dd>
+                            <dt>Sections</dt>
+                            <dd>apply.html</dd>
+                        </dl>
+                        <h3>Personal Information</h3>
+                        <dl>
+                            <dt>Full name</dt>
+                            <dd>Lê Bá Cao Minh</dd>
+                            <dt>Nick name</dt>
+                            <dd>Mìn Lê</dd>
+                            <dt>Student ID</dt>
+                            <dd>104311860</dd>
+                            <dt>Email Swinburne</dt>
+                            <dd>104311860@student.swin.edu.au</dd>
+                            <dt>Quote (Vi)</dt>
+                            <dd lang="vi">&quot;Đi Dookki gọi một phần mì tương tư về em.&quot;</dd>
+                            <dt>Quote (En)</dt>
+                            <dd>&laquo;Going to Dookki, ordering a portion of noodles longing for you.&raquo;</dd>
+                        </dl>
+                    </div>
+                    <div class="member-photo-box">
+                        <img src="https://placehold.co" alt="Lê Bá Cao Minh">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-container">
+            <table>
+                <caption>Overview of member backgrounds, preferences, and social media handles</caption>
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Random Fun Fact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bùi Thuỵ Yến Ngân</strong></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td><strong>Nguyễn Hoàng Đăng Dương</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lê Bá Cao Minh</strong></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="meowdia_footer">
+        <div class="footer_main">
+            <div class="footer_left">
+                <div class="footer_logo">
+                    <img src="images/logo.svg" alt="meowdia logo">
+                    <span class="logoname">EOWDIA</span>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Meowdia Agency. All rights reserved.
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_columns">
+                    <div class="footer_column contact_col">
+                        <h3>Contact us</h3>
+                        <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+                        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
+                    </div>
+                    <div class="footer_column see_more_col">
+                        <h3>See more</h3>
+                        <a href="#" target="_blank">Live Site</a>
+                        <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
+                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum Board</a>
+                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6" target="_blank">Figma Design Board</a>
+                    </div>
+                </div>
+                <div class="instructor_credit">
+                    Instructed by Trung Kiểm Lâm #2611
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,204 @@
+body {
+    background: var(--page-gradient);
+    background-color: var(--backgroundcolor);
+    color: var(--maincolor);
+    font-family: var(--bodyfont);
+    letter-spacing: var(--default-letter-spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 950px;
+}
+
+header {
+    width: 100%;
+    max-width: 950px;
+    border: var(--defaultborder);
+    border-radius: var(--default-border-radius);
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.header-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.header-text h1 {
+    font-family: var(--headerfont);
+    font-size: 2.8rem;
+    line-height: 1.1;
+    color: var(--maincolor);
+}
+
+.header-text .highlight-text {
+    color: var(--secondarycolor);
+}
+
+.team-meta-list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.team-meta-list ul li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.team-meta-list strong {
+    color: var(--secondarycolor);
+}
+
+.main-group-photo {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    margin: 0;
+}
+
+.main-group-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--default-border-radius) - 10px);
+    border: solid 2px;
+}
+
+.main-group-photo figcaption {
+    display: none;
+}
+
+.team-profiles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+.profile-card {
+    border: var(--defaultborder);
+    border-radius: var(--default-border-radius);
+    padding: 25px 30px;
+}
+
+.member-name {
+    font-family: var(--headerfont);
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--secondarycolor);
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.member-info {
+    flex: 2;
+    min-width: 250px;
+}
+
+.member-info h3 {
+    font-family: var(--headerfont);
+    color: var(--maincolor);
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.member-info dl {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 6px 15px;
+    margin-bottom: 15px;
+}
+
+.member-info dt {
+    font-weight: bold;
+    color: var(--secondarycolor);
+}
+
+.member-info dd {
+    margin: 0;
+}
+
+.member-info dd[lang="vi"] {
+    font-style: italic;
+    color: var(--maincolor);
+}
+
+.member-photo-box {
+    flex: 1;
+    min-width: 150px;
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-photo-box img {
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--default-border-radius) - 10px);
+    border: solid var(--maincolor) 1px;
+    object-fit: cover;
+}
+
+.profile-card.image-left .card-body {
+    flex-direction: row-reverse;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: var(--defaultborder);
+    border-radius: var(--default-border-radius);
+    overflow: hidden;
+}
+
+caption {
+    font-style: italic;
+    padding: 10px;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: solid var(--secondarycolor) 1px;
+    border-right: solid var(--secondarycolor) 1px;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+th {
+    color: var(--maincolor);
+    font-family: var(--headerfont);
+    font-size: 1rem;
+}
