@@ -55,25 +55,25 @@ html {
 body {
   margin: 0;
   padding: 20px 3%;
-  background-color: rgb(6, 32, 43);
-  color: rgb(122, 226, 207);
-  font-family: "FS Nokio";
-  font-size: 18px;
+  background-color: var(--background-color);
+  color: var(--main-color);
+  font-family: var(--nokio-font);
+  font-size: var(--body-font-size);
   line-height: 1.6;
 }
 
 h1, h2, h3, h4 {
-  font-family: "iCiel Pony";
+  font-family: var(--iciel-font);
   font-weight: normal;
   letter-spacing: 1px;
 }
 
 a {
-  color: rgb(122, 226, 207);
+  color: var(--main-color);
 }
 
 .yellow-text {
-  color: rgb(255, 210, 0);
+  color: var(--secondary-color);
 }
 
 
@@ -85,8 +85,8 @@ a {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  border: 3px solid rgb(255, 210, 0);
-  border-radius: 30px;
+  border: var(--yellow-border);
+  border-radius: var(--default-border-radius);
   padding: 25px 40px;
   /* Cat background graphic on the right side */
   background-image: url(catjobs1.png);
@@ -94,8 +94,6 @@ a {
   background-position: right center;
   background-size: auto 100%;
 }
-
-
 /* Logo on the left, navigation + paw to the right */
 .nav-row {
   display: flex;
@@ -109,7 +107,8 @@ a {
 }
 
 .paw-icon {
-  width: 50px;
+  width: 30px;
+  margin-left: -85px;
 }
 
 /* Navigation bar (rounded) */
@@ -118,9 +117,9 @@ a {
   align-items: center;
   gap: 40px;
   margin-left: auto;
-  border: 2px solid rgb(122, 226, 207);
-  border-radius: 40px;
-  padding: 8px 35px;
+  border: var(--cyan-border);
+  border-radius: var(--default-border-radius);
+  padding: 8px 101px 8px 35px;
 }
 
 .main-nav ul {
@@ -133,16 +132,16 @@ a {
 
 .main-nav a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: var(--body-font-size);
 }
 
 .main-nav a:hover {
-  color: rgb(255, 210, 0);
+  color: var(--secondary-color);
 }
 
 /* Current page link */
 .main-nav a.active {
-  color: rgb(255, 210, 0);
+  color: var(--secondary-color);
   text-decoration: underline;
 }
 
@@ -154,15 +153,15 @@ a {
 .nav-search input {
   width: 170px;
   border: none;
-  border-bottom: 1px solid rgb(122, 226, 207);
+  border-bottom: var(--cyan-border);
   background: transparent;
-  color: rgb(122, 226, 207);
+  color: var(--main-color);
   font-family: inherit;
-  font-size: 1.1rem;
+  font-size: var(--body-font-size);
 }
 
 .nav-search input::placeholder {
-  color: rgb(122, 226, 207);
+  color: var(--main-color);
 }
 
 .nav-search button {
@@ -179,14 +178,14 @@ a {
 }
 
 .hero-text h1 {
-  letter-spacing: 8px;
+  letter-spacing: var(--iciel-letter-spacing);
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 5.7vw;
+  font-size: var(--slogan-font-size);
   line-height: 1.3;
-  color: rgb(122, 226, 207);
+  color: var(--main-color);
 }
 
 /* "OUR TEAM" in a yellow rounded box*/
@@ -194,23 +193,23 @@ a {
   display: inline-block;
   line-height: 1.1;
   padding: 0.2em 0.2em 0.01em;
-  border: 4px solid rgb(255, 210, 0);
-  border-radius: 25px;
-  color: rgb(255, 210, 0);
+  border: var(--yellow-border);
+  border-radius: var(--default-border-radius);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 /* "OUR TEAM" fills yellow when hovered */
 .hero h1 .highlight:hover {
-  color: rgb(6, 32, 43);
-  background-color: rgb(255, 210, 0);
+  color: var(--background-color);
+  background-color: var(--secondary-color);
 }
 
 .hero-sub {
   margin: 20px 0 0;
-  font-size: 3.7vw;
+  font-size: var(--heading-font-size);
   line-height: 1.4;
-  letter-spacing: 3px;
+  letter-spacing: var(--nokio-letter-spacing);
 }
 
 
@@ -230,8 +229,8 @@ aside.benefits {
   width: 25%;
   margin: 70px 0 20px 30px;
   padding: 0 25px 25px;
-  border: 2px solid rgb(122, 226, 207);
-  border-radius: 40px;
+  border: var(--cyan-border);
+  border-radius: var(--default-border-radius);
   /* Sticky: stays on screen while the user scrolls the job list */
   position: sticky;
   top: 50px; 
@@ -239,13 +238,13 @@ aside.benefits {
 
 aside.benefits h2 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: var(--heading-font-size);
 }
 
 aside.benefits ul {
   margin: 0;
   padding-left: 20px;
-  font-size: 1.2rem;
+  font-size: var(--body-font-size);
 }
 
 
@@ -261,9 +260,9 @@ aside.benefits ul {
   width: fit-content;
   margin: 20px auto 35px;
   padding: 5px 40px;
-  border: 2px solid rgb(122, 226, 207);
-  border-radius: 40px;
-  font-size: 2.2rem;
+  border: var(--cyan-border);
+  border-radius: var(--default-border-radius);
+  font-size: var(--heading-font-size);
 }
 
 /* Hide the real radio buttons (still usable with keyboard) */
@@ -276,7 +275,7 @@ aside.benefits ul {
 .switch-bar {
   position: relative;
   display: flex;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto 40px;
 }
 
@@ -286,8 +285,8 @@ aside.benefits ul {
   width: 50%;
   padding: 8px 0;
   text-align: center;
-  font-family: "iCiel Pony";
-  font-size: 1.5rem;
+  font-family: var(--iciel-font);
+  font-size: var(--subheading-font-size);
 }
 
 /* Yellow rounded box that slides left / right */
@@ -298,8 +297,8 @@ aside.benefits ul {
   width: 50%;
   height: 100%;
   box-sizing: border-box;
-  border: 3px solid rgb(255, 210, 0);
-  border-radius: 40px;
+  border: var(--yellow-border);
+  border-radius: var(--default-border-radius);
   transition: left 0.3s ease;
 }
 
@@ -311,7 +310,7 @@ aside.benefits ul {
 /* Selected label turns yellow */
 #tab-fed:checked ~ .switch-bar label[for="tab-fed"],
 #tab-uid:checked ~ .switch-bar label[for="tab-uid"] {
-  color: rgb(255, 210, 0);
+  color: var(--secondary-color);
 }
 
 .job {
@@ -327,15 +326,15 @@ aside.benefits ul {
 /* Job card */
 .job {
   padding: 30px 60px 40px;
-  border: 3px solid rgb(255, 210, 0);
+  border: var(--yellow-border);
   border-radius: 30px;
-  font-size: 1.2rem;
+  font-size: var(--body-font-size);
 }
 
 .job-title {
   margin: 0 0 15px;
   text-align: center;
-  font-size: 2.8rem;
+  font-size: var(--heading-font-size);
 }
 
 .job-desc {
@@ -356,15 +355,15 @@ aside.benefits ul {
 
 .job-tags li {
   padding: 2px 16px;
-  border: 2px solid rgb(122, 226, 207);
-  border-radius: 25px;
-  font-size: 1rem;
+  border: var(--cyan-border);
+  border-radius: var(--default-border-radius);
+  font-size: var(--body-font-size);
 }
 
 .job-part h4 {
   margin: 30px 0 10px;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: var(--subheading-font-size);
 }
 
 .job-part ol,
@@ -379,15 +378,15 @@ aside.benefits ul {
   margin: 35px auto 0;
   padding: 8px 40px;
   border-radius: 40px;
-  background-color: rgb(122, 226, 207);
-  color: #06202B;
-  font-family: "iCiel Pony";
-  font-size: 2.2rem;
+  background-color: var(--main-color);
+  color: var(--background-color);
+  font-family: var(--iciel-font);
+  font-size: var(--subheading-font-size);
   text-decoration: none;
 }
 
 .apply-button:hover {
-  background-color: rgb(255, 210, 0);
+  background-color: var(--secondary-color);
 }
 
 
@@ -403,99 +402,13 @@ aside.benefits ul {
 
 .bottom-nav a {
   padding: 4px 35px;
-  border: 2px solid rgb(122, 226, 207);
-  border-radius: 25px;
-  font-size: 1.1rem;
+  border: var(--cyan-border);
+  border-radius: var(--end-button-border-radius);
+  font-size: var(--body-font-size);
   text-decoration: none;
 }
 
 .bottom-nav a:hover {
-  color: rgb(6, 32, 43);
-  background-color: rgb(122, 226, 207);
-}
-
-
-/* Footer*/
-
-
-/* Big cat face above the footer */
-.footer-cat {
-  display: block;
-  width: 55%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Footer moves up a little*/
-.site-footer {
-  position: relative;
-  margin-top: -6px;
-  background-color: rgb(6, 32, 43);
-  display: grid;
-  /* brand takes the free space, the 2 link columns sit on the right */
-  grid-template-columns: 1fr auto auto;
-  gap: 10px 80px;
-  padding: 30px 40px 15px;
-  border: 3px solid rgb(255, 210, 0);
-  border-radius: 35px;
-  font-size: 1rem;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: flex-end;
-  gap: 15px;
-}
-
-.footer-logo {
-  margin: 20px;
-  width: 110px;
-}
-
-.footer-name {
-  margin: 0;
-  font-family: "iCiel Pony";
-  font-size: 6rem;
-  line-height: 1;
-  letter-spacing: 3px;
-}
-
-.site-footer h2 {
-  margin: 0 0 10px;
-  color: rgb(255, 210, 0);
-  font-size: 2rem;
-}
-
-/* "See more" column*/
-.footer-col.see-more {
-  text-align: right;
-}
-
-.site-footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-footer a {
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  color: rgb(255, 210, 0);
-  text-decoration: underline;
-}
-
-.copyright,
-.credit {
-  margin: 0;
-}
-
-.copyright {
-  grid-column: 1 / 2;
-}
-
-.credit {
-  grid-column: 2 / 4;
-  text-align: right;
+  color: var(--background-color);
+  background-color: var(--main-color);
 }
