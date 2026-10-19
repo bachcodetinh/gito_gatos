@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="duong_css/index/index.css">
     <style>
+        body {
+            background: linear-gradient(
+                20deg,
+                rgb(0, 0, 0) 0%,
+                rgb(6, 32, 43) 25%,
+                rgb(0, 0, 0) 50%,
+                rgb(6, 32, 43) 75%,
+                rgb(0, 0, 0) 100%
+            );
+        }
+
         header {
             margin: 1.8em;
         }
@@ -16,32 +27,39 @@
             margin: 0;
         }
 
-        .logoname {
-            font-family: var(--headerfont);
-            font-size: 2.7em;
-            letter-spacing: var(--default-letter-spacing);
+        .footer_logo img {
+            height: 6rem;
+            width: auto;
+            display: inline-block;
+            margin-right: 0.7rem;
         }
     </style>
 </head>
 <body>
     <header id="top">
-        <div class="nav_menu">
-            <details>
-                <summary><img src="images/Paw.svg" alt="nav_button" style="height: 27px; width: auto;"></summary>
-                <nav class="nav_bar">
-                    <a class="active" href="index.html">Home</a>
-                    <a href="jobs.html">Jobs</a>
-                    <a href="apply.html">Apply</a>
-                    <a href="about.html">About</a>
-                    <form>Search
-                        <input type="search" placeholder="">
-                        <button type="submit"><img src="images/maginifying-glass-navbar.svg" alt="search_button"></button>
-                    </form>
-                </nav>
-            </details>
+        <div class="nav-row">
+            <a href="index.html" class="logo-link">
+                <img src="ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html" class="active" aria-current="page">Jobs</a></li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <form class="nav-search" action="#" role="search">
+                    <input type="search" id="search-box" name="search" placeholder="Search">
+                    <button type="submit">
+                        <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
+                    </button>
+                </form>
+            </nav>
+
+            <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
         </div>
-        <img src="images/logo.svg" alt="meowdia_logo">
-        <h1>
+                <h1>
             YOU GIVE US<br>
             <span style="font-size: 1.35em;"><span style="color: var(--secondarycolor);">PAWSOME</span> IDEAS<br></span>
             <br>
@@ -53,8 +71,10 @@
         <div class="who_we_are_card">
         <h2 class="section_title underline_title">Who We Are</h2>
             <div class="intro_text">
-                <img src="images/logo.svg" alt="meowdia_logo">
-                <span class="logoname">EOWDIA</span> is a creative digital media agency. We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
+                <div class="footer_logo">
+                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">is a creative digital media agency.
+                </div>
+                We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
             </div>
             <table class="layout_table">
                 <thead>
@@ -88,14 +108,13 @@
         </div>
     </main>
     
-    <img src="images/catface.png" alt="footer_cat" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+    <img src="images/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
     
     <footer class="meowdia_footer">
         <div class="footer_main">
             <div class="footer_left">
                 <div class="footer_logo">
-                    <img src="images/logo.svg" alt="meowdia_logo">
-                    <span class="logoname">EOWDIA</span>
+                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">
                 </div>
                 <div class="copyright">
                     &copy; 2026 Meowdia Agency. All rights reserved.

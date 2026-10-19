@@ -11,7 +11,7 @@ header {
     background-repeat: no-repeat;
     position: relative;
     min-height: 93vh;
-    border: var(--defaultborder);
+    border: var(--yellow-border);
     border-radius: var(--default-border-radius);
 }
 
@@ -21,10 +21,10 @@ header h1 {
     position: absolute;
     top: 13vw;
     left: 4vw;
-    font-family: var(--headerfont);
+    font-family: var(--iciel-font);
     font-weight: 700;
-    color: var(--maincolor);
-    letter-spacing: var(--default-letter-spacing);
+    color: var(--main-color);
+    letter-spacing: var(--nokio-letter-spacing);
 }
 
 header img {
@@ -34,23 +34,22 @@ header img {
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 40px 20px;
     text-align: center;
 }
 
 /* Who We Are layout */
 .section_title {
-    color: var(--maincolor);
-    font-family: var(--headerfont);
-    font-size: 2em;
-    letter-spacing: var(--default-letter-spacing);
+    color: var(--main-color);
+    font-family: var(--iciel-font);
+    font-size: var(--subheading-font-size);
+    letter-spacing: var(--iciel-letter-spacing);
 }
 
 .who_we_are_card {
     width: 100%;
-    border: var(--defaultborder);
+    border: var(--yellow-border);
     border-radius: var(--default-border-radius);
     padding: 20px;
     margin-bottom: 40px;
@@ -60,9 +59,9 @@ main {
     width: 100%;
     text-align: left;
     margin-bottom: 40px;
-    color: var(--maincolor);
-    font-family: var(--bodyfont);
-    font-size: 18px;
+    color: var(--main-color);
+    font-family: var(--nokio-font);
+    font-size: var(--body-font-size);
     line-height: 1.6;
 }
 
@@ -73,7 +72,7 @@ main {
 }
 
 .layout_table th {
-    letter-spacing: var(--default-letter-spacing);
+    letter-spacing: var(--nokio-letter-spacing);
 }
 
 .layout_table th, .layout_table td {
@@ -82,25 +81,24 @@ main {
 }
 
 .layout_table thead th {
-    font-family: var(--headerfont);
-    color: var(--secondarycolor);
-    font-size: 22px;
-    font-weight: 700;
+    font-family: var(--iciel-font);
+    color: var(--secondary-color);
+    font-size: var(--subheading-font-size);
     text-align: left;
     padding-bottom: 15px;
 }
 
 .layout_table td {
-    font-family: var(--bodyfont);
-    color: var(--maincolor);
-    font-size: 15px;
+    font-family: var(--nokio-font);
+    color: var(--main-color);
+    font-size: var(--body-font-size);
     line-height: 1.6;
     font-weight: 300;
     text-align: left;
 }
 
 .layout_table td strong {
-    color: var(--secondarycolor);
+    color: var(--secondary-color);
 }
 
 /* Our Products layout */
@@ -116,9 +114,9 @@ main {
     left: 50%;
     bottom: -10px;
     transform: translateX(-50%);
-    width: 60px;
+    width: 100px;
     height: 3px;
-    background-color: var(--secondarycolor);
+    background-color: var(--secondary-color);
     border-radius: 2px;
 }
 
@@ -149,11 +147,11 @@ main {
 
 .navigation_buttons .nav_btn {
     background-color: transparent;
-    color: var(--maincolor);
+    color: var(--main-color);
     border: 1px solid currentColor;
     padding: 8px 24px;
     border-radius: 50px;
-    font-family: var(--bodyfont), sans-serif;
+    font-family: var(--nokio-font), sans-serif;
     font-size: 15px;
     text-decoration: none;
     display: inline-block;
