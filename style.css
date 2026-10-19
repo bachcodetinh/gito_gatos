@@ -52,16 +52,31 @@
 /* Actual styling with CSS */
 /*
 Varibles that wil be used across all 4 pages, in order from top to bottom:
-- Font for heading
-- Font for description
+- Iciel Pony Font
+- Nokio Font
+
+- Font size for: 
+    + Slogan
+    + Heading
+    + Subheading
+
 - Main color
 - Secondary color
 - Background color
-- Page gradient
-- Border
-- Border radius
-- Letter spacing
+
+- Border:
+    + Cyan Border
+    + Yellow Border
+
+- Border radius:
+    + Normal Border Radius
+    + End Button Radius
+
+- Letter spacing:
+    + Iciel Spacing
+    + Nokio Spacing
 */
+
 :root {
     --iciel-font: 'iCiel Pony', 'Arial', sans-serif;
     --nokio-font: 'FS Nokio', 'Arial', sans-serif;
@@ -76,22 +91,11 @@ Varibles that wil be used across all 4 pages, in order from top to bottom:
     --secondary-color: rgb(255, 210, 0);
     --background-color: rgb(6, 32, 43);
 
-    /*
-    --page-gradient: linear-gradient(
-        20deg
-        ,  rgb(0, 0, 0) 0%
-        ,  rgb(6, 32, 43) 25%
-        ,  rgb(0, 0, 0) 50%
-        ,  rgb(6, 32, 43) 75%
-        ,  rgb(0, 0, 0) 100%
-        );
-    */
-
-    --cyan-border: solid var(--maincolor) 3px;
-    --yellow-border: solid var(--secondarycolor) 3px;
+    --cyan-border: solid var(--main-color) 3px;
+    --yellow-border: solid var(--secondary-color) 3px;
 
     --default-border-radius: 40px;
-    --end-button-border: 30px;
+    --end-button-border-radius: 30px;
 
     --iciel-letter-spacing: 0.105rem;
     --nokio-letter-spacing: 0.08rem;
@@ -192,8 +196,8 @@ body {
     padding: 0.7em 2em;
     margin: 1.8em;
     margin-top: 0;
-    font-family: var(--bodyfont);
-    color: var(--maincolor);
+    font-family: var(--nokio-font);
+    color: var(--main-color);
     box-sizing: border-box;
 }
 
@@ -216,22 +220,15 @@ body {
 }
 
 .footer_logo img {
-    height: 10em;
+    margin-top: 2.3em;
+    height: 11rem;
     width: auto;
     display: inline-block;
-    margin-left: -1.5em;
-}
-
-.footer_logo .logoname {
-    font-family: var(--headerfont);
-    font-size: 6em;
-    line-height: 1;
 }
 
 .copyright {
-    font-size: 0.85em;
-    color: var(--maincolor);
-    margin-top: 16px;
+    font-size: var(--body-font-size);
+    color: var(--main-color);
     margin-bottom: 4px;
 }
 
@@ -244,7 +241,7 @@ body {
 
 .footer_columns {
     display: flex;
-    gap: 5em;
+    gap: 3em;
 }
 
 .footer_column {
@@ -263,25 +260,28 @@ body {
 }
 
 .footer_column h3 {
-    font-family: var(--headerfont);
-    color: var(--secondarycolor);
-    font-size: 2.4em;
+    font-family: var(--iciel-font);
+    color: var(--secondary-color);
+    font-size: var(--subheading-font-size);
     margin-bottom: 8px;
     line-height: 1.2;
-    letter-spacing: var(--default-letter-spacing);
+    letter-spacing: var(--iciel-letter-spacing);
 }
 
 .footer_column a {
-    color: var(--maincolor);
-    text-decoration: none;
-    font-size: 1.1em;
+    color: var(--main-color);
+    font-size: var(--body-font-size);
     margin-bottom: 6px;
     line-height: 1.4;
 }
 
+.footer_column a:hover {
+    color: var(--secondary-color);
+}
+
 .instructor_credit {
-    font-size: 0.85em;
-    color: var(--maincolor);
+    font-size: var(--body-font-size);
+    color: var(--main-color);
     margin-top: 16px;
     margin-bottom: 4px;
 }
