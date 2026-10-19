@@ -7,6 +7,8 @@
     /* Fonts */
 
     --important-font-size:  2rem;
+    --nokio-spacing: 0.08rem;
+    --iciel-spacing: 1rem;
 }
 
 /* Universal font setup */
@@ -14,41 +16,54 @@
 .slogan {
     font-family: var(--iciel-font);
     font-size: var(--slogan-font-size);
+    letter-spacing: var(--iciel-spacing);
+}
+
+.heading {
+    font-family: var(--iciel-font);
+    font-size: var(--heading-font-size);
+    letter-spacing: var(--iciel-spacing);
+}
+
+.sub_heading {
+    font-family: var(--iciel-font);
+    font-size: var(--subheading-font-size);
+    letter-spacing: var(--iciel-spacing);
 }
 
 .norm_text {
     font-family: var(--nokio-font);
     font-size: var(--body-font-size);
+    letter-spacing: var(--nokio-spacing);
 }
 
 .imp_text {
     font-family: var(--nokio-font);
     font-size: var(--important-font-size);
+    letter-spacing: var(--nokio-spacing);
 }
 
-p,
-h1,
-h2,
-li,
-label,
-legend {
+.cyan {
     color: var(--main-color);
-    letter-spacing: var(--iciel-letter-spacing);
 }
 
-.accent,
-strong {
+.yellow {
     color: var(--secondary-color);
 }
 
-
-.heading {
-    font: var(--heading-text-style);
+/* unit set up */
+.yel_bar {
+    border-bottom: 1.5px solid var(--secondary-color);
+    height: 20px;
+    text-align: center;
 }
 
-.sub_heading {
-    font: var(--subheading-text-style)
+.video {
+    border: 3px solid var(--main-color);
+    border-radius: 40px;
 }
+
+
 
 header,
 section,

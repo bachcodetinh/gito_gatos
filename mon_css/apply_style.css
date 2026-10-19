@@ -1,7 +1,5 @@
 /* This section determines the layout of the web */
-* {
-    box-sizing: border-box;
-}
+
 
 body {
     display: flex;
@@ -23,17 +21,14 @@ header {
 
     display: grid;
     grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
-    grid-template-rows: var(--margin-outer) 55px var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
+    grid-template-rows: var(--margin-outer) 55px var(--margin-outer) 1fr 1fr 1fr 1fr 1fr  var(--margin-outer);
     box-sizing: border-box;
-    height: 660px;
+    height: 870px;
 }
 
-#header_logo {
-    grid-column: 2 / span 1;
+.nav-row {
+    grid-column: 2 / span 5;
     grid-row: 2 / span 1;
-    display: flex;
-    justify-content: left;
-    width: auto;
 }
 
 nav {
@@ -54,23 +49,24 @@ nav {
     margin-top: 5px;
 }
 
-#slogan {
+.slogan.yellow {
     grid-column: 2 / span 2;
     grid-row: 4 / span 1;
-    display: flex;
-    flex-direction: column;
+    margin: 0px;
+    height: 0px;
 }
 
-#slogan h1 {
-    box-sizing: border-box;
+.slogan.cyan {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
     margin: 0px;
-    height: 75px;
+    height: 0px;
 }
+
 
 #header_des {
-    margin-top: 25px;
     grid-column: 2 / span 3;
-    grid-row: 5 / span 2;
+    grid-row: 6 / span 2;
 }
 
 #header_des p {
@@ -79,15 +75,23 @@ nav {
     height: 25px;
 }
 
+.video {
+    margin-top: 20px;
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 3;
+}
+
 #header_info {
     grid-column: 2 / span 5;
     grid-row: 8 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #header_info p {
     box-sizing: border-box;
-    margin: 0px;
-    height: 50px;
+    margin: 0px;  
 }
 
 /* Layout for Recruitment Process and its elements */
@@ -109,11 +113,8 @@ h2.heading {
 }
 
 .yel_bar.process {
-    border-bottom: 1.5px solid var(--border-accent-color);
-    height: 20px;
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
-    text-align: center;
 }
 
 #re_pro_list {
@@ -131,11 +132,10 @@ h2.heading {
 }
 
 .yel_bar.col_not {
-    border-bottom: 1.5px solid var(--border-accent-color);
-    height: 20px;
+    
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
-    text-align: center;
+    
 }
 
 .sub_heading.one {
