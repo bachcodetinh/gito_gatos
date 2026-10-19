@@ -396,7 +396,7 @@ aside.benefits ul {
 .bottom-nav {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 45px;
   margin: 70px 0 40px;
 }
 
