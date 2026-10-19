@@ -111,6 +111,7 @@ body {
     background-color: rgb(0, 0, 0); /* Fallback color */
 }
 
+
 /* Logo on the left, navigation + paw to the right */
 .nav-row {
   display: flex;
@@ -189,6 +190,8 @@ body {
 .nav-search button img {
   width: 20px;
 }
+
+
 
 /* Styling for footer */
 .meowdia_footer {
