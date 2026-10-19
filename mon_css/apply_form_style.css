@@ -1,0 +1,31 @@
+/* Layout for Collection Notice and its elements */
+
+#form {
+    display: grid;
+    grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
+    grid-template-rows: var(--margin-inner) 50px 50px 1fr 1fr 50px 1fr 1fr 1fr 50px 1fr 50px 50px 1fr 1fr 1fr var(--margin-outer);
+    box-sizing: border-box;
+    height: 1500px;
+}
+
+.heading.form {
+    grid-column: 6 / span 1;
+    grid-row: 2 / span 1;
+
+    height: 50px;
+    margin: 0px;
+    text-align: center;
+}
+
+.yel_bar.form {
+    border-bottom: 1.5px solid var(--border-accent-color);
+    height: 20px;
+    grid-column: 6 / span 1;
+    grid-row: 3 / span 1;
+    text-align: center;
+}
+
+#PI {
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 1;
+}
