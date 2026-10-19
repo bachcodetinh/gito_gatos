@@ -31,23 +31,6 @@ header {
     grid-row: 2 / span 1;
 }
 
-nav {
-    grid-column: 3 / span 3;
-    grid-row: 2 / span 1;
-
-    justify-content: center;
-    display: flex;
-
-    width: auto;
-    gap: 30px;
-
-}
-
-.nav,
-.nav_apply {
-    margin: 0px;
-    margin-top: 5px;
-}
 
 .slogan.yellow {
     grid-column: 2 / span 2;
@@ -100,26 +83,27 @@ nav {
     grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
     grid-template-rows: var( --margin-inner)  50px 1fr 3fr 1fr var(--margin-outer);
     box-sizing: border-box;
-    height: 400px;
+    height: 430px;
 }
 
-h2.heading {
-    grid-column: 3 / span 3;
+.heading.process{
+    grid-column: 2 / span 5;
     grid-row: 2 / span 1;
 
-    height: 50px;
+    height: 0px;
     margin: 0px;
     text-align: center;
 }
 
 .yel_bar.process {
+    margin-top: 30px;
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
 }
 
 #re_pro_list {
     grid-column: 2 / span 5;
-    grid-row: 3 / span 5;
+    grid-row: 4 / span 5;
 }
 
 /* Layout for Collection Notice and its elements */
@@ -129,6 +113,15 @@ h2.heading {
     grid-template-rows: var( --margin-inner) 50px 1fr 1fr 2fr 1fr 2fr 1fr 2fr var(--margin-outer);
     box-sizing: border-box;
     height: 600px;
+}
+
+.heading.notice {
+    grid-column: 3 / span 3;
+    grid-row: 2 / span 1;
+
+    height: 50px;
+    margin: 0px;
+    text-align: center;
 }
 
 .yel_bar.col_not {
@@ -200,13 +193,13 @@ h2.heading {
 
 /* Layout for Form and its elements */
 
-/* #form {
+#form {
     display: grid;
     grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
     grid-template-rows: var(--margin-inner) 50px 50px 1fr 1fr 50px 1fr 1fr 1fr 50px 1fr 50px 50px 1fr 1fr 1fr var(--margin-outer);
     box-sizing: border-box;
     height: 1500px;
-} */
+}
 
 .heading.form {
     grid-column: 6 / span 1;
@@ -218,8 +211,6 @@ h2.heading {
 }
 
 .yel_bar.form {
-    border-bottom: 1.5px solid var(--border-accent-color);
-    height: 20px;
     grid-column: 6 / span 1;
     grid-row: 3 / span 1;
     text-align: center;
