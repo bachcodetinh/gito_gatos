@@ -109,9 +109,9 @@ header {
 #collection_notice {
     display: grid;
     grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
-    grid-template-rows: var(--margin-inner) 1fr 1fr 2fr 1fr 2fr 1fr 1fr 2fr var(--margin-outer);
+    grid-template-rows: var(--margin-inner) 50px 70px 50px 70px 40px 70px 40fr 70fr var(--margin-outer);
     box-sizing: border-box;
-    height: 800px;
+    height: 600px;
 }
 
 .heading.notice {
@@ -140,7 +140,6 @@ header {
 .norm_text.one {
     grid-column: 2 / span 3;
     grid-row: 5 / span 1;
-    
 }
 
 .sub_heading.two {
@@ -151,6 +150,7 @@ header {
 .norm_text.two {
     grid-column: 2 / span 3;
     grid-row: 7 / span 1;
+    margin: 0px;
 }
 
 .sub_heading.three {
@@ -161,16 +161,19 @@ header {
 .norm_text.three {
     grid-column: 2 / span 3;
     grid-row: 9 / span 1;
+    margin: 0px;
 }
 
 .sub_heading.four {
     grid-column: 6 / span 4;
     grid-row: 4 / span 1;
+    
 }
 
 .norm_text.four {
     grid-column: 6 / span 3;
     grid-row: 5 / span 1;
+    margin: 0px;
 }
 
 .sub_heading.five {
@@ -181,6 +184,7 @@ header {
 .norm_text.five {
     grid-column: 6 / span 3;
     grid-row: 7 / span 1;
+    margin: 0px;
 }
 
 .sub_heading.six {
@@ -191,6 +195,7 @@ header {
 .norm_text.six {
     grid-column: 6 / span 4;
     grid-row: 9 / span 1;
+    margin: 0px;
 }
 
 /* Layout for End Button */
