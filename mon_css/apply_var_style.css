@@ -6,7 +6,7 @@
 
     /* Fonts */
 
-    --important-font-size:  2rem;
+    --important-font-size: 2rem;
     --nokio-spacing: 0.08rem;
     --iciel-spacing: 1rem;
     --sub-head-spacing: 0.5rem;
@@ -80,6 +80,13 @@ footer {
     border: 3px solid var(--secondary-color);
     border-radius: 40px;
 }
+
+header,
+section,
+footer, #end_button, #footer {
+    margin-top: var(--margin-outer);
+}
+
 
 details {
     color: var(--secondary-color)
