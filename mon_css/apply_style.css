@@ -1,92 +1,11 @@
-/* filename: apply_style.css
-author: le ba cao minh
-
-created: October 16, 2026
-last modified: October 18, 2026
-description: css working style sheet for apply page
-
-AI acknowledgement: Cao Minh use Claude for cross checking requirements with project descriptions */
-
-/* ----------------------------- */
-
-/* This section determines the size and color of web elements*/
-
-h1 {
-    font: var(--slogan-text-style);
-}
-
-.norm_text {
-    font: var(--body-text-style);
-}
-
-.imp_text {
-    font: var(--important-text-style);
-}
-
-.mid_text {
-    font: var(--mid-text-style);
-}
-
-p,
-h1,
-h2,
-li,
-label, legend {
-    color: var(--text-bright-color);
-}
-
-.accent,
-strong {
-    color: var(--text-accent-color);
-}
-
-nav {
-    border: 3px solid var(--border-primary-color);
-    border-radius: 40px;
-}
-
-a:link,
-a:visited {
-    color: var(--text-bright-color);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--text-accent-color);
-}
-
-.nav#nav__apply:link {
-    color: var(--text-accent-color);
-    text-decoration: underline;
-}
-
-.heading {
-    font: var(--heading-text-style);
-}
-
-.sub_heading {
-    font: var(--subheading-text-style)
-}
-
-header,
-section,
-footer {
-    border: 3px solid var(--border-accent-color);
-    border-radius: 40px;
-}
-
 /* This section determines the layout of the web */
-* {
-    box-sizing: border-box;
-}
+
 
 body {
     display: flex;
     flex-direction: column;
     gap: var(--margin-outer);
 }
-
-
 
 header,
 section,
@@ -102,17 +21,14 @@ header {
 
     display: grid;
     grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
-    grid-template-rows: var(--margin-outer) 55px var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
+    grid-template-rows: var(--margin-outer) 55px var(--margin-outer) 1fr 1fr 1fr 1fr 1fr  var(--margin-outer);
     box-sizing: border-box;
-    height: 660px;
+    height: 870px;
 }
 
-#header_logo {
-    grid-column: 2 / span 1;
+.nav-row {
+    grid-column: 2 / span 5;
     grid-row: 2 / span 1;
-    display: flex;
-    justify-content: left;
-    width: auto;
 }
 
 nav {
@@ -133,23 +49,24 @@ nav {
     margin-top: 5px;
 }
 
-#slogan {
+.slogan.yellow {
     grid-column: 2 / span 2;
     grid-row: 4 / span 1;
-    display: flex;
-    flex-direction: column;
+    margin: 0px;
+    height: 0px;
 }
 
-#slogan h1 {
-    box-sizing: border-box;
+.slogan.cyan {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
     margin: 0px;
-    height: 75px;
+    height: 0px;
 }
+
 
 #header_des {
-    margin-top: 25px;
     grid-column: 2 / span 3;
-    grid-row: 5 / span 2;
+    grid-row: 6 / span 2;
 }
 
 #header_des p {
@@ -158,13 +75,157 @@ nav {
     height: 25px;
 }
 
+.video {
+    margin-top: 20px;
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 3;
+}
+
 #header_info {
     grid-column: 2 / span 5;
     grid-row: 8 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #header_info p {
     box-sizing: border-box;
-    margin: 0px;
-    height: 50px;
+    margin: 0px;  
 }
+
+/* Layout for Recruitment Process and its elements */
+#recruit_process {
+    display: grid;
+    grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
+    grid-template-rows: var( --margin-inner)  50px 1fr 3fr 1fr var(--margin-outer);
+    box-sizing: border-box;
+    height: 400px;
+}
+
+h2.heading {
+    grid-column: 3 / span 3;
+    grid-row: 2 / span 1;
+
+    height: 50px;
+    margin: 0px;
+    text-align: center;
+}
+
+.yel_bar.process {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+}
+
+#re_pro_list {
+    grid-column: 2 / span 5;
+    grid-row: 3 / span 5;
+}
+
+/* Layout for Collection Notice and its elements */
+#collection_notice {
+    display: grid;
+    grid-template-columns: var(--margin-outer) 2fr 1fr 1fr 1fr 2fr var(--margin-outer);
+    grid-template-rows: var( --margin-inner) 50px 1fr 1fr 2fr 1fr 2fr 1fr 2fr var(--margin-outer);
+    box-sizing: border-box;
+    height: 600px;
+}
+
+.yel_bar.col_not {
+    
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    
+}
+
+.sub_heading.one {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+}
+
+.norm_text.one {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+}
+
+.sub_heading.two {
+    grid-column: 2 / span 1;
+    grid-row: 6 / span 1;
+}
+
+.norm_text.two {
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+}
+
+.sub_heading.three {
+    grid-column: 2 / span 1;
+    grid-row: 8 / span 1;
+}
+
+.norm_text.three{
+    grid-column: 2 / span 1;
+    grid-row: 9 / span 1;
+}
+
+.sub_heading.four {
+    grid-column: 4 / span 2;
+    grid-row: 4 / span 1;
+}
+
+.norm_text.four {
+    grid-column: 4 / span 2;
+    grid-row: 5 / span 1;
+}
+
+.sub_heading.five {
+    grid-column: 4 / span 2;
+    grid-row: 6 / span 1;
+}
+
+.norm_text.five {
+    grid-column: 4 / span 2;
+    grid-row: 7 / span 1;
+}
+
+.sub_heading.six {
+    grid-column: 4 / span 2;
+    grid-row: 8 / span 1;
+}
+
+.norm_text.six{
+    grid-column: 4 / span 2;
+    grid-row: 9 / span 1;
+}
+
+/* Layout for Form and its elements */
+
+/* #form {
+    display: grid;
+    grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
+    grid-template-rows: var(--margin-inner) 50px 50px 1fr 1fr 50px 1fr 1fr 1fr 50px 1fr 50px 50px 1fr 1fr 1fr var(--margin-outer);
+    box-sizing: border-box;
+    height: 1500px;
+} */
+
+.heading.form {
+    grid-column: 6 / span 1;
+    grid-row: 2 / span 1;
+
+    height: 50px;
+    margin: 0px;
+    text-align: center;
+}
+
+.yel_bar.form {
+    border-bottom: 1.5px solid var(--border-accent-color);
+    height: 20px;
+    grid-column: 6 / span 1;
+    grid-row: 3 / span 1;
+    text-align: center;
+}
+
+/* #PI {
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 1;
+} */
