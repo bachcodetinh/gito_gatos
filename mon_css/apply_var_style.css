@@ -70,8 +70,8 @@
 }
 
 #end_button>a:hover {
-    border: 3px solid var(--secondary-color);
-    color: var(--secondary-color);
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 
 header,
