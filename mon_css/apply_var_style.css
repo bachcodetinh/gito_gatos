@@ -53,6 +53,10 @@
 }
 
 /* unit set up */
+details>p {
+    color: var(--main-color)
+}
+
 .yel_bar {
     border-bottom: 1.5px solid var(--secondary-color);
     height: 20px;
