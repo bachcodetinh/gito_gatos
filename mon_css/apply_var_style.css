@@ -9,6 +9,7 @@
     --important-font-size:  2rem;
     --nokio-spacing: 0.08rem;
     --iciel-spacing: 1rem;
+    --sub-head-spacing: 0.5rem;
 }
 
 /* Universal font setup */
@@ -28,7 +29,7 @@
 .sub_heading {
     font-family: var(--iciel-font);
     font-size: var(--subheading-font-size);
-    letter-spacing: var(--iciel-spacing);
+    letter-spacing: var(--sub-head-spacing);
 }
 
 .norm_text {
@@ -63,11 +64,23 @@
     border-radius: 40px;
 }
 
+#end_button>a {
+    border: 3px solid var(--main-color);
+    border-radius: 30px;
+}
 
+#end_button>a:hover {
+    border: 3px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
 
 header,
 section,
 footer {
     border: 3px solid var(--secondary-color);
     border-radius: 40px;
+}
+
+details {
+    color: var(--secondary-color)
 }
