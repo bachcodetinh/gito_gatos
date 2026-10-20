@@ -20,89 +20,124 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     <meta name="author" content="Mon Le">
     <meta name="description" content="This page is an application form for a job at Meowdia company.">
 
-    <link href="mon_css/root_style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <link href="mon_css/apply_var_style.css" rel="stylesheet">
     <link href="mon_css/apply_style.css" rel="stylesheet">
-    <link href="mon_css/apply_recruitment_process_style.css" rel="stylesheet">
-    <link href="mon_css/apply_collection_notice_style.css" rel="stylesheet">
     <link href="mon_css/apply_form_style.css" rel="stylesheet">
+
 
     <title>Apply to Meowdia</title>
 
     <style>
         body {
-            background: repeating-linear-gradient(35deg, var(--bg-secondary-color), var(--bg-primary-color), var(--bg-secondary-color), var(--bg-primary-color), var(--bg-secondary-color));
+            background: repeating-linear-gradient(35deg,
+                    rgb(0, 0, 0), var(--background-color),
+                    rgb(0, 0, 0), var(--background-color),
+                    rgb(0, 0, 0), var(--background-color),
+                    rgb(0, 0, 0));
         }
     </style>
 </head>
 
 <body>
-    <!-- <header>
+    <header>
         <a id="top"></a>
-        <a href="./index.html" id="header_logo"><img src="images/logo.svg" alt="Meowdia Logo" /></a>
-        <nav id="nav" class="norm_text">
-            <p class="nav"><a href="./index.html">Home</a></p>
-            <p class="nav"><a href="./jobs.html">Jobs</a> </p>
-            <p class="nav_apply" id="nav_apply"><a href="./apply.html">Apply</a></p>
-            <p class="nav"><a href="./about.html">About</a></p>
-            <p class="nav"><a href="">Search</a></p>
-        </nav>
-        <div id="slogan">
-            <h1 class="accent">APPLICATION</h1>
-            <h1>FORM</h1>
-        </div>
-        <div id="header_des" class="norm_text">
-            <p>Your journey with Meowdia starts here!</p>
-            <p>Please complete all fields below, Other skills is optional.</p>
-        </div>
-        <div id="header_info" class="imp_text">
-            <p><strong>Closing date:</strong> 24 December 2026</p>
-            <p><strong>Location:</strong> Middle Street, Faker District, Summoner’s Rift City, T1 Nation</p>
-        </div>
-        <h2>
 
-        </h2>
+        <!-- -------------------- -->
+        <div class="nav-row">
+            <a href="index.html" class="logo-link">
+                <img src="ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+            </a>
+
+            <nav class="main-nav norm_text">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="apply.html" class="active" aria-current="page">Apply</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <form class="nav-search" action="#" role="search">
+                    <input type="search" id="search-box" name="search" placeholder="Search">
+                    <button type="submit">
+                        <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
+                    </button>
+                </form>
+            </nav>
+
+            <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
+        </div>
+        <!-- -------------------- -->
+
+
+        <h1 class="slogan yellow">APPLICATION</h1>
+        <h1 class="slogan cyan">FORM</h1>
+
+
+        <div id="header_des" class="norm_text cyan">
+            <p>Join Meowdia to work perfomatively like the video!</p>
+            <p>Please complete all fields below.</p>
+        </div>
+
+        <video width="640" height="360" autoplay loop class="video">
+            <source src="images/timelapse_refractor.mov" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag
+        </video>
+
+        <div id="header_info" class="imp_text cyan">
+            <p><strong class="yellow">Closing date:</strong> 24 December 2026</p>
+            <p><strong class="yellow">Location:</strong> Middle Street, Faker District, Summoner’s Rift City, T1 Nation
+            </p>
+        </div>
     </header>
 
     <section id="recruit_process">
-        <h2 class="heading">Our Recruitment Process</h2>
+        <h2 class="heading cyan">Our Recruitment Process</h2>
         <div class="yel_bar process"></div>
-        <ol class="mid_text" id="re_pro_list">
-            <li><strong>Submit the application:</strong> complete the form below.</li>
-            <li><strong>Confirmation:</strong> we will email you within 10 business days to confirm if we have received
+        <ol class="norm_text cyan" id="re_pro_list">
+            <li><strong class="yellow">Submit the application:</strong> complete the form below.</li>
+            <li><strong class="yellow">Confirmation:</strong> we will email you within 10 business days to confirm if we
+                have received
                 it.</li>
-            <li><strong>Screening:</strong> our recruitment team reviews applications against the position requirements.
+            <li><strong class="yellow">Screening:</strong> our recruitment team reviews applications against the
+                position requirements.
             </li>
-            <li><strong>Interview:</strong> shortlisted applicants are contacted to arrange an interview.</li>
-            <li><strong>Outcome:</strong> all applicants are notified of the outcome 1 week after the interview.</li>
+            <li><strong class="yellow">Interview:</strong> shortlisted applicants are contacted to arrange an interview.
+            </li>
+            <li><strong class="yellow">Outcome:</strong> all applicants are notified of the outcome 1 week after the
+                interview.</li>
         </ol>
     </section>
 
     <section id="collection_notice">
-        <h2 class="heading">Collection Notice</h2>
+        <h2 class="heading cyan">Collection Notice</h2>
         <div class="yel_bar col_not"></div>
 
-        <strong class="sub_heading one">Who we are</strong>
-        <p class="norm_text one">Meowdia collects this information.</p>
-        <a href=" mailto:meowdia_hr@company.com" class="norm_text one mail">Contact: meowdia_hr@company.com</a>
+        <strong class="sub_heading one yellow">Who we are</strong>
+        <p class="norm_text cyan one">Meowdia collects this information.</p>
+        <a href=" mailto:meowdia_hr@company.com" class="norm_text cyan one mail">Contact: meowdia_hr@company.com</a>
 
-        <strong class="sub_heading two">Why we collect it</strong>
-        <p class="norm_text two">To assess your suitability for the position and to contact you about the application.
+        <strong class="sub_heading yellow two">Why we collect it</strong>
+        <p class="norm_text cyan two">To assess your suitability for the position and to contact you about the
+            application.
         </p>
 
-        <strong class="sub_heading three">Who sees it</strong>
-        <p class="norm_text three">Only our recruitment team and the hiring manager. We do not share it with third parties
+        <strong class="sub_heading yellow three">Who sees it</strong>
+        <p class="norm_text cyan three">Only our recruitment team and the hiring manager. We do not share it with third
+            parties
             or send it overseas.</p>
-        <strong class="sub_heading four">If you do not provide it</strong>
-        <p class="norm_text four">We cannot consider your application.</p>
+        <strong class="sub_heading yellow four">If you do not provide it</strong>
+        <p class="norm_text cyan four">We cannot consider your application.</p>
 
-        <strong class="sub_heading five">How long we keep it</strong>
-        <p class="norm_text five">2 months after the position closes, then it is securely deleted.</p>
+        <strong class="sub_heading yellow five">How long we keep it</strong>
+        <p class="norm_text cyan five">2 months after the position closes, then it is securely deleted.</p>
 
-        <strong class="sub_heading six">Your rights</strong>
-        <p class="norm_text six">You can ask to view, correct or delete your information at any time by contacting
+        <strong class="sub_heading yellow six">Your rights</strong>
+        <p class="norm_text cyan six">You can ask to view, correct or delete your information at any time by contacting
             meowdia_hr@company.com</p>
 
-    </section> -->
+    </section>
 
     <section id="form">
         <h2 class="heading form">Form</h2>
@@ -306,40 +341,41 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         <a href="#top">Back to Top</a>
         <a href="./about.html">About Meowdia</a>
     </div>
-    <footer>
-        <div>
-            <h2>Contact Us</h2>
-            <p>
-                <a href="mailto:meowdia@company.com">meowdia@company.com</a>
-            </p>
-            <p>
-                <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
-            </p>
+    <img src="images/catface.png" alt="footer_cat" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+
+    <footer class="meowdia_footer">
+        <div class="footer_main">
+            <div class="footer_left">
+                <div class="footer_logo">
+                    <img src="images/logo.svg" alt="meowdia_logo">
+                    <span class="logoname">EOWDIA</span>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 Meowdia Agency. All rights reserved.
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_columns">
+                    <div class="footer_column contact_col">
+                        <h3>Contact us</h3>
+                        <a href="mailto:meowdia@company.com">meowdia@company.com</a>
+                        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
+                    </div>
+                    <div class="footer_column see_more_col">
+                        <h3>See more</h3>
+                        <a href="#" target="_blank">Live Site</a>
+                        <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
+                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
+                            Board</a>
+                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6"
+                            target="_blank">Figma Design Board</a>
+                    </div>
+                </div>
+                <div class="instructor_credit">
+                    Instructed by Trung Kiểm Lâm #2611
+                </div>
+            </div>
         </div>
-        <div>
-            <h2>See More</h2>
-            <p>
-                <a href="https://bachcodetinh.github.io/gito_gatos/">Live site</a>
-            </p>
-            <p>
-                <a href="https://github.com/bachcodetinh/gito_gatos">GitHub Repository</a>
-            </p>
-            <p>
-                <a
-                    href="https://btyenngan6608.atlassian.net/jira/software/projects/COS26P1/boards/4/calendar?atlOrigin=eyJpIjoiMTViMDA5OTVlYWY4NGMxNzgxMjIzZWE0NDkyYWYwZWQiLCJwIjoiaiJ9">Jira
-                    Scrum Board</a>
-            </p>
-            <p>
-                <a
-                    href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?node-id=74-296&t=ngCQpk1ezZlVMU0e-1">Figma
-                    Design Board</a>
-            </p>
-        </div>
-
-
-
-        <p>© 2026 Meowdia Agency. All rights reserved.</p>
-        <p>Instructed by Trung Kiểm Lâm #2611</p>
     </footer>
 </body>
 
