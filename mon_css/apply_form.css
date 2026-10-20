@@ -33,27 +33,28 @@ form>.sub_heading.per_inf {
 }
 
 #first_name {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
     grid-row: 5 / span 1;
     margin: 0px;
 }
 
 #last_name {
-    grid-column: 6 / span 3;
+    grid-column: 6 / span 4;
     grid-row: 5 / span 1;
     margin: 0px;
 }
 
 #dob {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
     grid-row: 6 / span 1;
     margin: 0px;
 }
 
 #gender {
-    grid-column: 6 / span 3;
+    grid-column: 6 / span 4;
     grid-row: 6 / span 1;
     margin: 0px;
+    height: 70px;
 }
 
 form>.sub_heading.con_loc {
@@ -64,37 +65,37 @@ form>.sub_heading.con_loc {
 }
 
 #email {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
     grid-row: 8 / span 1;
     margin: 0px;
 }
 
 #phone {
-    grid-column: 6 / span 3;
+    grid-column: 6 / span 4;
     grid-row: 8 / span 1;
     margin: 0px;
 }
 
 #address {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
     grid-row: 9 / span 1;
     margin: 0px;
 }
 
 #suburb {
-    grid-column: 6 / span 3;
+    grid-column: 6 / span 4;
     grid-row: 9 / span 1;
     margin: 0px;
 }
 
 #state {
-    grid-column: 2 / span 3;
+    grid-column: 2 / span 4;
     grid-row: 10 / span 1;
     margin: 0px;
 }
 
 #postcode {
-    grid-column: 6 / span 3;
+    grid-column: 6 / span 4;
     grid-row: 10 / span 1;
     margin: 0px;
 }
