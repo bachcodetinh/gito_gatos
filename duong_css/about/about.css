@@ -16,7 +16,6 @@ body {
 main {
     width: 100%;
     max-width: 96.5%;
-    margin: 1.8em;
 }
 
 header {
@@ -62,8 +61,8 @@ header {
 
 .main-group-photo {
     flex: 1;
-    min-width: 280px;
-    max-width: 400px;
+    min-width: 40rem;
+    max-width: 44rem;
     margin: 0;
 }
 
@@ -95,11 +94,29 @@ header {
     font-family: var(--iciel-font);
     text-align: center;
     font-size: var(--heading-font-size);
-    color: var(--secondary-color);
+    color: var(--main-color);
     letter-spacing: var(--iciel-letter-spacing);
     margin-bottom: 20px;
-    text-decoration: underline;
     text-underline-offset: 6px;
+}
+
+.underline-title {
+    position: relative;
+    display: inline-table;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.underline-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
 }
 
 .card-body {
@@ -169,6 +186,20 @@ header {
     overflow-x: auto;
     width: 100%;
     margin-top: 20px;
+}
+
+.swin-email {
+    display: flex;
+    align-items: center;
+}
+
+.swin-email a {
+    font-size: calc(var(--subheading-font-size) - 0.7rem);
+    color: var(--main-color);
+}
+
+.swin-email a:hover {
+    color: var(--secondary-color);
 }
 
 table {
