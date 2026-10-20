@@ -157,6 +157,8 @@ body {
   color: var(--secondary-color);
 }
 
+/* -------------------- */
+
 /* Current page link */
 .main-nav a.active {
   color: var(--secondary-color);

@@ -27,11 +27,16 @@
             margin: 0;
         }
 
-        .footer_logo img {
-            height: 6rem;
+        .main_logo img {
+            height: 5rem;
             width: auto;
             display: inline-block;
             margin-right: 0.7rem;
+        }
+
+        td > img {
+            display: flex;
+            margin: auto;
         }
     </style>
 </head>
@@ -44,8 +49,8 @@
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="jobs.html" class="active" aria-current="page">Jobs</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
                     <li><a href="apply.html">Apply</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
@@ -59,47 +64,80 @@
 
             <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
         </div>
-                <h1>
-            YOU GIVE US<br>
-            <span style="font-size: 1.35em;"><span style="color: var(--secondarycolor);">PAWSOME</span> IDEAS<br></span>
+        <h1>
+            <span style="font-size: 0.7em;">GIVE US<br></span>
+           <span style="color: var(--secondary-color);">PAWSOME</span> IDEAS<br>
             <br>
-            WE BRING<br>
-            <span style="font-size: 1.35em;"><span style="color: var(--secondarycolor);">PURR-FECT</span> PRODUCTS</span>
+           <span style="font-size: 0.7em;">WE BRING<br></span>
+            <span style="color: var(--secondary-color);">PURR-FECT</span> PRODUCTS
         </h1>
     </header>
     <main>
         <div class="who_we_are_card">
         <h2 class="section_title underline_title">Who We Are</h2>
-            <div class="intro_text">
-                <div class="footer_logo">
-                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">is a creative digital media agency.
-                </div>
-                We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
-            </div>
             <table class="layout_table">
                 <thead>
+                    <tr>
+                        <td>
+                            <img src="duong_css/index/images/clapperboard.png" alt="Clapper board element" style="width: 70%; height: auto;">
+                        </td>
+                        <td colspan="2">
+                            <div class="intro_text">
+                                <div class="main_logo">
+                                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">is a creative digital media agency.
+                                </div>
+                                We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <th scope="col">Our Vision</th>
                         <th scope="col">Our Mission</th>
                         <th scope="col">Why Meowdia?</th>
                     </tr>
-                </thead>
-                <tbody>
+                </tbody>
+                <tfooter>
                     <tr>
                         <td><strong>Bringing Creativity to Life.</strong> To become the leading digital agency where creativity meets front-end development, turning visionary ideas into reality.</td>
                         <td><strong>Fostering Digital Success</strong> for our clients. Through collaborative teamwork, we build top-notch web products that give our clients an excellent digital presence.</td>
                         <td><strong>Design and development meet here.</strong> We combine creativity and code without compromising either, and we iterate quickly so every design is ready for launch.</td>
                     </tr>
-                </tbody>
+                </tfooter>
             </table>
         </div>
         <div class="who_we_are_card">
             <h2 class="section_title underline_title">Our Products</h2>
             <div class="product_gallery">
-                <img src="duong_css/index/images/1888160_26.jpg" alt="Product Mockup 1">
-                <img src="duong_css/index/images/1888160_31.jpg" alt="Product Mockup 2">
-                <img src="duong_css/index/images/Screenshot (319).png" alt="Product Mockup 3">
-                <img src="duong_css/index/images/Screenshot (343).png" alt="Product Mockup 4">
+                <div class="work">
+                    <img src="duong_css/index/images/1888160_26.jpg" alt="Product Mockup 1">
+                    <div class="layer">
+                        <h3>AC6: Fires of Rubicon</h3>
+                        <p>A pic about RAB V.2, not fully optimized.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="duong_css/index/images/1888160_31.jpg" alt="Product Mockup 2">
+                    <div class="layer">
+                        <h3>AC6: Fires of Rubicon</h3>
+                        <p>Kaboom? Yes Rico, kaboom.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="duong_css/index/images/Screenshot(319).png" alt="Product Mockup 3">
+                    <div class="layer">
+                        <h3>Break Arts 2</h3>
+                        <p>I can not run Break Arts 3. I need a new laptop.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="duong_css/index/images/Screenshot(343).png" alt="Product Mockup 4">
+                    <div class="layer">
+                        <h3>AC4A</h3>
+                        <p>Promotional poster made for fun during Highschool Photoshop class.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="navigation_buttons">
