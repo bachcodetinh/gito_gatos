@@ -1,9 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: var(--page-gradient);
-    background-color: var(--backgroundcolor);
-    color: var(--maincolor);
-    font-family: var(--bodyfont);
-    letter-spacing: var(--default-letter-spacing);
+    color: var(--main-color);
+    font-family: var(--nokio-font);
+    letter-spacing: var(--nokio-letter-spacing);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,13 +15,13 @@ body {
 
 main {
     width: 100%;
-    max-width: 950px;
+    max-width: 96.5%;
+    margin: 1.8em;
 }
 
 header {
-    width: 100%;
-    max-width: 950px;
-    border: var(--defaultborder);
+    min-height: 93vh;
+    border: var(--yellow-border);
     border-radius: var(--default-border-radius);
     padding: 25px;
     margin-bottom: 40px;
@@ -33,29 +37,27 @@ header {
 }
 
 .header-text h1 {
-    font-family: var(--headerfont);
-    font-size: 2.8rem;
+    font-family: var(--iciel-font);
+    font-size: var(--slogan-font-size);
     line-height: 1.1;
-    color: var(--maincolor);
-}
-
-.header-text .highlight-text {
-    color: var(--secondarycolor);
+    color: var(--main-color);
+    margin-bottom: 6rem;
 }
 
 .team-meta-list ul {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .team-meta-list ul li {
     margin-bottom: 8px;
-    font-size: 1.05rem;
+    font-size: var(--body-font-size);
+    letter-spacing: var(--nokio-letter-spacing);
 }
 
 .team-meta-list strong {
-    color: var(--secondarycolor);
+    color: var(--secondary-color);
 }
 
 .main-group-photo {
@@ -68,8 +70,8 @@ header {
 .main-group-photo img {
     width: 100%;
     height: auto;
-    border-radius: calc(var(--default-border-radius) - 10px);
-    border: solid 2px;
+    border-radius: var(--default-border-radius);
+    border: var(--cyan-border);
 }
 
 .main-group-photo figcaption {
@@ -84,16 +86,17 @@ header {
 }
 
 .profile-card {
-    border: var(--defaultborder);
+    border: var(--yellow-border);
     border-radius: var(--default-border-radius);
     padding: 25px 30px;
 }
 
 .member-name {
-    font-family: var(--headerfont);
+    font-family: var(--iciel-font);
     text-align: center;
-    font-size: 1.8rem;
-    color: var(--secondarycolor);
+    font-size: var(--heading-font-size);
+    color: var(--secondary-color);
+    letter-spacing: var(--iciel-letter-spacing);
     margin-bottom: 20px;
     text-decoration: underline;
     text-underline-offset: 6px;
@@ -112,9 +115,10 @@ header {
 }
 
 .member-info h3 {
-    font-family: var(--headerfont);
-    color: var(--maincolor);
-    font-size: 1.3rem;
+    font-family: var(--iciel-font);
+    color: var(--main-color);
+    font-size: var(--subheading-font-size);
+    letter-spacing: var(--iciel-letter-spacing);
     margin-top: 15px;
     margin-bottom: 8px;
 }
@@ -128,7 +132,7 @@ header {
 
 .member-info dt {
     font-weight: bold;
-    color: var(--secondarycolor);
+    color: var(--secondary-color);
 }
 
 .member-info dd {
@@ -137,13 +141,13 @@ header {
 
 .member-info dd[lang="vi"] {
     font-style: italic;
-    color: var(--maincolor);
+    color: var(--main-color);
 }
 
 .member-photo-box {
     flex: 1;
-    min-width: 150px;
-    max-width: 220px;
+    min-width: 20em;
+    max-width: 21em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,8 +156,8 @@ header {
 .member-photo-box img {
     width: 100%;
     height: auto;
-    border-radius: calc(var(--default-border-radius) - 10px);
-    border: solid var(--maincolor) 1px;
+    border-radius: var(--default-border-radius);
+    border: var(--cyan-border);
     object-fit: cover;
 }
 
@@ -171,7 +175,7 @@ table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    border: var(--defaultborder);
+    border: var(--yellow-border);
     border-radius: var(--default-border-radius);
     overflow: hidden;
 }
@@ -185,8 +189,8 @@ caption {
 th, td {
     padding: 15px;
     text-align: left;
-    border-bottom: solid var(--secondarycolor) 1px;
-    border-right: solid var(--secondarycolor) 1px;
+    border-bottom: var(--yellow-border);
+    border-right: var(--yellow-border);
 }
 
 th:last-child, td:last-child {
@@ -198,7 +202,8 @@ tr:last-child td {
 }
 
 th {
-    color: var(--maincolor);
-    font-family: var(--headerfont);
-    font-size: 1rem;
+    color: var(--main-color);
+    font-family: var(--iciel-font);
+    font-size: var(--subheading-font-size);
+    letter-spacing: var(--iciel-letter-spacing);
 }

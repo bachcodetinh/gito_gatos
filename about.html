@@ -7,29 +7,53 @@
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="duong_css/about/about.css">
+    <style>
+        body {
+            background: linear-gradient(
+                20deg,
+                rgb(0, 0, 0) 0%,
+                rgb(6, 32, 43) 25%,
+                rgb(0, 0, 0) 50%,
+                rgb(6, 32, 43) 75%,
+                rgb(0, 0, 0) 100%
+            );
+        }
+
+        header {
+            width: 100%;
+            max-width: 96.5%;
+            margin: 1.8em;
+        }
+    </style>
 </head>
 <body>
     <header id="top">
-        <div class="nav_menu">
-            <details>
-                <summary><img src="images/Paw.svg" alt="nav button" style="height: 27px; width: auto;"></summary>
-                <nav class="nav_bar">
-                    <a class="active" href="index.html">Home</a>
-                    <a href="jobs.html">Jobs</a>
-                    <a href="apply.html">Apply</a>
-                    <a href="about.html">About</a>
-                    <form>Search
-                        <input type="search" placeholder="">
-                        <button type="submit"><img src="images/maginifying-glass-navbar.svg" alt="search button"></button>
-                    </form>
-                </nav>
-            </details>
+        <div class="nav-row">
+            <a href="index.html" class="logo-link">
+                <img src="ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html" class="active" aria-current="page">About</a></li>
+                </ul>
+                <form class="nav-search" action="#" role="search">
+                    <input type="search" id="search-box" name="search" placeholder="Search">
+                    <button type="submit">
+                        <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
+                    </button>
+                </form>
+            </nav>
+
+            <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
         </div>
-        <img src="images/logo.svg" alt="meowdia logo">
         
         <div class="header-main-content">
             <div class="header-text">
-                <h1>ABOUT <br><span class="highlight-text">OUR TEAM</span></h1>
+                <h1>ABOUT <br><span style="color: var(--secondary-color);">OUR TEAM</span></h1>
                 <div class="team-meta-list">
                     <ul>
                         <li><strong>Group:</strong> Gito_gatos</li>
@@ -51,7 +75,7 @@
     <main>
         <div class="team-profiles-container">
         
-            <div class="profile-card">
+            <div class="profile-card image-left">
                 <h2 class="member-name">Bùi Thuỵ Yến Ngân</h2>
                 <div class="card-body">
                     <div class="member-info">
@@ -60,7 +84,7 @@
                             <dt>Roles</dt>
                             <dd>Project Manager (Scrum Master), Developer, UI/UX co-designer</dd>
                             <dt>Sections</dt>
-                            <dd>jobs.html</dd>
+                            <dd>jobs.html, style.css</dd>
                         </dl>
                         <h3>Personal Information</h3>
                         <dl>
@@ -79,12 +103,12 @@
                         </dl>
                     </div>
                     <div class="member-photo-box">
-                        <img src="https://placehold.co" alt="Bùi Thuỵ Yến Ngân">
+                        <img src="duong_css/about/images/Ngan-profile-pic.jpg" alt="Bùi Thuỵ Yến Ngân">
                     </div>
                 </div>
             </div>
 
-            <div class="profile-card image-left">
+            <div class="profile-card">
                 <h2 class="member-name">Nguyễn Hoàng Đăng Dương</h2>
                 <div class="card-body">
                     <div class="member-info">
@@ -100,7 +124,7 @@
                             <dt>Full name</dt>
                             <dd>Nguyễn Hoàng Đăng Dương</dd>
                             <dt>Nick name</dt>
-                            <dd>Deymuum</dd>
+                            <dd>Microwave</dd>
                             <dt>Student ID</dt>
                             <dd>104192930</dd>
                             <dt>Email Swinburne</dt>
@@ -112,12 +136,12 @@
                         </dl>
                     </div>
                     <div class="member-photo-box">
-                        <img src="https://placehold.co" alt="Nguyễn Hoàng Đăng Dương">
+                        <img src="duong_css/about/images/DSC_1714_1.jpg" alt="Nguyễn Hoàng Đăng Dương">
                     </div>
                 </div>
             </div>
 
-            <div class="profile-card">
+            <div class="profile-card image-left">
                 <h2 class="member-name">Lê Bá Cao Minh</h2>
                 <div class="card-body">
                     <div class="member-info">
@@ -126,14 +150,14 @@
                             <dt>Roles</dt>
                             <dd>Tech Lead (Git Master), Developer, UI/UX co-designer</dd>
                             <dt>Sections</dt>
-                            <dd>apply.html</dd>
+                            <dd>apply.html, style.css</dd>
                         </dl>
                         <h3>Personal Information</h3>
                         <dl>
                             <dt>Full name</dt>
                             <dd>Lê Bá Cao Minh</dd>
                             <dt>Nick name</dt>
-                            <dd>Mìn Lê</dd>
+                            <dd>Mon Lê</dd>
                             <dt>Student ID</dt>
                             <dd>104311860</dd>
                             <dt>Email Swinburne</dt>
@@ -145,7 +169,7 @@
                         </dl>
                     </div>
                     <div class="member-photo-box">
-                        <img src="https://placehold.co" alt="Lê Bá Cao Minh">
+                        <img src="duong_css/about/images/DSC01519-3.jpg" alt="Lê Bá Cao Minh">
                     </div>
                 </div>
             </div>
@@ -163,16 +187,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Bùi Thuỵ Yến Ngân</strong></td>
+                        <td><strong>Yến Ngân</strong></td>
                         <td></td>
 
                     </tr>
                     <tr>
-                        <td><strong>Nguyễn Hoàng Đăng Dương</strong></td>
+                        <td><strong>Đăng Dương</strong></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td><strong>Lê Bá Cao Minh</strong></td>
+                        <td><strong>Cao Minh</strong></td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -180,12 +204,13 @@
         </div>
     </main>
 
+    <img src="images/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
+
     <footer class="meowdia_footer">
         <div class="footer_main">
             <div class="footer_left">
                 <div class="footer_logo">
-                    <img src="images/logo.svg" alt="meowdia logo">
-                    <span class="logoname">EOWDIA</span>
+                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">
                 </div>
                 <div class="copyright">
                     &copy; 2026 Meowdia Agency. All rights reserved.
