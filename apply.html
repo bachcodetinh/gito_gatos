@@ -91,7 +91,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         </div>
     </header>
 
-    <section id="recruit_process">
+    <!-- <section id="recruit_process">
         <h2 class="heading cyan process">Our Recruitment Process</h2>
         <div class="yel_bar process"></div>
         <ol class="norm_text cyan" id="re_pro_list">
@@ -135,7 +135,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         <p class="norm_text cyan six">You can ask to view, correct or delete your information at any time by contacting
             meowdia_hr@company.com</p>
 
-    </section>
+    </section> -->
 
     <section id="form_sec">
 
@@ -147,22 +147,22 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
             <div id="first_name">
                 <label for="F_name" class="norm_text yellow">First name</label>
-                <input type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
+                <input class="norm_text cyan input" type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
                 <p class="norm_text cyan">Letters only, up to 20 characters</p>
             </div>
             <div id="last_name">
                 <label for="L_name" class="norm_text yellow">Last name</label>
-                <input type="text" id="L_name" name="L_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
+                <input class="norm_text cyan input" type="text" id="L_name" name="L_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
                 <p class="norm_text cyan">Letters only, up to 20 characters</p>
             </div>
             <div id="dob">
                 <label for="dob" class="norm_text yellow">Date of birth</label>
-                <input type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="bdate" placeholder="dd/mm/yyyy"
+                <input class="norm_text cyan input" type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="bdate" placeholder="dd/mm/yyyy"
                     required>
                 <p class="norm_text cyan">Used to verify you meet the legal working-age requirement</p>
             </div>
 
-            <fieldset id="gender">
+            <fieldset class="norm_text cyan input" id="gender">
                 <legend class="norm_text yellow">Gender</legend>
                 <input type="radio" id="Female" name="gender" value="Female" required />
                 <label for="Female" class="norm_text cyan">Female</label>
@@ -174,27 +174,27 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
             <div id="email">
                 <label for="email" class="norm_text yellow">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input class="norm_text cyan input" type="email" id="email" name="email" required>
                 <p class="norm_text cyan">Where you receive the result</p>
             </div>
             <div id="phone">
                 <label for="phone" class="norm_text yellow">Phone</label>
-                <input type="text" id="phone" name="phone" pattern="^\d{8,12}$" maxlength="12" required>
+                <input class="norm_text cyan input" type="text" id="phone" name="phone" pattern="^\d{8,12}$" maxlength="12" required>
                 <p class="norm_text cyan">8 to 12 digits, no space</p>
             </div>
             <div id="address">
                 <label for="street" class="norm_text yellow">Street Address</label>
-                <input type="text" id="street" name="street" maxlength="40" required>
+                <input class="norm_text cyan input" type="text" id="street" name="street" maxlength="40" required>
                 <p class="norm_text cyan">Up to 40 characters</p>
             </div>
             <div id="suburb">
                 <label for="suburb" class="norm_text yellow">Suburb/Town</label>
-                <input type="text" id="suburb" name="suburb" maxlength="40" required>
+                <input class="norm_text cyan input" type="text" id="suburb" name="suburb" maxlength="40" required>
                 <p class="norm_text cyan">Up to 40 characters</p>
             </div>
             <div id="state">
                 <label for="state" class="norm_text yellow">State</label>
-                <select name="state" id="state" required>
+                <select class="norm_text cyan input" name="state" id="state" required>
                     <option value="">Please select</option>
                     <option>VIC</option>
                     <option>NSW</option>
@@ -208,14 +208,14 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </div>
             <div id="postcode">
                 <label for="postcode" class="norm_text yellow">Postcode</label>
-                <input type="text" id="postcode" name="postcode" pattern="^\d{4}$" maxlength="4" required>
+                <input class="norm_text cyan input" type="text" id="postcode" name="postcode" pattern="^\d{4}$" maxlength="4" required>
                 <p class="norm_text cyan">4 digits</p>
             </div>
 
             <h2 class="sub_heading yellow pos_skill">Position & Skills</h2>
             <div id="ref_num">
                 <label class="norm_text yellow" for="ref_num">Job reference number</label>
-                <input type="text" id="ref_num" name="ref_num" pattern="^[A-Z]{3}[0-9]{2}$" maxlength="5" required>
+                <input class="norm_text cyan input" type="text" id="ref_num" name="ref_num" pattern="^[A-Z]{3}[0-9]{2}$" maxlength="5" required>
                 <p class="norm_text cyan">Front-end Developer: FED01</p>
                 <p class="norm_text cyan">UI/UX Designer: UXD02</p>
             </div>
@@ -336,7 +336,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </details>
             <div id="other">
                 <label class="norm_text yellow" for="other_skill">Other Skills Optional</label>
-                <textarea class="norm_text cyan" id="other_skill" name="other_skill" rows="4"
+                <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4"
                     cols="40">Type anything that you think is valuable for this position...</textarea>
             </div>
             <div id="consent">
@@ -346,16 +346,16 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     information I provide in this form to assess my application.</label>
             </div>
             <div id="submit_reset">
-                <input type="submit" value="Apply">
-                <input type="reset" value="Reset form">
+                <input class=" norm_text cyan button input" type="submit" value="Apply">
+                <input class=" norm_text cyan button input" type="reset" value="Reset form">
             </div>
         </form>
     </section>
 
     <div id="end_button">
-        <a class="norm_text cyan" href="./jobs.html">Return to Jobs</a>
-        <a class="norm_text cyan" href="#top">Back to Top</a>
-        <a class="norm_text cyan" href="./about.html">About Meowdia</a>
+        <a class="norm_text cyan button" href="./jobs.html">Return to Jobs</a>
+        <a class="norm_text cyan button" href="#top">Back to Top</a>
+        <a class="norm_text cyan button" href="./about.html">About Meowdia</a>
     </div>
     <div id="footer">
         <img src="images/catface.png" alt="footer_cat"
