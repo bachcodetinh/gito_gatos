@@ -19,7 +19,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mon Le">
     <meta name="description" content="This page is an application form for a job at Meowdia company.">
-
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
     <link href="style.css" rel="stylesheet">
 
     <link href="mon_css/apply_var_style.css" rel="stylesheet">
@@ -147,18 +147,20 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
             <div id="first_name">
                 <label for="F_name" class="norm_text yellow">First name</label>
-                <input class="norm_text cyan input" type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
+                <input class="norm_text cyan input" type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$"
+                    maxlength="20" required>
                 <p class="norm_text cyan">Letters only, up to 20 characters</p>
             </div>
             <div id="last_name">
                 <label for="L_name" class="norm_text yellow">Last name</label>
-                <input class="norm_text cyan input" type="text" id="L_name" name="L_name" pattern="^[a-z]{1-20}$" maxlength="20" required>
+                <input class="norm_text cyan input" type="text" id="L_name" name="L_name" pattern="^[a-z]{1-20}$"
+                    maxlength="20" required>
                 <p class="norm_text cyan">Letters only, up to 20 characters</p>
             </div>
             <div id="dob">
                 <label for="dob" class="norm_text yellow">Date of birth</label>
-                <input class="norm_text cyan input" type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="bdate" placeholder="dd/mm/yyyy"
-                    required>
+                <input class="norm_text cyan input" type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="bdate"
+                    placeholder="dd/mm/yyyy" required>
                 <p class="norm_text cyan">Used to verify you meet the legal working-age requirement</p>
             </div>
 
@@ -179,7 +181,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </div>
             <div id="phone">
                 <label for="phone" class="norm_text yellow">Phone</label>
-                <input class="norm_text cyan input" type="text" id="phone" name="phone" pattern="^\d{8,12}$" maxlength="12" required>
+                <input class="norm_text cyan input" type="text" id="phone" name="phone" pattern="^\d{8,12}$"
+                    maxlength="12" required>
                 <p class="norm_text cyan">8 to 12 digits, no space</p>
             </div>
             <div id="address">
@@ -208,14 +211,16 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </div>
             <div id="postcode">
                 <label for="postcode" class="norm_text yellow">Postcode</label>
-                <input class="norm_text cyan input" type="text" id="postcode" name="postcode" pattern="^\d{4}$" maxlength="4" required>
+                <input class="norm_text cyan input" type="text" id="postcode" name="postcode" pattern="^\d{4}$"
+                    maxlength="4" required>
                 <p class="norm_text cyan">4 digits</p>
             </div>
 
             <h2 class="sub_heading yellow pos_skill">Position & Skills</h2>
             <div id="ref_num">
                 <label class="norm_text yellow" for="ref_num">Job reference number</label>
-                <input class="norm_text cyan input" type="text" id="ref_num" name="ref_num" pattern="^[A-Z]{3}[0-9]{2}$" maxlength="5" required>
+                <input class="norm_text cyan input" type="text" id="ref_num" name="ref_num" pattern="^[A-Z]{3}[0-9]{2}$"
+                    maxlength="5" required>
                 <p class="norm_text cyan">Front-end Developer: FED01</p>
                 <p class="norm_text cyan">UI/UX Designer: UXD02</p>
             </div>
@@ -336,8 +341,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </details>
             <div id="other">
                 <label class="norm_text yellow" for="other_skill">Other Skills Optional</label>
-                <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4"
-                    cols="40" placeholder="Type anything that you think is valuable for this position..."></textarea>
+                <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4" cols="40"
+                    placeholder="Type anything that you think is valuable for this position..."></textarea>
             </div>
             <div id="consent">
                 <input type="checkbox" id="consent" value="consent" required>
