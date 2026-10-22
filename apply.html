@@ -19,12 +19,12 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mon Le">
     <meta name="description" content="This page is an application form for a job at Meowdia company.">
-    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <link rel="icon" type="image/x-icon" href="Media/Navigation_bar/logo-ngan.svg">
     <link href="style.css" rel="stylesheet">
 
-    <link href="mon_css/apply_var_style.css" rel="stylesheet">
-    <link href="mon_css/apply_style.css" rel="stylesheet">
-    <link href="mon_css/apply_form.css" rel="stylesheet">
+    <link href="page_css/Apply/apply_var_style.css" rel="stylesheet">
+    <link href="page_css/Apply/apply_style.css" rel="stylesheet">
+    <link href="page_css/Apply/apply_form.css" rel="stylesheet">
 
 
     <title>Apply to Meowdia</title>
@@ -44,30 +44,30 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     <header>
         <a id="top"></a>
 
-        <!-- -------------------- -->
+        <!-- ---------  Navigation Row  ----------- -->
         <div class="nav-row">
             <a href="index.html" class="logo-link">
-                <img src="ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+                <img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency" class="logo">
             </a>
-
             <nav class="main-nav norm_text">
                 <ul>
-                    <li><a class="cyan" href="index.html">Home</a></li>
-                    <li><a class="cyan" href="jobs.html">Jobs</a></li>
+                    <li><a href="index.html" class="cyan">Home</a></li>
+                    <li><a href="jobs.html" class="cyan">Jobs</a></li>
                     <li><a href="apply.html" class="active" aria-current="page">Apply</a></li>
-                    <li><a class="cyan" href="about.html">About</a></li>
+                    <li><a href="about.html" class="cyan">About</a></li>
                 </ul>
                 <form class="nav-search" action="#" role="search">
                     <input type="search" id="search-box" name="search" placeholder="Search">
                     <button type="submit">
-                        <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
+                        <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search">
                     </button>
                 </form>
             </nav>
 
-            <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
+            <img src="Media/Navigation_bar/Paw.svg" alt="" class="paw-icon">
         </div>
-        <!-- -------------------- -->
+
+        <!-- ----------Header Content---------- -->
 
         <h1 class="slogan yellow">APPLICATION</h1>
         <h1 class="slogan cyan">FORM</h1>
@@ -78,9 +78,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             <p>Please complete all fields below.</p>
         </div>
 
-        <video width="640" height="360" autoplay loop class="video">
-            <source src="images/timelapse_refractor.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
+        <video width="640" height="360" autoplay loop class="video"> <!--Import Timelapse Video-->
+            <source src="Media/Apply/timelapse_small.mp4" type="video/mp4">
             Your browser does not support the video tag
         </video>
 
@@ -90,6 +89,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </p>
         </div>
     </header>
+
+    <!-- ----------Recruitment Process Content---------- -->
 
     <section id="recruit_process">
         <h2 class="heading cyan process">Our Recruitment Process</h2>
@@ -108,6 +109,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 interview.</li>
         </ol>
     </section>
+
+    <!-- ----------Collection Notice Content---------- -->
 
     <section id="collection_notice">
         <h2 class="heading cyan notice">Collection Notice</h2>
@@ -136,6 +139,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             meowdia_hr@company.com</p>
 
     </section>
+
+    <!-- ----------Application Form Content---------- -->
 
     <section id="form_sec">
 
@@ -357,20 +362,25 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         </form>
     </section>
 
+    <!-- ----------End Button Content---------- -->
+
     <div id="end_button">
         <a class="norm_text cyan button" href="./jobs.html">Return to Jobs</a>
         <a class="norm_text cyan button" href="#top">Back to Top</a>
         <a class="norm_text cyan button" href="./about.html">About Meowdia</a>
     </div>
+
+    <!-- ----------Footer Content---------- -->
+
     <div id="footer">
-        <img src="images/catface.png" alt="footer_cat"
+        <img src="Media/Footer/catface.png" alt="footer_cat"
             style="width: 90%; height: auto; display: block; margin: 0 auto;">
 
         <footer class="meowdia_footer">
             <div class="footer_main">
                 <div class="footer_left">
                     <div class="footer_logo">
-                        <img src="images/logo-text.svg" alt="Meowdia with logo as the M">
+                        <img src="Media/Footer/logo-text.svg" alt="Meowdia with logo as the M">
                     </div>
                     <div class="copyright">
                         &copy; 2026 Meowdia Agency. All rights reserved.
@@ -385,7 +395,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                         </div>
                         <div class="footer_column see_more_col">
                             <h3>See more</h3>
-                            <a href="#" target="_blank">Live Site</a>
+                            <a href="https://bachcodetinh.github.io/gito_gatos" target="_blank">Live Site</a>
                             <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub
                                 Repository</a>
                             <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
