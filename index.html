@@ -6,7 +6,7 @@
     <meta name="author" content="Duong">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="duong_css/index/index.css">
+    <link rel="stylesheet" href="page_css/Index/index.css">
     <style>
         body {
             background: linear-gradient(
@@ -38,31 +38,40 @@
             display: flex;
             margin: auto;
         }
+
+        .nav-search input::placeholder {
+            font-family: var(--nokio-font);
+        }
+
+        .main-nav a {
+            color: var(--main-color);
+            font-family: var(--nokio-font);
+        }
     </style>
 </head>
 <body>
     <header id="top">
         <div class="nav-row">
             <a href="index.html" class="logo-link">
-                <img src="ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+                <img src= "Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency" class="logo">
             </a>
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="jobs.html">Jobs</a></li>
-                    <li><a href="apply.html">Apply</a></li>
-                    <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
                 </ul>
                 <form class="nav-search" action="#" role="search">
-                    <input type="search" id="search-box" name="search" placeholder="Search">
-                    <button type="submit">
-                        <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
-                    </button>
+                <input type="search" id="search-box" name="search" placeholder="Search">
+                <button type="submit">
+                    <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search">
+                </button>
                 </form>
             </nav>
 
-            <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
+            <img src="Media/Navigation_bar/Paw.svg" alt="paw icon" class="paw-icon">
         </div>
         <h1>
             <span style="font-size: 0.7em;">GIVE US<br></span>
@@ -79,12 +88,12 @@
                 <thead>
                     <tr>
                         <td>
-                            <img src="duong_css/index/images/clapperboard.png" alt="Clapper board element" style="width: 70%; height: auto;">
+                            <img src="Media/Index/clapperboard.png" alt="Clapper board element" style="width: 70%; height: auto;">
                         </td>
                         <td colspan="2">
                             <div class="intro_text">
                                 <div class="main_logo">
-                                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">is a creative digital media agency.
+                                    <img src="Media/Index/logo-text.svg" alt="Meowdia with logo as the M">is a creative digital media agency.
                                 </div>
                                 We design responsive, engaging websites, build distinctive brand identities, and produce digital content that connects clients with their audiences.
                             </div>
@@ -111,28 +120,28 @@
             <h2 class="section_title underline_title">Our Products</h2>
             <div class="product_gallery">
                 <div class="work">
-                    <img src="duong_css/index/images/1888160_26.jpg" alt="Product Mockup 1">
+                    <img src="Media/Index/1888160_26.jpg" alt="Product Mockup 1">
                     <div class="layer">
                         <h3>AC6: Fires of Rubicon</h3>
                         <p>A pic about RAB V.2, not fully optimized.</p>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="duong_css/index/images/1888160_31.jpg" alt="Product Mockup 2">
+                    <img src="Media/Index/1888160_31.jpg" alt="Product Mockup 2">
                     <div class="layer">
                         <h3>AC6: Fires of Rubicon</h3>
                         <p>Kaboom? Yes Rico, kaboom.</p>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="duong_css/index/images/Screenshot(319).png" alt="Product Mockup 3">
+                    <img src="Media/Index/Screenshot(319).png" alt="Product Mockup 3">
                     <div class="layer">
                         <h3>Break Arts 2</h3>
                         <p>I can not run Break Arts 3. I need a new laptop.</p>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="duong_css/index/images/Screenshot(343).png" alt="Product Mockup 4">
+                    <img src="Media/Index/Screenshot(343).png" alt="Product Mockup 4">
                     <div class="layer">
                         <h3>AC4A</h3>
                         <p>Promotional poster made for fun during Highschool Photoshop class.</p>
@@ -146,13 +155,13 @@
         </div>
     </main>
     
-    <img src="images/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
-    
+    <img src="Media/Footer/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
+
     <footer class="meowdia_footer">
         <div class="footer_main">
             <div class="footer_left">
                 <div class="footer_logo">
-                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">
+                    <img src="Media/Footer/logo-text.svg" alt="Meowdia with logo as the M">
                 </div>
                 <div class="copyright">
                     &copy; 2026 Meowdia Agency. All rights reserved.
@@ -167,7 +176,7 @@
                     </div>
                     <div class="footer_column see_more_col">
                         <h3>See more</h3>
-                        <a href="#" target="_blank">Live Site</a>
+                        <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
                         <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
                         <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum Board</a>
                         <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6" target="_blank">Figma Design Board</a>

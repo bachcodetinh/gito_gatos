@@ -6,7 +6,7 @@
     <meta name="author" content="Duong">
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="duong_css/about/about.css">
+    <link rel="stylesheet" href="page_css/About/about.css">
     <style>
         body {
             background: linear-gradient(
@@ -24,31 +24,44 @@
             max-width: 96.5%;
             margin: 1.8em;
         }
+
+        .nav-search input::placeholder {
+            font-family: var(--nokio-font);
+        }
+
+        .main-nav a {
+            color: var(--main-color);
+            font-family: var(--nokio-font);
+        }
+
+        .swin-id {
+            color: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
     <header id="top">
         <div class="nav-row">
             <a href="index.html" class="logo-link">
-                <img src="ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+                <img src= "Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency" class="logo">
             </a>
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="jobs.html">Jobs</a></li>
-                    <li><a href="apply.html">Apply</a></li>
-                    <li><a href="about.html" class="active" aria-current="page">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About</a></li>
                 </ul>
                 <form class="nav-search" action="#" role="search">
-                    <input type="search" id="search-box" name="search" placeholder="Search">
-                    <button type="submit">
-                        <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
-                    </button>
+                <input type="search" id="search-box" name="search" placeholder="Search">
+                <button type="submit">
+                    <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search">
+                </button>
                 </form>
             </nav>
 
-            <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
+            <img src="Media/Navigation_bar/Paw.svg" alt="paw icon" class="paw-icon">
         </div>
         
         <div class="header-main-content">
@@ -66,7 +79,7 @@
                 </div>
             </div>
             <figure class="main-group-photo">
-                <img src="duong_css/about/images/gitogatos.png" alt="gito_gatos group photo">
+                <img src="Media/About/about_image_cleaned.png" alt="Gito gatos group photo">
                 <figcaption>Our Team Photo</figcaption>
             </figure>
         </div>
@@ -93,7 +106,7 @@
                             <dt>Nick name</dt>
                             <dd>Bo</dd>
                             <dt>Student ID</dt>
-                            <dd>104203362</dd>
+                            <dd class="swin-id">106913256</dd>
                             <dt>Email Swinburne</dt>
                             <dd class="swin-email">
                                 &laquo;<a href="mailto:106913256@student.swin.edu.au">106913256@student.swin.edu.au</a>&raquo;
@@ -105,7 +118,7 @@
                         </dl>
                     </div>
                     <div class="member-photo-box">
-                        <img src="duong_css/about/images/Ngan-profile-pic.jpg" alt="Bùi Thuỵ Yến Ngân">
+                        <img src="Media/About/1920_1280_pics/Ngan-profile-pic.jpg" alt="Bùi Thuỵ Yến Ngân">
                     </div>
                 </div>
             </div>
@@ -128,7 +141,7 @@
                             <dt>Nick name</dt>
                             <dd>Microwave</dd>
                             <dt>Student ID</dt>
-                            <dd>104192930</dd>
+                            <dd class="swin-id">106913256</dd>
                             <dt>Email Swinburne</dt>
                             <dd class="swin-email">
                                 &laquo;<a href="mailto:106913256@student.swin.edu.au">106913256@student.swin.edu.au</a>&raquo;
@@ -140,7 +153,7 @@
                         </dl>
                     </div>
                     <div class="member-photo-box">
-                        <img src="duong_css/about/images/DSC_1714_1.jpg" alt="Nguyễn Hoàng Đăng Dương">
+                        <img src="Media/About/1920_1280_pics/DSC_1714_1.jpg" alt="Nguyễn Hoàng Đăng Dương">
                     </div>
                 </div>
             </div>
@@ -163,7 +176,7 @@
                             <dt>Nick name</dt>
                             <dd>Mon Lê</dd>
                             <dt>Student ID</dt>
-                            <dd>104311860</dd>
+                            <dd class="swin-id">106913544</dd>
                             <dt>Email Swinburne</dt>
                             <dd class="swin-email">
                                 &laquo;<a href="mailto:106913544@student.swin.edu.au">106913544@student.swin.edu.au</a>&raquo;
@@ -175,7 +188,7 @@
                         </dl>
                     </div>
                     <div class="member-photo-box">
-                        <img src="duong_css/about/images/DSC01519-3.jpg" alt="Lê Bá Cao Minh">
+                        <img src="Media/About/1920_1280_pics/DSC01519-3.jpg" alt="Lê Bá Cao Minh">
                     </div>
                 </div>
             </div>
@@ -184,7 +197,7 @@
 
         <div class="table-container">
             <table>
-                <caption>Overview of member backgrounds, preferences, and social media handles</caption>
+                <caption>Table consist of every member's fun fact</caption>
                 <thead>
                     <tr>
                         <th>Member</th>
@@ -210,13 +223,13 @@
         </div>
     </main>
 
-    <img src="images/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
+    <img src="Media/Footer/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
 
     <footer class="meowdia_footer">
         <div class="footer_main">
             <div class="footer_left">
                 <div class="footer_logo">
-                    <img src="images/logo-text.svg" alt="Meowdia with logo as the M">
+                    <img src="Media/Footer/logo-text.svg" alt="Meowdia with logo as the M">
                 </div>
                 <div class="copyright">
                     &copy; 2026 Meowdia Agency. All rights reserved.
@@ -231,7 +244,7 @@
                     </div>
                     <div class="footer_column see_more_col">
                         <h3>See more</h3>
-                        <a href="#" target="_blank">Live Site</a>
+                        <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
                         <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
                         <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum Board</a>
                         <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6" target="_blank">Figma Design Board</a>
