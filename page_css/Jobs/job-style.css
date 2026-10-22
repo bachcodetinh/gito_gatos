@@ -1,51 +1,3 @@
-@font-face {
-    font-family: 'iCiel Pony';
-    src: url('ngan-folder/Pony-ngan.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FS Nokio';
-    src: url('fonts/FSNokioExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FS Nokio';
-    src: url('fonts/FSNokioLight.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FS Nokio';
-    src: url('fonts/FSNokioRegular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FS Nokio';
-    src: url('fonts/FSNokioMedium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FS Nokio';
-    src: url('fonts/FSNokioBold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* Smooth scrolling for the "Back to top" link */
 html {
   scroll-behavior: smooth;
@@ -89,7 +41,7 @@ a {
   border-radius: var(--default-border-radius);
   padding: 25px 40px;
   /* Cat background graphic on the right side */
-  background-image: url(catjobs1.png);
+  background-image: url("../../Media/Jobs/catjobs1.png");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: auto 100%;
@@ -336,6 +288,15 @@ aside.benefits ul {
   text-align: center;
   font-size: var(--heading-font-size);
 }
+
+.job-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 10px auto 0;
+  background-color: var(--secondary-color);
+    }
 
 .job-desc {
   max-width: 650px;

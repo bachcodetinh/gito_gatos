@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yen Ngan Bui">
+  <meta name="description" content="This page lists available job positions: Front-End developer and UI Designer at Meowdia Agency">
   <title>Jobs - Meowdia Agency</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="ngan-folder/ngan-style.css">
-
+  <link rel="stylesheet" href="page_css/Jobs/job-style.css">
   <style>
     body {
             background: repeating-linear-gradient(35deg,
@@ -15,14 +16,6 @@
                     rgb(0, 0, 0), var(--background-color),
                     rgb(0, 0, 0));
         }
-    .job-title::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      margin: 10px auto 0;
-      background-color: rgb(255, 210, 0);
-    }
   </style>
 </head>
 
@@ -31,7 +24,7 @@
   <header id="top" class="hero">
     <div class="nav-row">
       <a href="index.html" class="logo-link">
-        <img src= "ngan-folder/logo-ngan.svg" alt="Meowdia Agency" class="logo">
+        <img src= "Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency" class="logo">
       </a>
 
       <nav class="main-nav">
@@ -44,19 +37,19 @@
         <form class="nav-search" action="#" role="search">
           <input type="search" id="search-box" name="search" placeholder="Search">
           <button type="submit">
-            <img src="ngan-folder/search-icon-ngan.svg" alt="Search">
+            <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search">
           </button>
         </form>
       </nav>
 
-      <img src="ngan-folder/paw-ngan.svg" alt="" class="paw-icon">
+      <img src="Media/Navigation_bar/Paw.svg" alt="paw icon" class="paw-icon">
     </div>
 
     <div class="hero-text">
       <!-- "OUR TEAM" is a link to the About page -->
       <h1>JOIN <a href="about.html" class="highlight">OUR TEAM</a></h1>
       <!-- Inline CSS -->
-      <p class="hero-sub">Are you the <span style="color: rgb(255, 210, 0);">purr-fect cat</span><br>we're missing?</p>
+      <p class="hero-sub">Are you the <span style="color: var(--secondary-color);">purr-fect cat</span><br>we're missing?</p>
     </div>
   </header>
 
@@ -91,7 +84,7 @@
 
       <!-- JOB 1: Front-End Developer -->
       <article class="job" id="job-fed">
-        <h3 class="job-title">Front-End Developer</h3>
+        <h2 class="job-title">Front-End Developer</h2>
         <p class="job-desc">We are looking for a Front-End Developer to build interactive, responsive websites for our diverse client projects.</p>
 
         <ul class="job-tags">
@@ -102,7 +95,7 @@
         </ul>
 
         <section class="job-part">
-          <h4 class="yellow-text">Key Responsibilities</h4>
+          <h3 class="yellow-text">Key Responsibilities</h3>
           <ol>
             <li>Develop user interface features using HTML5, CSS3 and JavaScript.</li>
             <li>Collaborate closely with the design team to translate graphic designs into actual web interfaces.</li>
@@ -111,7 +104,7 @@
         </section>
 
         <section class="job-part">
-          <h4>Essential <span class="yellow-text">Requirements</span></h4>
+          <h3>Essential <span class="yellow-text">Requirements</span></h3>
           <ul>
             <li>Proficient in HTML, CSS, and pure JavaScript.</li>
             <li>Has practical experience with Responsive Web Design (works well on all devices).</li>
@@ -120,7 +113,7 @@
         </section>
 
         <section class="job-part">
-          <h4>Preferred <span class="yellow-text">Requirements</span></h4>
+          <h3>Preferred <span class="yellow-text">Requirements</span></h3>
           <ul>
             <li>Has basic knowledge of search engine optimization (SEO).</li>
             <li>Has experience using Git and GitHub for source code management.</li>
@@ -132,7 +125,7 @@
 
       <!-- JOB 2: UI Designer -->
       <article class="job" id="job-uid">
-        <h3 class="job-title">UI Designer</h3>
+        <h2 class="job-title">UI Designer</h2>
         <p class="job-desc">Join our creative team to design visually appealing, interactive, and intuitive interfaces for our web and digital products.</p>
 
         <ul class="job-tags">
@@ -143,7 +136,7 @@
         </ul>
 
         <section class="job-part">
-          <h4 class="yellow-text">Key Responsibilities</h4>
+          <h3 class="yellow-text">Key Responsibilities</h3>
           <ol>
             <li>Collaborate with UX designers and product teams to translate wireframes and user flows into high-fidelity visual designs.</li>
             <li>Create high-quality mockups, interactive prototypes, and maintain design systems/style guides for web projects.</li>
@@ -152,7 +145,7 @@
         </section>
 
         <section class="job-part">
-          <h4>Essential <span class="yellow-text">Requirements</span></h4>
+          <h3>Essential <span class="yellow-text">Requirements</span></h3>
           <ul>
             <li>Proven experience in UI design with a strong portfolio demonstrating web design, aesthetics, and visual skills.</li>
             <li>Proficient in design software such as Figma, Adobe XD or Sketch.</li>
@@ -161,7 +154,7 @@
         </section>
 
         <section class="job-part">
-          <h4>Preferred <span class="yellow-text">Requirements</span></h4>
+          <h3>Preferred <span class="yellow-text">Requirements</span></h3>
           <ul>
             <li>Has basic knowledge of implementing HTML5 and CSS3 from designs.</li>
             <li>Has experience working in an agency environment, which is a significant advantage.</li>
