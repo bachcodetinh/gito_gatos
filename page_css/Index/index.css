@@ -23,7 +23,7 @@
 }
 
 header {
-    background-image: url('images/meoshadowchot2.png');
+    background-image: url('../../Media/Index/meoshadowchot2.png');
     background-size: auto 60vh;
     background-position: right;
     background-repeat: no-repeat;
@@ -42,12 +42,6 @@ header h1 {
     font-family: var(--iciel-font);
     color: var(--main-color);
     letter-spacing: var(--iciel-letter-spacing);
-}
-
-header img {
-    width: 80px;
-    height: auto;
-    margin: 40px;
 }
 
 main {
@@ -137,7 +131,7 @@ main {
 }
 
 .work {
-    border-radius: 10px;
+    border-radius: var(--default-border-radius);
     position: relative;
     overflow: hidden;
 }
@@ -146,7 +140,7 @@ main {
     width: 100%;
     height: 0;
     background: color-mix(in srgb, var(--background-color) 80%, transparent);
-    border-radius: 10px;
+    border-radius: var(--default-border-radius);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -199,5 +193,9 @@ main {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+}
+
+.navigation_buttons .nav_btn:hover {
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
