@@ -1,8 +1,8 @@
 :root {
 
     /* Dimensions */
-    --margin-outer: 50px;
-    --margin-inner: 30px;
+    --margin-outer: 1.5vw;
+    --margin-inner: 1.5vw;
 
     /* Fonts */
 
@@ -14,10 +14,15 @@
 
 /* Universal font setup */
 
+html {
+    font-size: 16px;
+}
+
 .slogan {
     font-family: var(--iciel-font);
     font-size: var(--slogan-font-size);
     letter-spacing: var(--iciel-spacing);
+    margin: 0px;
 }
 
 .heading {
@@ -53,9 +58,14 @@
 }
 
 /* unit set up */
+
+/* details {
+    color: var(--secondary-color)
+}
+
 details>p {
     color: var(--main-color)
-}
+} */
 
 .yel_bar {
     border-bottom: 1.5px solid var(--secondary-color);
@@ -68,7 +78,7 @@ details>p {
     border-radius: 40px;
 }
 
-.button{
+.button {
     border: 3px solid var(--main-color);
     border-radius: 30px;
 }
@@ -96,11 +106,8 @@ footer {
 
 header,
 section,
-footer, #end_button, #footer {
+footer,
+#end_button,
+#footer {
     margin-top: var(--margin-outer);
-}
-
-
-details {
-    color: var(--secondary-color)
 }
