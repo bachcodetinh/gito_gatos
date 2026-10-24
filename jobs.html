@@ -58,8 +58,10 @@
 
     <!--  ASIDE: Benefits -->
     <aside class="benefits">
-      <h2>Benefits</h2>
-      <ul>
+      <!-- "Benefits" open or close on small screens -->
+      <input type="checkbox" id="benefits-switch" class="benefits-check">
+      <h2><label for="benefits-switch" class="benefits-button">Benefits</label></h2>
+      <ul class="benefits-list">
         <li>Flexible working hours.</li>
         <li>Open work environment, always encouraging innovative ideas.</li>
         <li>Providing modern equipment (MacBook, external monitors) to support work to the fullest.</li>

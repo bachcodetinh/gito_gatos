@@ -14,7 +14,10 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--iciel-font);
   font-weight: normal;
   letter-spacing: 1px;
@@ -46,6 +49,7 @@ a {
   background-position: right center;
   background-size: auto 100%;
 }
+
 /* Logo on the left, navigation + paw to the right */
 .nav-row {
   display: flex;
@@ -185,7 +189,7 @@ aside.benefits {
   border-radius: var(--default-border-radius);
   /* Sticky: stays on screen while the user scrolls the job list */
   position: sticky;
-  top: 50px; 
+  top: 50px;
 }
 
 aside.benefits h2 {
@@ -199,6 +203,14 @@ aside.benefits ul {
   font-size: var(--body-font-size);
 }
 
+aside.benefits input.benefits-check {
+  display: none;
+}
+
+/* On 1920 (big) "Benefits" is only a heading, so it can't be clicked */
+.benefits-button {
+  pointer-events: none;
+}
 
 /* Available positions + switch bar*/
 
@@ -232,7 +244,8 @@ aside.benefits ul {
 }
 
 .switch-bar label {
-  position: relative;  /* stay above the slider */
+  position: relative;
+  /* stay above the slider */
   z-index: 1;
   width: 50%;
   padding: 8px 0;
@@ -255,13 +268,13 @@ aside.benefits ul {
 }
 
 /* When UI Designer is chosen, move the slider to the right */
-#tab-uid:checked ~ .switch-bar .slider {
+#tab-uid:checked~.switch-bar .slider {
   left: 50%;
 }
 
 /* Selected label turns yellow */
-#tab-fed:checked ~ .switch-bar label[for="tab-fed"],
-#tab-uid:checked ~ .switch-bar label[for="tab-uid"] {
+#tab-fed:checked~.switch-bar label[for="tab-fed"],
+#tab-uid:checked~.switch-bar label[for="tab-uid"] {
   color: var(--secondary-color);
 }
 
@@ -270,8 +283,8 @@ aside.benefits ul {
 }
 
 /*Only the selected job card is shown */
-#tab-fed:checked ~ #job-fed,
-#tab-uid:checked ~ #job-uid {
+#tab-fed:checked~#job-fed,
+#tab-uid:checked~#job-uid {
   display: block;
 }
 
@@ -296,7 +309,7 @@ aside.benefits ul {
   height: 2px;
   margin: 10px auto 0;
   background-color: var(--secondary-color);
-    }
+}
 
 .job-desc {
   max-width: 650px;
@@ -373,4 +386,161 @@ aside.benefits ul {
 .bottom-nav a:hover {
   color: var(--background-color);
   background-color: var(--main-color);
+}
+
+/*Responsive design: smaller screens*/
+
+
+@media (max-width: 1280px) {
+
+  /*Remove the cat*/
+  .hero {
+    min-height: auto;
+    padding: 1.5rem 2rem 4rem;
+    background-image: none;
+  }
+
+  .hero-text {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  /*"JOIN" on one line, "OUR TEAM" on the next line*/
+  .hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    font-size: calc(1rem + 8vw);
+    line-height: 1.1;
+  }
+
+  .hero-sub {
+    margin-top: 0.8em;
+    font-size: calc(0.6rem + 1.8vw);
+  }
+
+  /*Benefits button that can open or close */
+
+  /*Not a sidebar any more*/
+  aside.benefits {
+    float: none;
+    position: static;
+    width: auto;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    border: none;
+    text-align: center;
+  }
+
+  aside.benefits h2 {
+    margin: 0;
+    font-size: calc(1rem + 1.6vw);
+  }
+
+  /*The button*/
+  .benefits-button {
+    display: inline-block;
+    padding: 0.2em 1.5em;
+    border: var(--cyan-border);
+    border-radius: var(--default-border-radius);
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  .benefits-button:hover {
+    color: var(--secondary-color);
+    border: var(--yellow-border);
+  }
+
+  /*Yellow border and yellow text when opnê */
+  .benefits-check:checked~h2 .benefits-button {
+    border: var(--yellow-border);
+    color: var(--secondary-color);
+  }
+
+  aside.benefits .benefits-list {
+    display: none;
+  }
+
+  /*Checkbox ticked show the list in box with border */
+  aside.benefits .benefits-check:checked~.benefits-list {
+    display: block;
+    width: 80%;
+    margin: 1rem auto 0;
+    padding: 1rem 1.5rem 1rem 2.5rem;
+    border: var(--cyan-border);
+    border-radius: 1.5rem;
+    text-align: left;
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  aside.benefits li {
+    margin-bottom: 0.4em;
+  }
+
+
+  /*Available Positions */
+
+  .positions {
+    margin-right: 0;
+  }
+
+  .pill-heading {
+    margin: 0 auto 1.5rem;
+    padding: 0.2em 1.5em;
+    font-size: calc(1rem + 2.5vw);
+  }
+
+  /*Switch bar*/
+  .switch-bar {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .switch-bar label {
+    padding: 0.4em 0;
+    font-size: calc(0.5rem + 1.3vw);
+    cursor: pointer;
+  }
+
+  /*Job card*/
+
+  .job {
+    padding: 2rem 5%;
+    border-radius: 2rem;
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  .job-title {
+    font-size: calc(1rem + 2vw);
+  }
+
+  .job-desc {
+    width: 80%;
+  }
+
+  .job-tags {
+    gap: 0.6rem;
+  }
+
+  .job-tags li {
+    padding: 0.1em 0.8em;
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  .job-part h4 {
+    margin: 1.5em 0 0.5em;
+    font-size: calc(1rem + 1vw);
+  }
+
+  .job-part li {
+    margin-bottom: 0.3em;
+  }
+
+  .apply-button {
+    margin-top: 2rem;
+    padding: 0.3em 1.5em;
+    font-size: calc(1rem + 2vw);
+  }
 }
