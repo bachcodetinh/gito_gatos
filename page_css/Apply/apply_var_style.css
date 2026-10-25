@@ -2,7 +2,7 @@
 
     /* Dimensions */
     --margin-outer: 1.5vw;
-    --margin-inner: 1.5vw;
+    --margin-inner: 2em;
 
     /* Fonts */
 
@@ -17,6 +17,7 @@
 html {
     font-size: 16px;
 }
+
 
 .slogan {
     font-family: var(--iciel-font);

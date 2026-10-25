@@ -4,75 +4,141 @@
     padding: 0px;
 }
 
-body {
-    /* display: flex;
-    flex-direction: column; */
-}
-
 header,
 section,
 footer {
     box-sizing: border-box;
-    padding: var(--margin-outer);
+    padding: var(--margin-inner);
     margin: var(--margin-outer);
 }
-header {
 
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 55px  1fr 1fr 1fr; */
+@media (min-width: 992px) {
 
+    /* Layout for header's elements */
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 4em var(--slogan-font-size) var(--slogan-font-size) 1fr;
+        height: 90vh;
+        max-height: 1080px;
+
+    }
+
+    .nav-row {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 1;
+    }
+
+    .slogan.yellow {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        height: var(--slogan-font-size);
+        align-items: center;
+        margin-top: 0.2em;
+
+    }
+
+    .slogan.cyan {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+        height: var(--slogan-font-size);
+        display: flex;
+        align-items: center;
+    }
+
+    #header_des {
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    #header_des p {
+        box-sizing: border-box;
+    }
+
+    .video {
+        width: 50vw;
+        max-width: 1200px;
+        height: auto;
+        margin-top: 3em;
+        grid-column: 5 / span 1;
+        grid-row: 3 / span 3;
+    }
+
+    #header_info {
+        grid-column: 1 / span 5;
+        grid-row: 5 / span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #header_info p {
+        box-sizing: border-box;
+
+    }
 }
 
-/* Layout for header's elements */
-.nav-row {
-    grid-column: 1 / span 5;
-    grid-row: 1 / span 1;
+@media screen and (min-width: 480px) and (max-width: 991px) {
+    html {
+        font-size: 10px;
+    }
+
+    .video {
+        width: 50vw;
+        height: auto;
+        margin-top: 2em;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .slogan.yellow {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        align-items: center;
+        height: var(--slogan-font-size);
+        margin-top: 0.2em;
+
+    }
+
+    .slogan.cyan {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+        height: var(--slogan-font-size);
+        display: flex;
+        align-items: center;
+    }
+
+    #header_des {
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    #header_des p {
+        box-sizing: border-box;
+    }
+
+    .video {
+        width: 50vw;
+        max-width: 1200px;
+        height: auto;
+        margin-top: 2em;
+        grid-column: 5 / span 1;
+        grid-row: 3 / span 3;
+    }
 }
 
-.slogan.yellow {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
-
-}
-
-.slogan.cyan {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
 
 
-}
 
 
-#header_des {
-    grid-column: 1 / span 3;
-    grid-row: 6 / span 2;
-}
-
-#header_des p {
-    box-sizing: border-box;
-    margin: 0px;
-    height: 25px;
-}
-
-.video {
-    margin-top: 20px;
-    grid-column: 5 / span 2;
-    grid-row: 5 / span 3;
-}
-
-#header_info {
-    grid-column: 1 / span 5;
-    grid-row: 8 / span 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#header_info p {
-    box-sizing: border-box;
-    margin: 0px;
-}
 
 /* Layout for Recruitment Process and its elements */
 #recruit_process {

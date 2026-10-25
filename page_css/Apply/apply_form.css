@@ -1,11 +1,11 @@
 /* Layout for Form and its elements */
 
 section>form {
-    display: grid;
+    /* display: grid;
     grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
-    grid-template-rows: var(--margin-inner) 50px 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
+    grid-template-rows: var(--margin-inner) 50px 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
     box-sizing: border-box;
-    height: 2000px;
+    height: 2000px; */
 }
 
 .heading.form {
