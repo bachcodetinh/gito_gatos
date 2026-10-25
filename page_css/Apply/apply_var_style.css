@@ -9,6 +9,7 @@
     --important-font-size: 2rem;
     --nokio-spacing: 0.08rem;
     --iciel-spacing: 1rem;
+    --heading-spacing: 0.5rem;
     --sub-head-spacing: 0.5rem;
 }
 
@@ -29,7 +30,7 @@ html {
 .heading {
     font-family: var(--iciel-font);
     font-size: var(--heading-font-size);
-    letter-spacing: var(--iciel-spacing);
+    letter-spacing: var(--heading-spacing);
 }
 
 .sub_heading {
@@ -69,9 +70,10 @@ details>p {
 } */
 
 .yel_bar {
-    border-bottom: 1.5px solid var(--secondary-color);
-    height: 20px;
-    text-align: center;
+    border-bottom: 0.2rem solid var(--secondary-color);
+    width: 8rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .video {
