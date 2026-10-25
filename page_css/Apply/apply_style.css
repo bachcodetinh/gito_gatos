@@ -185,7 +185,7 @@ header {
 
 
 
-@media (min-width: 992px) {
+@media (min-width: 1280px) {
 
     /* Layout for header's elements */
     header {
@@ -256,7 +256,7 @@ header {
 
 }
 
-@media screen and (min-width: 480px) and (max-width: 991px) {
+@media screen and (min-width: 480px) and (max-width: 1279px) {
     html {
         font-size: 10px;
     }
@@ -314,5 +314,11 @@ header {
     .col_2 {
         margin-left: 5vw;
         margin-right: 5vw;
+    }
+
+    /* Layout for form */
+
+    #per_inf, #con_loc, #ref_num{
+        display: block;
     }
 }
