@@ -112,86 +112,107 @@ body {
 }
 
 
-/* Logo on the left, navigation + paw to the right */
+/* Navigation row */
+
 .nav-row {
-  display: flex;
-  align-items: center;
-  gap: 25px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
-  width: 70px;
-  height: 70px;
+    height: 3.5em;
+    width: auto;
 }
 
-.paw-icon {
-  width: 30px;
-  margin-left: -85px;
+.icon {
+    width: 1.3em;
+    height: auto;
+}
+summary {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
-/* Navigation bar (rounded) */
 .main-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-left: auto;
-  border: var(--cyan-border);
-  border-radius: var(--default-border-radius);
-  padding: 8px 101px 8px 35px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+
+    justify-content: space-around;
+    align-items: center;
+
+    height: 2em;
+    padding: 0.1em;
+    padding-left: 0.44em;
+    padding-right: 0.4em;
+
+    border: var(--cyan-border);
+    border-radius: 3em;
+
 }
 
-.main-nav ul {
-  display: flex;
-  gap: 50px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.main-nav:open {
+    gap: 2em;
 }
 
-.main-nav a {
-  text-decoration: none;
-  font-size: var(--body-font-size);
+.main-nav div {
+    display: flex;
+    gap: 1.5em;
 }
 
-.main-nav a:hover {
-  color: var(--secondary-color);
+.main-nav * {
+    text-decoration: none;
 }
 
-/* -------------------- */
+.main-nav *:hover {
+    color: var(--secondary-color);
+}
 
-/* Current page link */
 .main-nav a.active {
-  color: var(--secondary-color);
-  text-decoration: underline;
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+#sesarch-box::placeholder {
+    font-family: var(--nokio-font);
+    font-size: var(--body-font-size);
 }
 
 .nav-search {
-  display: flex;
-  align-items: center;
+    display: inline;
+    
 }
 
 .nav-search input {
-  width: 170px;
-  border: none;
-  border-bottom: var(--cyan-border);
-  background: transparent;
-  color: var(--main-color);
-  font-family: inherit;
-  font-size: var(--body-font-size);
+    
+    width: 4em;
+    cursor: pointer;
+
+    border: none;
+
+
+    border-bottom: var(--cyan-border);
+    background: transparent;
+    color: var(--main-color);
+    font-family: inherit;
+    font-size: var(--body-font-size);
 }
 
 .nav-search input::placeholder {
-  color: var(--main-color);
+    color: var(--main-color);
 }
 
 .nav-search button {
-  border: none;
-  background: transparent;
+    border: none;
+    background: transparent;
 }
 
 .nav-search button img {
-  width: 20px;
+    width: 1.5em;
+    cursor: pointer;
 }
+
 
 
 

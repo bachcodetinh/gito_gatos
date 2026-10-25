@@ -4,10 +4,10 @@ filename: apply.html
 author: le ba cao minh
 
 created: October 8, 2026
-last modified: October 17, 2026
+last modified: October 23, 2026
 description: html file for apply page
 
-AI acknowledgement: Cao Minh use Claude for cross checking requirements with project descriptions
+AI acknowledgement: Cao Minh use Claude for cross checking requirements with project descriptions.
 
  -->
 
@@ -24,13 +24,12 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
     <link href="page_css/Apply/apply_var_style.css" rel="stylesheet">
     <link href="page_css/Apply/apply_style.css" rel="stylesheet">
-    <link href="page_css/Apply/apply_form.css" rel="stylesheet">
-
 
     <title>Apply to Meowdia</title>
 
     <style>
         body {
+
             background: repeating-linear-gradient(35deg,
                     rgb(0, 0, 0), var(--background-color),
                     rgb(0, 0, 0), var(--background-color),
@@ -45,40 +44,45 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         <a id="top"></a>
 
         <!-- ---------  Navigation Row  ----------- -->
-        <div class="nav-row">
-            <a href="index.html" class="logo-link">
-                <img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency" class="logo">
-            </a>
-            <nav class="main-nav norm_text">
-                <ul>
-                    <li><a href="index.html" class="cyan">Home</a></li>
-                    <li><a href="jobs.html" class="cyan">Jobs</a></li>
-                    <li><a href="apply.html" class="active" aria-current="page">Apply</a></li>
-                    <li><a href="about.html" class="cyan">About</a></li>
-                </ul>
-                <form class="nav-search" action="#" role="search">
-                    <input type="search" id="search-box" name="search" placeholder="Search">
-                    <button type="submit">
-                        <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search">
-                    </button>
-                </form>
-            </nav>
 
-            <img src="Media/Navigation_bar/Paw.svg" alt="" class="paw-icon">
+        <div class="nav-row">
+            <a href="index.html" class="logo-link"><img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency"
+                    class="logo"></a>
+
+            <details class="main-nav norm_text">
+
+                <summary><img src="Media/Navigation_bar/Paw.svg" alt="navigation bar button" class="icon"></summary>
+                <div>
+                    <a href="index.html" class="cyan" style="padding-left: 0.2em;">Home</a>
+                    <a href="jobs.html" class="cyan">Jobs</a>
+                    <a href="apply.html" class="active" aria-current="page">Apply</a>
+                    <a href="about.html" class="cyan">About</a>
+                    <form class="nav-search" action="#" role="search">
+                        <input type="search" class="norm-text cyan" id="search-box" name="search" placeholder="Search">
+                        <button type="submit">
+                            <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search button">
+                        </button>
+                    </form>
+                </div>
+
+            </details>
+
         </div>
 
         <!-- ----------Header Content---------- -->
 
-        <h1 class="slogan yellow">APPLICATION</h1>
+        <!-- <h1 class="slogan yellow">APPLICATION</h1>
         <h1 class="slogan cyan">FORM</h1>
 
 
         <div id="header_des" class="norm_text cyan">
             <p>Join Meowdia to work perfomatively like the video!</p>
             <p>Please complete all fields below.</p>
-        </div>
+        </div> -->
 
-        <video width="640" height="360" autoplay loop class="video"> <!--Import Timelapse Video-->
+        <!--Import Timelapse Video-->
+
+        <!-- <video width="640" height="360" autoplay loop class="video"> 
             <source src="Media/Apply/timelapse_small.mp4" type="video/mp4">
             Your browser does not support the video tag
         </video>
@@ -87,12 +91,12 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             <p><strong class="yellow">Closing date:</strong> 24 December 2026</p>
             <p><strong class="yellow">Location:</strong> Middle Street, Faker District, Summoner’s Rift City, T1 Nation
             </p>
-        </div>
+        </div> -->
     </header>
 
     <!-- ----------Recruitment Process Content---------- -->
 
-    <section id="recruit_process">
+    <!-- <section id="recruit_process">
         <h2 class="heading cyan process">Our Recruitment Process</h2>
         <div class="yel_bar process"></div>
         <ol class="norm_text cyan" id="re_pro_list">
@@ -108,11 +112,11 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             <li><strong class="yellow">Outcome:</strong> all applicants are notified of the outcome 1 week after the
                 interview.</li>
         </ol>
-    </section>
+    </section> -->
 
     <!-- ----------Collection Notice Content---------- -->
 
-    <section id="collection_notice">
+    <!-- <section id="collection_notice">
         <h2 class="heading cyan notice">Collection Notice</h2>
         <div class="yel_bar col_not"></div>
 
@@ -138,11 +142,11 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         <p class="norm_text cyan six">You can ask to view, correct or delete your information at any time by contacting
             meowdia_hr@company.com</p>
 
-    </section>
+    </section> -->
 
     <!-- ----------Application Form Content---------- -->
 
-    <section id="form_sec">
+    <!-- <section id="form_sec">
 
         <form class="form" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
             <h2 class="heading form cyan">Form</h2>
@@ -229,13 +233,9 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 <p class="norm_text cyan">Front-end Developer: FED01</p>
                 <p class="norm_text cyan">UI/UX Designer: UXD02</p>
             </div>
-
-
-            <details id="des">
-                <summary>
-                    <h2 class="sub_heading cyan">Design</h2>
-                </summary>
-                <p>Select all that apply</p>
+            <div class="norm_text cyan" id="des">
+                <h2 class="sub_heading cyan">Design</h2>
+                <em>Select all that apply</em>
                 <p>
                     <input type="checkbox" id="skill_des1" name="skill_des[]" value="skill_des1">
                     <label for="skill_des1">Figma (auto layout, components, variants)</label>
@@ -284,13 +284,10 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <input type="checkbox" id="skill_des12" name="skill_des[]" value="skill_des12">
                     <label for="skill_des12">Presenting Concepts to Clients</label>
                 </p>
-            </details>
-
-            <details id="fed">
-                <summary>
-                    <h2 class="sub_heading cyan">Front-end</h2>
-                </summary>
-                <p>Select all that apply</p>
+            </div>
+            <div class="norm_text cyan" id="fed">
+                <h2 class="sub_heading cyan">Front-end</h2>
+                <em>Select all that apply</em>
                 <p>
                     <input type="checkbox" id="skill_fed1" name="skill_fed[]" value="skill_fed1">
                     <label for="skill_fed1">Semantic HTML5</label>
@@ -343,7 +340,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <input type="checkbox" id="skill_fed13" name="skill_fed[]" value="skill_fed13">
                     <label for="skill_fed13">Client Communication & Requirements Gathering</label>
                 </p>
-            </details>
+            </div>
+
             <div id="other">
                 <label class="norm_text yellow" for="other_skill">Other Skills Optional</label>
                 <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4" cols="40"
@@ -360,19 +358,20 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 <input class=" norm_text cyan button input" type="reset" value="Reset form">
             </div>
         </form>
-    </section>
+    </section> -->
 
     <!-- ----------End Button Content---------- -->
 
-    <div id="end_button">
+    <!-- <div id="end_button">
         <a class="norm_text cyan button" href="./jobs.html">Return to Jobs</a>
         <a class="norm_text cyan button" href="#top">Back to Top</a>
         <a class="norm_text cyan button" href="./about.html">About Meowdia</a>
-    </div>
+    </div> -->
 
     <!-- ----------Footer Content---------- -->
 
-    <img src="Media/Footer/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
+    <!-- <img src="Media/Footer/catface.png" alt="footer_cat"
+        style="width: 90%; height: auto; display: block; margin: 0 auto; margin-top: var(--margin-outer);">
 
     <footer class="meowdia_footer">
         <div class="footer_main">
@@ -395,8 +394,10 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                         <h3>See more</h3>
                         <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
                         <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
-                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum Board</a>
-                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6" target="_blank">Figma Design Board</a>
+                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
+                            Board</a>
+                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6"
+                            target="_blank">Figma Design Board</a>
                     </div>
                 </div>
                 <div class="instructor_credit">
@@ -404,7 +405,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
