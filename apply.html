@@ -20,6 +20,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     <meta name="author" content="Mon Le">
     <meta name="description" content="This page is an application form for a job at Meowdia company.">
     <link rel="icon" type="image/x-icon" href="Media/Navigation_bar/logo-ngan.svg">
+
     <link href="style.css" rel="stylesheet">
 
     <link href="page_css/Apply/apply_var_style.css" rel="stylesheet">
@@ -117,7 +118,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     </section>
 
     <div class="yel_bar_section"></div>
-    <!-- ----------Collection Notice Content---------- -->
+    <!-- ----------FAQ---------- -->
 
     <section id="collection_notice">
         <h2 class="heading cyan notice">Frequently Asked Questions</h2>
@@ -160,83 +161,108 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     <div class="yel_bar_section"></div>
     <!-- ----------Application Form Content---------- -->
 
-    <!-- <section id="form_sec">
-
+    <section id="form_sec">
+        <h2 class="heading form cyan">Form</h2>
+        <div class="yel_bar form"></div>
         <form class="form" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-            <h2 class="heading form cyan">Form</h2>
-            <div class="yel_bar form"></div>
 
-            <h2 class="sub_heading yellow per_inf">Personal Information</h2>
 
-            <div id="first_name">
-                <label for="F_name" class="norm_text yellow">First name</label>
-                <input class="norm_text cyan input" type="text" id="F_name" name="F_name" pattern="^[a-z]{1-20}$"
-                    maxlength="20" required>
-                <p class="norm_text cyan">Letters only, up to 20 characters</p>
-            </div>
-            <div id="last_name">
-                <label for="L_name" class="norm_text yellow">Last name</label>
-                <input class="norm_text cyan input" type="text" id="L_name" name="L_name" pattern="^[a-z]{1-20}$"
-                    maxlength="20" required>
-                <p class="norm_text cyan">Letters only, up to 20 characters</p>
-            </div>
-            <div id="dob">
-                <label for="dob" class="norm_text yellow">Date of birth</label>
-                <input class="norm_text cyan input" type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$" name="bdate"
-                    placeholder="dd/mm/yyyy" required>
-                <p class="norm_text cyan">Used to verify you meet the legal working-age requirement</p>
+            <h2 class="sub_heading yellow">Personal Information</h2>
+            <div id="per_inf">
+                <div class="field" id="first_name_holder">
+                    <label for="F_name" class="norm_text yellow">First name</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="F_name" name="F_name"
+                            pattern="^[a-z]{1-20}$" maxlength="20" required>
+                        <p class="norm_text cyan">Letters only, up to 20 characters</p>
+                    </div>
+
+                </div>
+                <div class="field" id="last_name_holder">
+                    <label for="L_name" class="norm_text yellow">Last name</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="L_name" name="L_name"
+                            pattern="^[a-z]{1-20}$" maxlength="20" required>
+                        <p class="norm_text cyan">Letters only, up to 20 characters</p>
+                    </div>
+                </div>
+                <div class="field" id="dob_holder">
+                    <label for="dob" class="norm_text yellow">Date of birth</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$"
+                            name="bdate" placeholder="dd/mm/yyyy" required>
+                        <p class="norm_text cyan">Used to verify you meet the legal working-age requirement</p>
+                    </div>
+                </div>
+                <fieldset class="norm_text cyan input container" id="gender_holder">
+                    <legend class="norm_text yellow">Gender</legend>
+                    <input class="checkmark" type="radio" id="Female" name="gender" value="Female" required />
+                    <label for="Female" class="norm_text cyan">Female</label>
+                    <input class="checkmark" type="radio" id="Male" name="gender" value="Male" required />
+                    <label for="Male" class="norm_text cyan">Male</label>
+                    <input class="checkmark" type="radio" id="Others" name="gender" value="Others" required />
+                    <label for="Others" class="norm_text cyan">Others</label>
+                </fieldset>
             </div>
 
-            <fieldset class="norm_text cyan input" id="gender">
-                <legend class="norm_text yellow">Gender</legend>
-                <input type="radio" id="Female" name="gender" value="Female" required />
-                <label for="Female" class="norm_text cyan">Female</label>
-                <input type="radio" id="Male" name="gender" value="Male" required />
-                <label for="Male" class="norm_text cyan">Male</label>
-            </fieldset>
 
-            <h2 class="sub_heading yellow con_loc">Contact & Location</h2>
-
-            <div id="email">
-                <label for="email" class="norm_text yellow">Email</label>
-                <input class="norm_text cyan input" type="email" id="email" name="email" required>
-                <p class="norm_text cyan">Where you receive the result</p>
-            </div>
-            <div id="phone">
-                <label for="phone" class="norm_text yellow">Phone</label>
-                <input class="norm_text cyan input" type="text" id="phone" name="phone" pattern="^\d{8,12}$"
-                    maxlength="12" required>
-                <p class="norm_text cyan">8 to 12 digits, no space</p>
-            </div>
-            <div id="address">
-                <label for="street" class="norm_text yellow">Street Address</label>
-                <input class="norm_text cyan input" type="text" id="street" name="street" maxlength="40" required>
-                <p class="norm_text cyan">Up to 40 characters</p>
-            </div>
-            <div id="suburb">
-                <label for="suburb" class="norm_text yellow">Suburb/Town</label>
-                <input class="norm_text cyan input" type="text" id="suburb" name="suburb" maxlength="40" required>
-                <p class="norm_text cyan">Up to 40 characters</p>
-            </div>
-            <div id="state">
-                <label for="state" class="norm_text yellow">State</label>
-                <select class="norm_text cyan input" name="state" id="state" required>
-                    <option value="">Please select</option>
-                    <option>VIC</option>
-                    <option>NSW</option>
-                    <option>QLD</option>
-                    <option>NT</option>
-                    <option>WA</option>
-                    <option>SA</option>
-                    <option>TAS</option>
-                    <option>ACT</option>
-                </select>
-            </div>
-            <div id="postcode">
-                <label for="postcode" class="norm_text yellow">Postcode</label>
-                <input class="norm_text cyan input" type="text" id="postcode" name="postcode" pattern="^\d{4}$"
-                    maxlength="4" required>
-                <p class="norm_text cyan">4 digits</p>
+            <h2 class="sub_heading yellow">Contact & Location</h2>
+            <div id="con_loc">
+                <div class="field" id="email_holder">
+                    <label for="email" class="norm_text yellow">Email</label>
+                    <div>
+                        <input class="norm_text cyan input" type="email" id="email" name="email" required>
+                        <p class="norm_text cyan">Where you receive the result</p>
+                    </div>
+                </div>
+                <div class="field" id="phone_holder">
+                    <label for="phone" class="norm_text yellow">Phone</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="phone" name="phone" pattern="^\d{8,12}$"
+                            maxlength="12" required>
+                        <p class="norm_text cyan">8 to 12 digits, no space</p>
+                    </div>
+                </div>
+                <div class="field" id="address_holder">
+                    <label for="street" class="norm_text yellow">Street Address</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="street" name="street" maxlength="40"
+                            required>
+                        <p class="norm_text cyan">Up to 40 characters</p>
+                    </div>
+                </div>
+                <div class="field" id="suburb_holder">
+                    <label for="suburb" class="norm_text yellow">Suburb/Town</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="suburb" name="suburb" maxlength="40"
+                            required>
+                        <p class="norm_text cyan">Up to 40 characters</p>
+                    </div>
+                </div>
+                <div class="field" id="state_holder">
+                    <label for="state" class="norm_text yellow">State</label>
+                    <div>
+                        <select class="norm_text cyan input" name="state" id="state" required>
+                            <option value="">Please select</option>
+                            <option>VIC</option>
+                            <option>NSW</option>
+                            <option>QLD</option>
+                            <option>NT</option>
+                            <option>WA</option>
+                            <option>SA</option>
+                            <option>TAS</option>
+                            <option>ACT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field" id="postcode_holder">
+                    <label for="postcode" class="norm_text yellow">Postcode</label>
+                    <div>
+                        <input class="norm_text cyan input" type="text" id="postcode" name="postcode" pattern="^\d{4}$"
+                            maxlength="4" required>
+                        <p class="norm_text cyan">4 digits</p>
+                    </div>
+                </div>
             </div>
 
             <h2 class="sub_heading yellow pos_skill">Position & Skills</h2>
@@ -244,135 +270,147 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 <label class="norm_text yellow" for="ref_num">Job reference number</label>
                 <input class="norm_text cyan input" type="text" id="ref_num" name="ref_num" pattern="^[A-Z]{3}[0-9]{2}$"
                     maxlength="5" required>
-                <p class="norm_text cyan">Front-end Developer: FED01</p>
-                <p class="norm_text cyan">UI/UX Designer: UXD02</p>
+                <div>
+                    <p class="norm_text cyan">Front-end Developer: FED01</p>
+                    <p class="norm_text cyan">UI/UX Designer: UXD02</p>
+                </div>
             </div>
-            <div class="norm_text cyan" id="des">
-                <h2 class="sub_heading cyan">Design</h2>
-                <em>Select all that apply</em>
-                <p>
-                    <input type="checkbox" id="skill_des1" name="skill_des[]" value="skill_des1">
-                    <label for="skill_des1">Figma (auto layout, components, variants)</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des2" name="skill_des[]" value="skill_des2">
-                    <label for="skill_des2">Adobe Creative Suite (Photoshop, Illustrator)</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des3" name="skill_des[]" value="skill_des3">
-                    <label for="skill_des3">Wireframing & Interactive Prototyping</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des4" name="skill_des[]" value="skill_des4">
-                    <label for="skill_des4">Design Systems, Component Libraries & Style Guides</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des5" name="skill_des[]" value="skill_des5">
-                    <label for="skill_des5">Typography, Color Theory & Layout</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des6" name="skill_des[]" value="skill_des6">
-                    <label for="skill_des6">Accessibility (WCAG) & Inclusive Design</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des7" name="skill_des[]" value="skill_des7">
-                    <label for="skill_des7">Responsive Web Design</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des8" name="skill_des[]" value="skill_des8">
-                    <label for="skill_des8">Brand Identity & Visual Branding</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des9" name="skill_des[]" value="skill_des9">
-                    <label for="skill_des9">Motion Design & Micro-interactions</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des10" name="skill_des[]" value="skill_des10">
-                    <label for="skill_des10">User Research & Usability Testing</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des11" name="skill_des[]" value="skill_des11">
-                    <label for="skill_des11">Design-to-Developer Handoff</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_des12" name="skill_des[]" value="skill_des12">
-                    <label for="skill_des12">Presenting Concepts to Clients</label>
-                </p>
-            </div>
-            <div class="norm_text cyan" id="fed">
-                <h2 class="sub_heading cyan">Front-end</h2>
-                <em>Select all that apply</em>
-                <p>
-                    <input type="checkbox" id="skill_fed1" name="skill_fed[]" value="skill_fed1">
-                    <label for="skill_fed1">Semantic HTML5</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed2" name="skill_fed[]" value="skill_fed2">
-                    <label for="skill_fed2">CSS3 & Sass (SCSS)</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed3" name="skill_fed[]" value="skill_fed3">
-                    <label for="skill_fed3">Responsive Web Design</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed4" name="skill_fed[]" value="skill_fed4">
-                    <label for="skill_fed4">Cross-browser Compatibility</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed5" name="skill_fed[]" value="skill_fed5">
-                    <label for="skill_fed5">JavaScript (ES6+) & TypeScript</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed6" name="skill_fed[]" value="skill_fed6">
-                    <label for="skill_fed6">Front-end Frameworks (React, Vue)</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed7" name="skill_fed[]" value="skill_fed7">
-                    <label for="skill_fed7">Accessibility (WCAG) & SEO</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed8" name="skill_fed[]" value="skill_fed8">
-                    <label for="skill_fed8">Web Performance Optimization</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed9" name="skill_fed[]" value="skill_fed9">
-                    <label for="skill_fed9">CMS Platforms (WordPress)</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed10" name="skill_fed[]" value="skill_fed10">
-                    <label for="skill_fed10">Git & GitHub Version Control</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed11" name="skill_fed[]" value="skill_fed11">
-                    <label for="skill_fed11">Testing & Debugging</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed12" name="skill_fed[]" value="skill_fed12">
-                    <label for="skill_fed12">Agile Workflow & Jira</label>
-                </p>
-                <p>
-                    <input type="checkbox" id="skill_fed13" name="skill_fed[]" value="skill_fed13">
-                    <label for="skill_fed13">Client Communication & Requirements Gathering</label>
-                </p>
+            <div id="skill_list">
+                <details class="norm_text cyan" id="des">
+                    <summary>
+                        <img src="Media/Apply/triangle.svg" alt="Design skills button" class="icon">
+                        <h2 class="sub_heading cyan">Design</h2>
+                        <p>(Click to see full list)</p>
+                    </summary>
+                    <em>Select all that apply</em>
+                    <p>
+                        <input type="checkbox" id="skill_des1" name="skill_des[]" value="skill_des1">
+                        <label for="skill_des1">Figma (auto layout, components, variants)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des2" name="skill_des[]" value="skill_des2">
+                        <label for="skill_des2">Adobe Creative Suite (Photoshop, Illustrator)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des3" name="skill_des[]" value="skill_des3">
+                        <label for="skill_des3">Wireframing & Interactive Prototyping</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des4" name="skill_des[]" value="skill_des4">
+                        <label for="skill_des4">Design Systems, Component Libraries & Style Guides</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des5" name="skill_des[]" value="skill_des5">
+                        <label for="skill_des5">Typography, Color Theory & Layout</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des6" name="skill_des[]" value="skill_des6">
+                        <label for="skill_des6">Accessibility (WCAG) & Inclusive Design</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des7" name="skill_des[]" value="skill_des7">
+                        <label for="skill_des7">Responsive Web Design</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des8" name="skill_des[]" value="skill_des8">
+                        <label for="skill_des8">Brand Identity & Visual Branding</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des9" name="skill_des[]" value="skill_des9">
+                        <label for="skill_des9">Motion Design & Micro-interactions</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des10" name="skill_des[]" value="skill_des10">
+                        <label for="skill_des10">User Research & Usability Testing</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des11" name="skill_des[]" value="skill_des11">
+                        <label for="skill_des11">Design-to-Developer Handoff</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_des12" name="skill_des[]" value="skill_des12">
+                        <label for="skill_des12">Presenting Concepts to Clients</label>
+                    </p>
+                </details>
+                <details class="norm_text cyan" id="fed">
+                    <summary>
+                        <img src="Media/Apply/triangle.svg" alt="Design skills button" class="icon">
+                        <h2 class="sub_heading cyan">Front-end</h2>
+                        <p>(Click to see full list)</p>
+                    </summary>
+                    <em>Select all that apply</em>
+                    <p>
+                        <input type="checkbox" id="skill_fed1" name="skill_fed[]" value="skill_fed1">
+                        <label for="skill_fed1">Semantic HTML5</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed2" name="skill_fed[]" value="skill_fed2">
+                        <label for="skill_fed2">CSS3 & Sass (SCSS)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed3" name="skill_fed[]" value="skill_fed3">
+                        <label for="skill_fed3">Responsive Web Design</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed4" name="skill_fed[]" value="skill_fed4">
+                        <label for="skill_fed4">Cross-browser Compatibility</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed5" name="skill_fed[]" value="skill_fed5">
+                        <label for="skill_fed5">JavaScript (ES6+) & TypeScript</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed6" name="skill_fed[]" value="skill_fed6">
+                        <label for="skill_fed6">Front-end Frameworks (React, Vue)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed7" name="skill_fed[]" value="skill_fed7">
+                        <label for="skill_fed7">Accessibility (WCAG) & SEO</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed8" name="skill_fed[]" value="skill_fed8">
+                        <label for="skill_fed8">Web Performance Optimization</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed9" name="skill_fed[]" value="skill_fed9">
+                        <label for="skill_fed9">CMS Platforms (WordPress)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed10" name="skill_fed[]" value="skill_fed10">
+                        <label for="skill_fed10">Git & GitHub Version Control</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed11" name="skill_fed[]" value="skill_fed11">
+                        <label for="skill_fed11">Testing & Debugging</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed12" name="skill_fed[]" value="skill_fed12">
+                        <label for="skill_fed12">Agile Workflow & Jira</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="skill_fed13" name="skill_fed[]" value="skill_fed13">
+                        <label for="skill_fed13">Client Communication & Requirements Gathering</label>
+                    </p>
+                </details>
             </div>
 
             <div id="other">
                 <label class="norm_text yellow" for="other_skill">Other Skills Optional</label>
                 <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4" cols="40"
                     placeholder="Type anything that you think is valuable for this position..."></textarea>
+                <div id="consent">
+                    <input type="checkbox" id="consent" value="consent" required>
+                    <label class="norm_text cyan" for="consent">I have read the Collection Notice above and consent to
+                        Meowdia using the information I provide in this form to assess my application.</label>
+                </div>
             </div>
-            <div id="consent">
-                <input type="checkbox" id="consent" value="consent" required>
-                <label class="norm_text cyan" for="consent">I have read the Collection Notice above and consent to
-                    Meowdia using the
-                    information I provide in this form to assess my application.</label>
-            </div>
+
             <div id="submit_reset">
-                <input class=" norm_text cyan button input" type="submit" value="Apply">
-                <input class=" norm_text cyan button input" type="reset" value="Reset form">
+                <input class=" norm_text cyan button input" id="submit" type="submit" value="Apply">
+                <input class=" norm_text cyan button input" id="reset" type="reset" value="Reset form">
             </div>
         </form>
-    </section> -->
+    </section>
 
     <!-- ----------End Button Content---------- -->
 
@@ -384,7 +422,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
     <!-- ----------Footer Content---------- -->
 
-        
+
 
     <footer class="meowdia_footer">
         <div class="footer_main">
@@ -407,8 +445,10 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                         <h3>See more</h3>
                         <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
                         <a href="https://github.com/bachcodetinh/gito_gatos.git" target="_blank">GitHub Repository</a>
-                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum Board</a>
-                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6" target="_blank">Figma Design Board</a>
+                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
+                            Board</a>
+                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6"
+                            target="_blank">Figma Design Board</a>
                     </div>
                 </div>
                 <div class="instructor_credit">
@@ -417,7 +457,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
             </div>
         </div>
     </footer>
-    <img src="Media/Footer/catface.png" alt="footer_cat" style="width: 90%; height: auto; display: block; margin: 0 auto;">
+    <img src="Media/Footer/catface.png" alt="footer_cat"
+        style="width: 90%; height: auto; display: block; margin: 0 auto;">
 </body>
 
 </html>

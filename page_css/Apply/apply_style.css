@@ -15,11 +15,172 @@ header {
     padding-top: var(--margin-inner);
 }
 
-/* Layout for Recruitment Process and its elements */
-#recruit_process {
+#recruit_process,
+#collection_notice,
+#form_sec {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+}
+
+/* Layout for Application form and its elements */
+.field {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+}
+
+#form_sec {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.form>.sub_heading {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+/* Personal Information */
+
+#per_inf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#first_name_holder {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
+}
+
+#last_name_holder {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0.25em;
+}
+
+#dob_holder {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
+}
+
+#gender_holder {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    width: 15em;
+    height: 3em;
+    margin: 0.25em;
+}
+
+#gender input {
+    cursor: pointer;
+}
+
+/* Contact & Location */
+
+#con_loc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#email_holder {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
+}
+
+#phone_holder {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0.25em;
+}
+
+#address_holder {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    margin: 0.25em;
+}
+
+#suburb_holder {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
+}
+
+#state_holder {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0.25em;
+}
+
+#postcode_holder {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    margin: 0.25em;
+}
+
+/* Layout for Position Skill */
+#ref_num {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#skill_list {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 10em;
+}
+
+#skill_list summary {
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+#other {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 0.5em;
+    gap: 0.25em;
+    width: 50vw;
+}
+
+#consent {
+    display: inline;
+    margin-top: 0.5em;
+}
+
+#consent input {
+    width: 3em;
+}
+
+#submit_reset {
+    margin-top: 1.5em;
+
+    display: flex;
+    gap: 2em;
+}
+
+/* Layout for End Button */
+
+#end_button {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+
+
+/* Layout for Footer */
+
+.meowdia_footer {
+    border: none;
+    width: 95vw;
 }
 
 
@@ -139,7 +300,7 @@ header {
         box-sizing: border-box;
     }
 
-    /* Layout for Collection Notice */
+    /* Layout for FAQ */
 
     .two_column {
         display: block;
@@ -154,41 +315,4 @@ header {
         margin-left: 5vw;
         margin-right: 5vw;
     }
-}
-
-
-
-
-
-
-
-
-/* Layout for Collection Notice and its elements */
-#collection_notice {
-    flex-flow: column nowrap;
-    align-items: center;
-    display: flex;
-}
-
-
-/* Layout for End Button */
-
-#end_button {
-    display: flex;
-    justify-content: center;
-    gap: 3em;
-    margin-bottom: 10rem;
-}
-
-#end_button>a {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-}
-
-/* Layout for Footer */
-
-.meowdia_footer {
-    border: none;
-    width: 95vw;
 }
