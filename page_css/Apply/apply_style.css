@@ -4,208 +4,321 @@
     padding: 0px;
 }
 
-body {
-    /* display: flex;
-    flex-direction: column; */
-}
-
 header,
 section,
 footer {
     box-sizing: border-box;
-    padding: var(--margin-outer);
     margin: var(--margin-outer);
 }
+
 header {
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 55px  1fr 1fr 1fr; */
-
+    padding-top: var(--margin-inner);
 }
 
-/* Layout for header's elements */
-.nav-row {
-    grid-column: 1 / span 5;
-    grid-row: 1 / span 1;
-}
-
-.slogan.yellow {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
-
-}
-
-.slogan.cyan {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
-
-
-}
-
-
-#header_des {
-    grid-column: 1 / span 3;
-    grid-row: 6 / span 2;
-}
-
-#header_des p {
-    box-sizing: border-box;
-    margin: 0px;
-    height: 25px;
-}
-
-.video {
-    margin-top: 20px;
-    grid-column: 5 / span 2;
-    grid-row: 5 / span 3;
-}
-
-#header_info {
-    grid-column: 1 / span 5;
-    grid-row: 8 / span 2;
+#recruit_process,
+#collection_notice,
+#form_sec {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
-#header_info p {
-    box-sizing: border-box;
-    margin: 0px;
+/* Layout for Application form and its elements */
+.field {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
 }
 
-/* Layout for Recruitment Process and its elements */
-#recruit_process {
+#form_sec {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.form>.sub_heading {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+/* Personal Information */
+
+#per_inf {
     display: grid;
-    grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
-    grid-template-rows: var(--margin-inner) 50px 1fr 3fr 1fr var(--margin-outer);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-.heading.process {
-    grid-column: 2 / span 5;
+#first_name_holder {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
+}
+
+#last_name_holder {
+    grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-
-    height: 0px;
-    margin: 0px;
-    text-align: center;
+    margin: 0.25em;
 }
 
-.yel_bar.process {
-    margin-top: 30px;
-    grid-column: 4 / span 1;
-    grid-row: 3 / span 1;
+#dob_holder {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
 }
 
-#re_pro_list {
-    grid-column: 2 / span 5;
-    grid-row: 4 / span 5;
+#gender_holder {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    width: 15em;
+    height: 3em;
+    margin: 0.25em;
 }
 
-/* Layout for Collection Notice and its elements */
-/* #collection_notice {
+#gender input {
+    cursor: pointer;
+}
+
+/* Contact & Location */
+
+#con_loc {
     display: grid;
-    grid-template-columns: var(--margin-outer) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--margin-outer);
-    grid-template-rows: var(--margin-inner) 50px 70px 50px 70px 40px 70px 40fr 70fr var(--margin-outer);
-    box-sizing: border-box;
-    height: 600px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
-.heading.notice {
-    grid-column: 3 / span 6;
+#email_holder {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
+}
+
+#phone_holder {
+    grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-
-    height: 50px;
-    margin: 0px;
-    text-align: center;
+    margin: 0.25em;
 }
 
-.yel_bar.col_not {
-
-    grid-column: 5 / span 2;
+#address_holder {
+    grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 0.25em;
 }
 
-.sub_heading.one {
-    grid-column: 2 / span 3;
-    grid-row: 4 / span 1;
-    margin: 0px;
+#suburb_holder {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0.25em;
 }
 
-.norm_text.one {
-    grid-column: 2 / span 3;
-    grid-row: 5 / span 1;
+#state_holder {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0.25em;
 }
 
-.sub_heading.two {
-    grid-column: 2 / span 3;
-    grid-row: 6 / span 1;
+#postcode_holder {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    margin: 0.25em;
 }
 
-.norm_text.two {
-    grid-column: 2 / span 3;
-    grid-row: 7 / span 1;
-    margin: 0px;
+/* Layout for Position Skill */
+#ref_num {
+    display: flex;
+    gap: 1em;
+    align-items: center;
 }
 
-.sub_heading.three {
-    grid-column: 2 / span 2;
-    grid-row: 8 / span 1;
+#skill_list {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 10em;
 }
 
-.norm_text.three {
-    grid-column: 2 / span 3;
-    grid-row: 9 / span 1;
-    margin: 0px;
+#skill_list summary {
+    gap: 0.5em;
+    cursor: pointer;
 }
 
-.sub_heading.four {
-    grid-column: 6 / span 4;
-    grid-row: 4 / span 1;
-    
+#other {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 0.5em;
+    gap: 0.25em;
+    width: 50vw;
 }
 
-.norm_text.four {
-    grid-column: 6 / span 3;
-    grid-row: 5 / span 1;
-    margin: 0px;
+#consent {
+    display: inline;
+    margin-top: 0.5em;
 }
 
-.sub_heading.five {
-    grid-column: 6 / span 3;
-    grid-row: 6 / span 1;
+#consent input {
+    width: 3em;
 }
 
-.norm_text.five {
-    grid-column: 6 / span 3;
-    grid-row: 7 / span 1;
-    margin: 0px;
-}
+#submit_reset {
+    margin-top: 1.5em;
 
-.sub_heading.six {
-    grid-column: 6 / span 3;
-    grid-row: 8 / span 1;
+    display: flex;
+    gap: 2em;
 }
-
-.norm_text.six {
-    grid-column: 6 / span 4;
-    grid-row: 9 / span 1;
-    margin: 0px;
-} */
 
 /* Layout for End Button */
-/* 
+
 #end_button {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 3em;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
-#end_button>a {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-} */
+
 
 /* Layout for Footer */
+
+.meowdia_footer {
+    border: none;
+    width: 95vw;
+}
+
+
+
+@media (min-width: 1280px) {
+
+    /* Layout for header's elements */
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 4em var(--slogan-font-size) var(--slogan-font-size) 1fr;
+        height: 90vh;
+        max-height: 1080px;
+
+    }
+
+    .nav-row {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 1;
+    }
+
+    .slogan.yellow {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        height: var(--slogan-font-size);
+        align-items: center;
+        margin-top: 0.2em;
+
+    }
+
+    .slogan.cyan {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+        height: var(--slogan-font-size);
+        display: flex;
+        align-items: center;
+    }
+
+    #header_des {
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    #header_des p {
+        box-sizing: border-box;
+    }
+
+    .video {
+        width: 50vw;
+        max-width: 1200px;
+        height: auto;
+        margin-top: 3em;
+        grid-column: 5 / span 1;
+        grid-row: 3 / span 3;
+    }
+
+    #header_info {
+        grid-column: 1 / span 5;
+        grid-row: 5 / span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #header_info p {
+        box-sizing: border-box;
+
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 1279px) {
+    html {
+        font-size: 10px;
+    }
+
+    /* Layout for Header */
+    .video {
+        width: 50vw;
+        height: auto;
+        margin-top: 2em;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .slogan.yellow {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        align-items: center;
+        height: var(--slogan-font-size);
+        margin-top: 0.2em;
+
+    }
+
+    .slogan.cyan {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+        height: var(--slogan-font-size);
+        display: flex;
+        align-items: center;
+    }
+
+    #header_des {
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    #header_des p {
+        box-sizing: border-box;
+    }
+
+    /* Layout for FAQ */
+
+    .two_column {
+        display: block;
+    }
+
+    .col_1 {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .col_2 {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    /* Layout for form */
+
+    #per_inf, #con_loc, #ref_num{
+        display: block;
+    }
+}

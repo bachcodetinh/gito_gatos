@@ -108,7 +108,8 @@ html {
 
 /* Background */
 body {
-    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
 }
 
 
@@ -128,6 +129,7 @@ body {
     width: 1.3em;
     height: auto;
 }
+
 summary {
     list-style-type: none;
     display: flex;
@@ -158,6 +160,7 @@ summary {
 .main-nav div {
     display: flex;
     gap: 1.5em;
+    margin-left: 0.5em;
 }
 
 .main-nav * {
@@ -181,18 +184,18 @@ summary {
 
 .nav-search {
     display: inline;
-    
+
 }
 
 .nav-search input {
-    
-    width: 4em;
+
+    width: 5em;
     cursor: pointer;
 
     border: none;
 
 
-    border-bottom: var(--cyan-border);
+    border-bottom: 0.15rem solid var(--main-color);
     background: transparent;
     color: var(--main-color);
     font-family: inherit;
@@ -209,7 +212,7 @@ summary {
 }
 
 .nav-search button img {
-    width: 1.5em;
+    width: 1.5rem;
     cursor: pointer;
 }
 
