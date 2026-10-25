@@ -32,9 +32,7 @@ a {
   color: var(--secondary-color);
 }
 
-
 /* Header + hero */
-
 
 .hero {
   min-height: 85vh;
@@ -91,9 +89,7 @@ a {
   letter-spacing: var(--nokio-letter-spacing);
 }
 
-
 /* Page layout */
-
 
 /* flow-root keeps the floated aside inside <main> */
 .jobs-layout {
@@ -501,7 +497,6 @@ aside.benefits input.benefits-check {
     font-size: calc(0.1rem + 2.8vw);
   }
  
-  /* Smaller gaps so all links fit on one line */
   .main-nav div {
     gap: 0.8em;
     margin-left: 0.3em;
