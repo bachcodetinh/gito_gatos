@@ -1,6 +1,7 @@
 /* Smooth scrolling for the "Back to top" link */
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 /* Page fills almost the whole screen (small gap on both sides) */
@@ -31,9 +32,7 @@ a {
   color: var(--secondary-color);
 }
 
-
 /* Header + hero */
-
 
 .hero {
   min-height: 85vh;
@@ -50,84 +49,6 @@ a {
   background-size: auto 100%;
 }
 
-/* Logo on the left, navigation + paw to the right */
-.nav-row {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.logo {
-  width: 70px;
-  height: 70px;
-}
-
-.paw-icon {
-  width: 30px;
-  margin-left: -85px;
-}
-
-/* Navigation bar (rounded) */
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-left: auto;
-  border: var(--cyan-border);
-  border-radius: var(--default-border-radius);
-  padding: 8px 101px 8px 35px;
-}
-
-.main-nav ul {
-  display: flex;
-  gap: 50px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.main-nav a {
-  text-decoration: none;
-  font-size: var(--body-font-size);
-}
-
-.main-nav a:hover {
-  color: var(--secondary-color);
-}
-
-/* Current page link */
-.main-nav a.active {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-.nav-search {
-  display: flex;
-  align-items: center;
-}
-
-.nav-search input {
-  width: 170px;
-  border: none;
-  border-bottom: var(--cyan-border);
-  background: transparent;
-  color: var(--main-color);
-  font-family: inherit;
-  font-size: var(--body-font-size);
-}
-
-.nav-search input::placeholder {
-  color: var(--main-color);
-}
-
-.nav-search button {
-  border: none;
-  background: transparent;
-}
-
-.nav-search button img {
-  width: 20px;
-}
 
 .hero-text {
   margin: auto 0;
@@ -168,9 +89,7 @@ a {
   letter-spacing: var(--nokio-letter-spacing);
 }
 
-
 /* Page layout */
-
 
 /* flow-root keeps the floated aside inside <main> */
 .jobs-layout {
@@ -388,10 +307,35 @@ aside.benefits input.benefits-check {
   background-color: var(--main-color);
 }
 
+
 /*Responsive design: smaller screens*/
 
-
 @media (max-width: 1280px) {
+
+  .nav-row {
+    font-size: calc(0.6rem + 0.65vw);
+    align-items: center;
+  }
+ 
+  .nav-row .main-nav,
+  .nav-row .nav-search input {
+    font-size: 1em;
+  }
+ 
+  .nav-row .nav-search {
+    display: inline-flex;
+    align-items: center;
+  }
+ 
+  .nav-row .nav-search button img {
+    width: 1.5em;
+  }
+
+  .nav-row .main-nav {
+    border-width: 0.12em;
+    height: auto;
+    min-height: 2em;
+  }
 
   /*Remove the cat*/
   .hero {
@@ -543,4 +487,84 @@ aside.benefits input.benefits-check {
     padding: 0.3em 1.5em;
     font-size: calc(1rem + 2vw);
   }
+}
+
+@media (max-width: 480px) {
+
+  .nav-row {
+    flex-direction: column;
+    gap: 0.6em;
+    font-size: calc(0.1rem + 2.8vw);
+  }
+ 
+  .main-nav div {
+    gap: 0.8em;
+    margin-left: 0.3em;
+  }
+ 
+  .nav-search input {
+    width: 4.5em;
+  }
+
+  body {
+    padding: 0.6rem;
+  }
+ 
+  .hero {
+    padding: 1rem 1rem 2.5rem;
+    border-radius: 1.5rem;
+  }
+ 
+  .hero-text {
+    margin-top: 3rem;
+  }
+ 
+ 
+  /*Benefits*/
+
+  aside.benefits .benefits-check:checked ~ .benefits-list {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem 0.8rem 2rem;
+    font-size: 0.85rem;
+  }
+ 
+ 
+  /*Available Positions*/
+ 
+  .switch-bar {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .switch-bar label {
+    font-size: 0.85rem;
+  }
+ 
+ 
+  /*Job card*/
+ 
+  .job {
+    padding: 1.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.85rem;
+  }
+ 
+  .job-desc {
+    width: 100%;
+  }
+
+  .job-tags {
+    gap: 0.4rem;
+  }
+ 
+  .job-tags li {
+    font-size: 0.75rem;
+  }
+
+  .job-part ol,
+  .job-part ul {
+    padding-left: 1.2rem;
+  }
+ 
 }
