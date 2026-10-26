@@ -1,14 +1,16 @@
 :root {
 
     /* Dimensions */
-    --margin-outer: 2.5rem;
+
     --margin-inner: 2rem;
 
     /* Fonts */
 
     --important-font-size: 2rem;
+
     --nokio-spacing: 0.08rem;
     --iciel-spacing: 1rem;
+
     --heading-spacing: 0.5rem;
     --sub-head-spacing: 0.5rem;
 }
@@ -24,9 +26,7 @@
 
 /* Universal font setup */
 
-html {
-    font-size: 16px;
-}
+
 
 body {
     display: flex;
@@ -80,6 +80,7 @@ body {
     margin-left: 10vw;
     margin-right: 2.5vw;
 }
+
 .col_2 {
     grid-column: 2 / span 1;
     margin-left: 2.5vw;
@@ -99,32 +100,15 @@ dt {
     margin-bottom: 1rem;
 }
 
-.yel_bar_section{
-    border-bottom: 0.2rem solid var(--secondary-color);
-    width: 20rem;
-    padding-top: 2rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
-
 .video {
     border: 3px solid var(--main-color);
     border-radius: 40px;
+    width: 48vw;
+    max-width: 1200px;
+    min-width: 640px;
+    height: auto;
 }
 
-.button {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    padding-bottom: 0.5em;
-    text-decoration: none;
-    border: 3px solid var(--main-color);
-    border-radius: 30px;
-}
-
-.button:hover {
-    background-color: var(--main-color);
-    color: var(--background-color);
-}
 
 .input {
     background-color: rgba(0, 0, 0, 0);
@@ -133,7 +117,7 @@ dt {
     padding-bottom: 10px;
     border: 3px solid var(--main-color);
     border-radius: 30px;
-    
+
 }
 
 #submit {
