@@ -23,25 +23,61 @@
 }
 
 header {
-    background-image: url('../../Media/Index/meoshadowchot2.png');
-    background-size: auto 60vh;
-    background-position: right;
-    background-repeat: no-repeat;
-    position: relative;
+    margin: 1.8em;
+    padding: 40px;
     min-height: 93vh;
     border: var(--yellow-border);
     border-radius: var(--default-border-radius);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
 }
 
 header h1 {
-    font-size: var(--slogan-font-size); 
-    line-height: 0.9;
-    position: absolute;
-    top: 13vw;
-    left: 2vw;
-    font-family: var(--iciel-font);
-    color: var(--main-color);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    font-family: var(--iciel-font), sans-serif;
+    font-size: var(--slogan-font-size);
+    line-height: 0.9em;
     letter-spacing: var(--iciel-letter-spacing);
+    color: var(--main-color);
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    padding-right: 400px;
+    margin-top: 2em;
+}
+
+.slogan-block {
+    display: block;
+    width: 100%;
+}
+
+.top-text {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.yellow-text {
+    color: var(--secondary-color);
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    right: -0.4em;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 45vw;
+    aspect-ratio: 16 / 13;
+    background-image: url('../../Media/Index/meoshadowchot2.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -198,4 +234,36 @@ main {
 .navigation_buttons .nav_btn:hover {
     background-color: var(--main-color);
     color: var(--background-color);
+}
+
+@media screen and (max-width: 1280px) {
+    header {
+        margin: 1.2em;
+        padding: 25px;
+        min-height: 95vh;
+        align-items: center;
+    }
+
+    header h1 {
+        align-items: center;
+        justify-content: center;
+        font-size: calc(var(--slogan-font-size) * 0.82);
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 1.4;
+        gap: 0;
+        margin-top: 0;
+    }
+
+
+    header h1::before {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 260px;
+        max-width: 100%;
+        margin: 0;
+    }
 }
