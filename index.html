@@ -50,29 +50,32 @@
     </style>
 </head>
 <body>
-    <header id="top">
-        <div class="nav-row">
-            <a href="index.html" class="logo-link">
-                <img src= "Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency" class="logo">
-            </a>
+    <a id="top"></a>
+    <!-- ---------  Navigation Row  ----------- -->
 
-            <nav class="main-nav">
-                <ul>
-                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-                </ul>
+    <nav class="nav-row">
+        <a href="index.html" class="logo-link"><img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency"
+                class="logo"></a>
+
+        <details class="main-nav norm_text" open>
+
+            <summary><img src="Media/Navigation_bar/Paw.svg" alt="navigation bar button" class="icon"></summary>
+
+            <div>
+                <a href="index.html" class="active" style="padding-left: 0.2em;" aria-current="page">Home</a>
+                <a href="jobs.html" class="cyan">Jobs</a>
+                <a href="apply.html">Apply</a>
+                <a href="about.html" class="cyan">About</a>
                 <form class="nav-search" action="#" role="search">
-                <input type="search" id="search-box" name="search" placeholder="Search">
-                <button type="submit">
-                    <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search">
-                </button>
+                    <input type="search" class="norm-text cyan" id="search-box" name="search" placeholder="Search">
+                    <button type="submit">
+                        <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search button">
+                    </button>
                 </form>
-            </nav>
-
-            <img src="Media/Navigation_bar/Paw.svg" alt="paw icon" class="paw-icon">
-        </div>
+            </div>
+        </details>
+    </nav>
+    <header>
         <h1>
             <span class="slogan-block top-text">
                 <span class="top-text">GIVE US</span>
@@ -85,6 +88,9 @@
             </span>
         </h1>
     </header>
+
+    <div class="yel_bar_section"></div>
+    
     <main>
         <div class="who_we_are_card">
         <h2 class="section_title underline_title">Who We Are</h2>
@@ -94,7 +100,7 @@
                         <td>
                             <img src="Media/Index/clapperboard.png" alt="Clapper board element" style="width: 70%; height: auto;">
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="responsive-cell">
                             <div class="intro_text">
                                 <div class="main_logo">
                                     <img src="Media/Index/logo-text.svg" alt="Meowdia with logo as the M">is a creative digital media agency.
@@ -120,6 +126,9 @@
                 </tfooter>
             </table>
         </div>
+
+        <div class="yel_bar_section"></div>
+
         <div class="who_we_are_card">
             <h2 class="section_title underline_title">Our Products</h2>
             <div class="product_gallery">

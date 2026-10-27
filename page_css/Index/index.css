@@ -23,11 +23,7 @@
 }
 
 header {
-    margin: 1.8em;
-    padding: 40px;
     min-height: 93vh;
-    border: var(--yellow-border);
-    border-radius: var(--default-border-radius);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -48,8 +44,7 @@ header h1 {
     text-align: left;
     margin: 0;
     width: 100%;
-    padding-right: 400px;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .slogan-block {
@@ -69,10 +64,10 @@ header h1 {
 header h1::before {
     content: "";
     position: absolute;
-    right: -0.4em;
-    top: 55%;
+    right: -1.5em;
+    top: 40%;
     transform: translateY(-50%);
-    width: 45vw;
+    width: 50vw;
     aspect-ratio: 16 / 13;
     background-image: url('../../Media/Index/meoshadowchot2.png');
     background-size: contain;
@@ -96,8 +91,6 @@ main {
 
 .who_we_are_card {
     width: 100%;
-    border: var(--yellow-border);
-    border-radius: var(--default-border-radius);
     padding: 20px;
     margin-bottom: 40px;
 }
@@ -163,6 +156,7 @@ main {
     max-width: 38rem;
     height: auto;
     display: block;
+    border: var(--cyan-border);
     border-radius: var(--default-border-radius);
 }
 
@@ -236,7 +230,11 @@ main {
     color: var(--background-color);
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    html {
+        font-size: 16px;
+    }
+
     header {
         margin: 1.2em;
         padding: 25px;
@@ -247,7 +245,6 @@ main {
     header h1 {
         align-items: center;
         justify-content: center;
-        font-size: calc(var(--slogan-font-size) * 0.82);
         text-align: center;
         padding-left: 0;
         padding-right: 0;
@@ -265,5 +262,51 @@ main {
         width: 260px;
         max-width: 100%;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    header h1 {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 1.4;
+        gap: 0;
+        margin-top: 0;
+    }
+
+    header h1::before {
+        background-image: none;
+    }
+
+    img[src="Media/Index/clapperboard.png"] {
+        display: none;
+    }
+
+    table, tbody {
+        display: block;
+        width: 100%;
+    }
+
+    td tr {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    table td.responsive-cell {
+        grid-column: 1 / -1;
+        display: block; 
+        width: 100%;
+    }
+
+    .product_gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .layer {
+        padding: 0 20px;
     }
 }
