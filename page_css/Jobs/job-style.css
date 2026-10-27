@@ -1,27 +1,27 @@
 /* Smooth scrolling for the "Back to top" link */
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
 }
 
-/* Page fills almost the whole screen (small gap on both sides) */
 body {
-  margin: 0;
-  padding: 20px 3%;
-  background-color: var(--background-color);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   color: var(--main-color);
   font-family: var(--nokio-font);
   font-size: var(--body-font-size);
-  line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.hero,
+.jobs-layout {
+  align-self: stretch;
+  line-height: 1.6;
+}
+ 
+h1, h2, h3, h4 {
   font-family: var(--iciel-font);
   font-weight: normal;
-  letter-spacing: 1px;
+  letter-spacing: var(--iciel-letter-spacing);
 }
 
 a {
@@ -32,6 +32,15 @@ a {
   color: var(--secondary-color);
 }
 
+.nav-search input,
+.nav-search button {
+  padding: 0;
+}
+ 
+.footer_column h3 {
+  margin-top: 0;
+}
+
 /* Header + hero */
 
 .hero {
@@ -39,9 +48,6 @@ a {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  border: var(--yellow-border);
-  border-radius: var(--default-border-radius);
-  padding: 25px 40px;
   /* Cat background graphic on the right side */
   background-image: url("../../Media/Jobs/catjobs1.png");
   background-repeat: no-repeat;
@@ -67,23 +73,13 @@ a {
 
 /* "OUR TEAM" in a yellow rounded box*/
 .hero h1 .highlight {
-  display: inline-block;
   line-height: 1.1;
-  padding: 0.2em 0.2em 0.01em;
-  border: var(--yellow-border);
-  border-radius: var(--default-border-radius);
   color: var(--secondary-color);
-  text-decoration: none;
-}
-
-/* "OUR TEAM" fills yellow when hovered */
-.hero h1 .highlight:hover {
-  color: var(--background-color);
-  background-color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 .hero-sub {
-  margin: 20px 0 0;
+  margin: 1.25rem 0 0;
   font-size: var(--heading-font-size);
   line-height: 1.4;
   letter-spacing: var(--nokio-letter-spacing);
@@ -103,9 +99,6 @@ aside.benefits {
   float: right;
   width: 25%;
   margin: 70px 0 20px 30px;
-  padding: 0 25px 25px;
-  border: var(--cyan-border);
-  border-radius: var(--default-border-radius);
   /* Sticky: stays on screen while the user scrolls the job list */
   position: sticky;
   top: 50px;
@@ -119,7 +112,7 @@ aside.benefits h2 {
 aside.benefits ul {
   margin: 0;
   padding-left: 20px;
-  font-size: var(--body-font-size);
+
 }
 
 aside.benefits input.benefits-check {
@@ -142,9 +135,6 @@ aside.benefits input.benefits-check {
 .pill-heading {
   width: fit-content;
   margin: 20px auto 35px;
-  padding: 5px 40px;
-  border: var(--cyan-border);
-  border-radius: var(--default-border-radius);
   font-size: var(--heading-font-size);
 }
 
@@ -209,9 +199,6 @@ aside.benefits input.benefits-check {
 
 /* Job card */
 .job {
-  padding: 30px 60px 40px;
-  border: var(--yellow-border);
-  border-radius: 30px;
   font-size: var(--body-font-size);
 }
 
@@ -283,288 +270,79 @@ aside.benefits input.benefits-check {
   background-color: var(--secondary-color);
 }
 
+/*Responsive*/
 
-/* Bottom links */
+@media screen and (max-width: 1279px) {
 
-
-.bottom-nav {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin: 70px 0 40px;
-}
-
-.bottom-nav a {
-  padding: 4px 35px;
-  border: var(--cyan-border);
-  border-radius: var(--end-button-border-radius);
-  font-size: var(--body-font-size);
-  text-decoration: none;
-}
-
-.bottom-nav a:hover {
-  color: var(--background-color);
-  background-color: var(--main-color);
-}
-
-
-/*Responsive design: smaller screens*/
-
-@media (max-width: 1280px) {
-
-  .nav-row {
-    font-size: calc(0.6rem + 0.65vw);
-    align-items: center;
-  }
- 
-  .nav-row .main-nav,
-  .nav-row .nav-search input {
-    font-size: 1em;
-  }
- 
-  .nav-row .nav-search {
-    display: inline-flex;
-    align-items: center;
-  }
- 
-  .nav-row .nav-search button img {
-    width: 1.5em;
-  }
-
-  .nav-row .main-nav {
-    border-width: 0.12em;
-    height: auto;
-    min-height: 2em;
-  }
-
-  /*Remove the cat*/
   .hero {
-    min-height: auto;
-    padding: 1.5rem 2rem 4rem;
+    min-height: 32rem;
     background-image: none;
-  }
-
-  .hero-text {
-    margin-top: 5rem;
     text-align: center;
   }
 
-  /*"JOIN" on one line, "OUR TEAM" on the next line*/
   .hero h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.2em;
-    font-size: calc(1rem + 8vw);
     line-height: 1.1;
   }
 
-  .hero-sub {
-    margin-top: 0.8em;
-    font-size: calc(0.6rem + 1.8vw);
-  }
-
-  /*Benefits button that can open or close */
-
-  /*Not a sidebar any more*/
   aside.benefits {
     float: none;
     position: static;
     width: auto;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.3em;
     padding: 0;
     border: none;
     text-align: center;
   }
-
+ 
   aside.benefits h2 {
     margin: 0;
-    font-size: calc(1rem + 1.6vw);
   }
 
-  /*The button*/
   .benefits-button {
     display: inline-block;
-    padding: 0.2em 1.5em;
+    padding: 0.15em 1.25em;
     border: var(--cyan-border);
     border-radius: var(--default-border-radius);
     cursor: pointer;
     pointer-events: auto;
   }
-
+ 
   .benefits-button:hover {
     color: var(--secondary-color);
-    border: var(--yellow-border);
   }
-
-  /*Yellow border and yellow text when opnê */
-  .benefits-check:checked~h2 .benefits-button {
+ 
+  .benefits-check:checked ~ h2 .benefits-button {
     border: var(--yellow-border);
     color: var(--secondary-color);
   }
-
+ 
   aside.benefits .benefits-list {
     display: none;
   }
-
-  /*Checkbox ticked show the list in box with border */
-  aside.benefits .benefits-check:checked~.benefits-list {
+ 
+  aside.benefits .benefits-check:checked ~ .benefits-list {
     display: block;
     width: 80%;
-    margin: 1rem auto 0;
-    padding: 1rem 1.5rem 1rem 2.5rem;
+    margin: 0.7em auto 0;
+    padding: 0.7em 1em 0.7em 2em;
     border: var(--cyan-border);
     border-radius: 1.5rem;
     text-align: left;
-    font-size: calc(1rem + 0.5vw);
   }
-
-  aside.benefits li {
-    margin-bottom: 0.4em;
-  }
-
-
-  /*Available Positions */
-
+ 
   .positions {
     margin-right: 0;
   }
-
-  .pill-heading {
-    margin: 0 auto 1.5rem;
-    padding: 0.2em 1.5em;
-    font-size: calc(1rem + 2.5vw);
-  }
-
-  /*Switch bar*/
+ 
   .switch-bar {
     width: 90%;
-    margin-bottom: 2rem;
   }
-
-  .switch-bar label {
-    padding: 0.4em 0;
-    font-size: calc(0.5rem + 1.3vw);
-    cursor: pointer;
-  }
-
-  /*Job card*/
-
-  .job {
-    padding: 2rem 5%;
-    border-radius: 2rem;
-    font-size: calc(1rem + 0.5vw);
-  }
-
-  .job-title {
-    font-size: calc(1rem + 2vw);
-  }
-
-  .job-desc {
-    width: 80%;
-  }
-
-  .job-tags {
-    gap: 0.6rem;
-  }
-
-  .job-tags li {
-    padding: 0.1em 0.8em;
-    font-size: calc(1rem + 0.5vw);
-  }
-
-  .job-part h4 {
-    margin: 1.5em 0 0.5em;
-    font-size: calc(1rem + 1vw);
-  }
-
-  .job-part li {
-    margin-bottom: 0.3em;
-  }
-
-  .apply-button {
-    margin-top: 2rem;
-    padding: 0.3em 1.5em;
-    font-size: calc(1rem + 2vw);
-  }
-}
-
-@media (max-width: 480px) {
-
-  .nav-row {
-    flex-direction: column;
-    gap: 0.6em;
-    font-size: calc(0.1rem + 2.8vw);
-  }
- 
-  .main-nav div {
-    gap: 0.8em;
-    margin-left: 0.3em;
-  }
- 
-  .nav-search input {
-    width: 4.5em;
-  }
-
-  body {
-    padding: 0.6rem;
-  }
- 
-  .hero {
-    padding: 1rem 1rem 2.5rem;
-    border-radius: 1.5rem;
-  }
- 
-  .hero-text {
-    margin-top: 3rem;
-  }
- 
- 
-  /*Benefits*/
-
-  aside.benefits .benefits-check:checked ~ .benefits-list {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.8rem 1rem 0.8rem 2rem;
-    font-size: 0.85rem;
-  }
- 
- 
-  /*Available Positions*/
- 
-  .switch-bar {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
- 
-  .switch-bar label {
-    font-size: 0.85rem;
-  }
- 
- 
-  /*Job card*/
  
   .job {
-    padding: 1.5rem 1rem;
-    border-radius: 1.5rem;
-    font-size: 0.85rem;
+    padding: 1.3em 2em 1.7em;
   }
- 
-  .job-desc {
-    width: 100%;
-  }
-
-  .job-tags {
-    gap: 0.4rem;
-  }
- 
-  .job-tags li {
-    font-size: 0.75rem;
-  }
-
-  .job-part ol,
-  .job-part ul {
-    padding-left: 1.2rem;
-  }
- 
 }
