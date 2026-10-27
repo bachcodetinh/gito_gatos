@@ -4,6 +4,8 @@ html {
 }
 
 body {
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -54,7 +56,6 @@ a {
   background-position: right center;
   background-size: auto 100%;
 }
-
 
 .hero-text {
   margin: auto 0;
@@ -271,7 +272,6 @@ aside.benefits input.benefits-check {
 }
 
 /*Responsive*/
-
 @media screen and (max-width: 1279px) {
 
   .hero {
