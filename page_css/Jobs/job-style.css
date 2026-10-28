@@ -50,15 +50,21 @@ a {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  /* Cat background graphic on the right side */
-  background-image: url("../../Media/Jobs/catjobs1.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: auto 100%;
+  justify-content: center;
+  position: relative;
 }
 
 .hero-text {
-  margin: auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cat {
+  position: absolute;
+  top: 0;
+  right: calc(var(--margin-outer) * -1);
+  height: 100%;
+  width: auto;
 }
 
 .hero-text h1 {
@@ -100,6 +106,9 @@ aside.benefits {
   float: right;
   width: 25%;
   margin: 70px 0 20px 30px;
+  padding: 0 25px 25px;
+  border: var(--cyan-border);
+  border-radius: var(--default-border-radius);
   /* Sticky: stays on screen while the user scrolls the job list */
   position: sticky;
   top: 50px;
@@ -209,15 +218,6 @@ aside.benefits input.benefits-check {
   font-size: var(--heading-font-size);
 }
 
-.job-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  margin: 10px auto 0;
-  background-color: var(--secondary-color);
-}
-
 .job-desc {
   max-width: 650px;
   margin: 0 auto 20px;
@@ -272,6 +272,7 @@ aside.benefits input.benefits-check {
 }
 
 /*Responsive*/
+
 @media screen and (max-width: 1279px) {
 
   .hero {
@@ -286,6 +287,10 @@ aside.benefits input.benefits-check {
     align-items: center;
     gap: 0.2em;
     line-height: 1.1;
+  }
+
+  .hero-cat {
+    display: none;
   }
 
   aside.benefits {
@@ -337,7 +342,7 @@ aside.benefits input.benefits-check {
   .positions {
     margin-right: 0;
   }
- 
+
   .switch-bar {
     width: 90%;
   }
