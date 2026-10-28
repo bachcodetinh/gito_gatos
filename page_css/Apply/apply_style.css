@@ -148,8 +148,10 @@
     gap: 2em;
 }
 
-/* Layout for End Button */
-
+/* Layout for other skills */
+#other {
+    margin-top: 0.5em;
+}
 
 
 
@@ -168,7 +170,7 @@
     /* Layout for header's elements */
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: var(--slogan-font-size) var(--slogan-font-size) 1fr 1fr 1fr;
         height: calc(1080px - var(--margin-outer)*4);
     }
@@ -191,7 +193,7 @@
     }
 
     #header_des {
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         grid-row: 3 / span 1;
         display: flex;
         flex-flow: column nowrap;
@@ -203,12 +205,12 @@
     }
 
     .video {
-        grid-column: 5 / span 1;
+        grid-column: 3 / span 2;
         grid-row: 2 / span 1;
     }
 
     #header_info {
-        grid-column: 1 / span 5;
+        grid-column: 1 / span 2;
         grid-row: 5 / span 1;
         display: flex;
         flex-direction: column;
@@ -223,44 +225,17 @@
 }
 
 @media screen and (max-width: 1279px) {
-    /* Layout for Header */
-    
-    /* .video {
-        margin-top: 2em;
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-    } */
-
-    /* .slogan.yellow {
-        grid-column: 1 / span 2;
-        grid-row: 2 / span 1;
-        display: flex;
-        align-items: center;
-        height: var(--slogan-font-size);
-        margin-top: 0.2em;
-
-    }
-
-    .slogan.cyan {
-        grid-column: 1 / span 2;
-        grid-row: 3 / span 1;
-        height: var(--slogan-font-size);
-        display: flex;
-        align-items: center;
+    h1 {
+        height: 1em;
     }
 
     #header_des {
-        grid-column: 1 / span 3;
-        grid-row: 2 / span 1;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
+        margin-top: 1rem;
     }
 
-    #header_des p {
-        box-sizing: border-box;
-    } */
-
+    .video {
+        margin-top: 2em;
+    }
     /* Layout for FAQ */
 
     .two_column {
@@ -268,20 +243,24 @@
     }
 
     .col_1 {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
 
     .col_2 {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
 
     /* Layout for form */
 
     #per_inf,
     #con_loc,
-    #ref_num_holder {
+    #ref_num_holder, #pos_skill, #skill_list {
         display: block;
+    }
+
+    #skill_list summary {
+        margin-top: 1em;
     }
 }
