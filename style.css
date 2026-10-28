@@ -87,9 +87,9 @@ Varibles that wil be used across all 4 pages, in order from top to bottom:
 
     --body-font-size: 1.5rem;
 
-    --main-color: rgb(122, 226, 207);
-    --secondary-color: rgb(255, 210, 0);
-    --background-color: rgb(6, 32, 43);
+    --main-color: #7ae2cf;
+    --secondary-color: #ffd200;
+    --background-color: #06202b;
 
     --cyan-border: solid var(--main-color) 3px;
     --yellow-border: solid var(--secondary-color) 3px;
@@ -232,7 +232,7 @@ html {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: #000000; /*Fall back color*/
     margin-left: var(--margin-outer);
     margin-right: var(--margin-outer);
 }
