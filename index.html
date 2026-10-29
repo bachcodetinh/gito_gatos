@@ -1,3 +1,16 @@
+<!-- 
+
+filename: index.html
+author: Nguyen Hoang Dang Duong
+
+created: October 8, 2026
+last modified: October 29, 2026
+description: html file for index page
+
+AI acknowledgement: Dang Duong use Google Gemini 1.5 Pro for brain storming codes and fixing minor problems
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +19,13 @@
     <meta name="author" content="Duong">
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="Media/Navigation_bar/logo-ngan.svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="page_css/Index/index.css">
     <style>
+        * {
+            margin: 0;
+        }
+
         body {
             background: linear-gradient(
                 20deg,
@@ -18,6 +35,12 @@
                 rgb(6, 32, 43) 75%,
                 rgb(0, 0, 0) 100%
             );
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         div + img {
@@ -90,7 +113,7 @@
                 <a href="apply.html" class="cyan">Apply</a>
                 <a href="about.html" class="cyan">About</a>
                 <form class="nav-search" action="#" role="search">
-                    <input type="search" class="norm-text cyan" id="search-box" name="search" placeholder="Search">
+                    <input type="search" class="norm_text cyan" id="search-box" name="search" placeholder="Search" aria-label="Search">
                     <button type="submit">
                         <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search button">
                     </button>
@@ -154,31 +177,31 @@
             <h2 class="section_title underline_title">Our Products</h2>
             <div class="product_gallery">
                 <div class="work">
-                    <img src="Media/Index/1888160_26.jpg" alt="Product Mockup 1">
+                    <img src="Media/Index/to_gai.png" alt="Product 1">
                     <div class="layer">
-                        <h3>AC6: Fires of Rubicon</h3>
-                        <p>A pic about RAB V.2, not fully optimized.</p>
+                        <h3>Tổ Gai short film</h3>
+                        <p>Inspiring <strong>Viet Nam Micro Film</strong> shortlist.</p>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="Media/Index/1888160_31.jpg" alt="Product Mockup 2">
+                    <video src="Media/Index/Pepsi-motion-concept.mp4" autoplay loop muted></video>
                     <div class="layer">
-                        <h3>AC6: Fires of Rubicon</h3>
-                        <p>Kaboom? Yes Rico, kaboom.</p>
+                        <h3>Pepsi: Motion concept</h3>
+                        <p><strong>3D product animation</strong> with<br>realistic condensation and cinematic lighting, made for digital ads.</p>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="Media/Index/Screenshot(319).png" alt="Product Mockup 3">
+                    <img src="Media/Index/Meowdia_web.png" alt="Product 3">
                     <div class="layer">
-                        <h3>Break Arts 2</h3>
-                        <p>I can not run Break Arts 3. I need a new laptop.</p>
+                        <h3>Meowdia Home Page</h3>
+                        <p>Our <strong>Meowdia agency website</strong> developed by us.</p>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="Media/Index/Screenshot(343).png" alt="Product Mockup 4">
+                    <img src="Media/Index/Screenshot(343).png" alt="Product 4">
                     <div class="layer">
                         <h3>AC4A</h3>
-                        <p>Promotional poster made for fun during Highschool Photoshop class.</p>
+                        <p>Promotional poster for the game<br><strong>Armored Core: 4 Answer.</strong></p>
                     </div>
                 </div>
             </div>
