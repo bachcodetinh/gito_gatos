@@ -116,7 +116,7 @@ header {
 .card-body {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -135,19 +135,24 @@ header {
 }
 
 .member-info dl {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 6px 15px;
-    margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 140px 1fr; 
+  gap: 0 20px; 
+  margin-bottom: 25px;
+  font-size: var(--body-font-size);
+  align-items: start;
 }
 
 .member-info dt {
-    font-weight: bold;
-    color: var(--secondary-color);
+  font-weight: bold;
+  color: var(--secondary-color);
+  grid-column: 1;
 }
 
 .member-info dd {
-    margin: 0;
+  margin: 0;
+  grid-column: 2;
+  word-break: break-word;
 }
 
 .member-info dd[lang="vi"] {
@@ -238,7 +243,7 @@ tbody td:hover {
 }
 
 .latex-content {
-    font-size: 1.125rem;
+    font-size: var(--body-font-size);
     line-height: 1.7;
     color: var(--main-color);
     -webkit-font-smoothing: antialiased;
@@ -282,6 +287,14 @@ tbody td:hover {
 
 .latex-content a:hover {
     color: var(--secondary-color);
+}
+
+.aoc-photo {
+    border: var(--cyan-border);
+    border-radius: var(--default-border-radius);
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
 }
 
 @media (min-width: 1440px) and (max-width: 1620px) {
@@ -360,5 +373,10 @@ tbody td:hover {
         height: 350px; 
         object-fit: cover; 
         object-position: center 15%;
+    }
+
+    .aoc-photo {
+        width: 500px;
+        height: auto;
     }
 }
