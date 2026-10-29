@@ -20,10 +20,6 @@ main {
 
 header {
     min-height: 93vh;
-    border: var(--yellow-border);
-    border-radius: var(--default-border-radius);
-    padding: 25px;
-    margin-bottom: 40px;
 }
 
 .header-main-content {
@@ -85,9 +81,7 @@ header {
 }
 
 .profile-card {
-    border: var(--yellow-border);
-    border-radius: var(--default-border-radius);
-    padding: 25px 30px;
+    padding: 25px 0;
 }
 
 .member-name {
@@ -237,4 +231,107 @@ th {
     font-family: var(--iciel-font);
     font-size: var(--subheading-font-size);
     letter-spacing: var(--iciel-letter-spacing);
+}
+
+.latex-content {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--main-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.latex-content h1 {
+    font-size: var(--subheading-font-size);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: var(--nokio-letter-spacing);
+    text-align: center;
+}
+
+.latex-content h1[id^="statement"] {
+    color: var(--secondary-color);
+}
+
+.latex-content h1[id^="why-this-is-here"],
+.latex-content h1[id^="what-we-do-about-it"] {
+    color: var(--secondary-color);
+}
+
+.latex-content p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 2rem;
+}
+
+.latex-content p:has(iframe),
+.latex-content p:has(a) {
+    text-align: left;
+}
+
+.latex-content a {
+    color: var(--main-color);
+    word-break: break-all;
+}
+
+.latex-content a:hover {
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1279px) {
+    .header-main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-meta-list ul {
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    .card-body, .profile-card,
+    .profile-card.image-left .card-body {
+        flex-direction: column-reverse; 
+        align-items: center;            
+    }
+
+    .member-info {
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .member-info h3 {
+        text-align: center;
+    }
+
+    .member-info dl {
+        display: grid;
+    }
+
+    .member-info dt {
+        grid-column: 1;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .member-info dd {
+        grid-column: 2;
+        margin: 0;
+    }
+
+    .member-photo-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .member-photo-box img {
+        width: 100%;
+        height: 350px; 
+        object-fit: cover; 
+        object-position: center 15%;
+    }
 }
