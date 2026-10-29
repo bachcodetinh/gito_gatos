@@ -4,10 +4,10 @@ filename: apply.html
 author: le ba cao minh
 
 created: October 8, 2026
-last modified: October 28, 2026
+last modified: October 29, 2026
 description: html file for apply page
 
-AI acknowledgement: Cao Minh use Claude for cross checking requirements with project descriptions.
+AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requirements with project descriptions.
 
 -->
 
@@ -92,7 +92,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     </header>
 
     <div class="yel_bar_section"></div>
-
+    
     <!-- ----------Recruitment Process Content---------- -->
     <section id="recruit_process">
 
@@ -172,7 +172,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <label for="F_name" class="norm_text yellow field_label">First name</label>
                     <div>
                         <input class="norm_text cyan input" type="text" id="F_name" name="F_name"
-                            pattern="^[a-zA-Z\s]{1,20}$" required>
+                            pattern="^[a-zA-Z]{1,20}$" maxlength="20" required>
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
 
@@ -181,7 +181,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <label for="L_name" class="norm_text yellow field_label">Last name</label>
                     <div>
                         <input class="norm_text cyan input" type="text" id="L_name" name="L_name"
-                            pattern="^[a-zA-Z\s]{1,20}$" required>
+                            pattern="^[a-zA-Z]{1,20}$" maxlength="20" required>
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
                 </div>
