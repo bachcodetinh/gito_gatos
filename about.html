@@ -1,3 +1,16 @@
+<!-- 
+
+filename: about.html
+author: Nguyen Hoang Dang Duong
+
+created: October 8, 2026
+last modified: October 29, 2026
+description: html file for about page
+
+AI acknowledgement: Dang Duong use Google Gemini 1.5 Pro for brain storming codes and fixing minor problems
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Duong">
     <title>About Us</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Media/Navigation_bar/logo-ngan.svg">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="page_css/About/about.css">
     <style>
         body {
@@ -41,6 +55,7 @@
 
         .swin-id {
             color: var(--secondary-color);
+            font-style: italic;
         }
 
         #end_button a {
@@ -51,6 +66,11 @@
 
         #end_button a:hover {
             color: var(--background-color);
+        }
+
+        .yel_bar_section {
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -88,10 +108,11 @@
                     <ul>
                         <li><strong>Group:</strong> Gito_gatos</li>
                         <li><strong>Class:</strong> COS10026 (Sem 1 AY 26-27)</li>
-                        <li><strong>Schedule:</strong></li>
-                        <ul>
-                            <li>Mon - Sun | 9am - 9pm</li>
-                        </ul>
+                        <li><strong>Schedule:</strong>
+                            <ul>
+                                <li>Mon - Sun | 9am - 9pm</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -160,10 +181,10 @@
                             <dt>Nick name</dt>
                             <dd>Microwave</dd>
                             <dt>Student ID</dt>
-                            <dd class="swin-id">106913256</dd>
+                            <dd class="swin-id">106913104</dd>
                             <dt>Email Swinburne</dt>
                             <dd class="swin-email">
-                                &laquo;<a href="mailto:106913256@student.swin.edu.au">106913256@student.swin.edu.au</a>&raquo;
+                                &laquo;<a href="mailto:106913104@student.swin.edu.au">106913104@student.swin.edu.au</a>&raquo;
                             </dd>
                             <dt>Quote (Vi)</dt>
                             <dd lang="vi">&quot;Tới đâu thì tới.&quot;</dd>
@@ -178,7 +199,7 @@
             </div>
 
             <div class="profile-card image-left">
-                <h2 class="member-name underline-title">Lê Đại Hiệp</h2>
+                <h2 class="member-name underline-title">Lê Bá Cao Minh</h2>
                 <div class="card-body">
                     <div class="member-info">
                         <h3>Contribution</h3>
@@ -246,7 +267,8 @@
 
         <article class="latex-content">
             <h2 class="member-name underline-title">Acknowledgement of Country</h2>
-            <h1 id="statement">Statement</h1>
+            <h3 id="statement">Statement</h3>
+
             <p>Meowdia was created by students of Swinburne Vietnam in Can Tho, a
             city in the Mekong Delta. This region is shared by many communities,
             including the Kinh majority and the Khmer, Hoa and other ethnic groups
@@ -254,29 +276,40 @@
             communities and pay our respects to their traditions and elders, post
             and present. We recognise that language, culture and connection to place
             are central to who people are.</p>
+
             <p>We are also building this site for an audience in Australia, and we
             acknowledge Aboriginal and Torres Strait Islander peoples as the
             Traditional Owners and Custodians of Country throughout Australia.</p>
-            <h1 id="why-this-is-here">Why this is here</h1>
+
+            <h3 id="why-this-is-here">Why this is here</h3>
+
             <p>Creative work shapes how people see themselves and each other, so we
             start from respect. Recognising the peoples who share Can Tho is the
             first step in showing the workplace Meowdia wants to be: one that
             welcomes people of every ethnic background, language and culture. We
             want our work to represent the communities around us fairly and with
             care.</p>
-            <h1 id="what-we-do-about-it">What we do about it</h1>
+
+            <h3 id="what-we-do-about-it">What we do about it</h3>
+
             <p>We encourage applications from people of all ethnic backgrounds,
             including Khmer, Hoa and other ethnic minority communities.</p>
+
             <p>We design this site to be accessible, so everyone can use it.</p>
+
             <p>We do not use cultural symbols, patterns, music or festival imagery
             from any community without permission and credit.</p>
+
             <p>We commit to learning from the communities around us and to listening
             when they tell us how we can represent them better.</p>
-            <h1 id="what-we-do-about-it-1">What we do about it</h1>
-            <p>Cần Thơ boosts policies to improve Khmer livelihoods<br>
-            <a href="vietnamnews.vn/society/172546/can-tho-boosts-policies-to-improve-khmer-livelihoods.html">vietnamnews.vn/society/172546/can-tho-boosts-policies-to-improve-khmer-livelihoods.html</a></p>
-            <p>Vietnam Museum of Ethnology<br>
-            <a href="vme.org.vn">vme.org.vn</a></p>
+
+            <h3 id="what-we-do-about-it-1">What we do about it</h3>
+
+            <p><em>Cần Thơ boosts policies to improve Khmer livelihoods.</em> (2025, September 23). Việt Nam News.<br>
+            <a href="https://vietnamnews.vn/society/1725746/can-tho-boosts-policies-to-improve-khmer-livelihoods.html" target="_blank">https://vietnamnews.vn/society/1725746/can-tho-boosts-policies-to-improve-khmer-livelihoods.html</a></p>
+            
+            <p><em>Bảo tàng Dân tộc học Việt Nam [Vietnam Museum of Ethnology].</em>  (2021).<br>
+            <a href="https://www.vme.org.vn/" target="_blank">https://vme.org.vn</a></p>
         </article>
 
     </main>

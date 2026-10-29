@@ -26,7 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 300px;
     margin-top: 25px;
     flex-wrap: wrap;
 }
@@ -58,7 +58,7 @@ header {
 .main-group-photo {
     flex: 1;
     min-width: 40rem;
-    max-width: 44rem;
+    max-width: 57rem;
     margin: 0;
 }
 
@@ -233,6 +233,10 @@ th {
     letter-spacing: var(--iciel-letter-spacing);
 }
 
+tbody td:hover {
+    color: var(--secondary-color);
+}
+
 .latex-content {
     font-size: 1.125rem;
     line-height: 1.7;
@@ -240,20 +244,21 @@ th {
     -webkit-font-smoothing: antialiased;
 }
 
-.latex-content h1 {
+.latex-content h3 {
     font-size: var(--subheading-font-size);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    letter-spacing: var(--nokio-letter-spacing);
+    letter-spacing: var(--iciel-letter-spacing);
+    font-family: var(--iciel-font);
     text-align: center;
 }
 
-.latex-content h1[id^="statement"] {
+.latex-content h3[id^="statement"] {
     color: var(--secondary-color);
 }
 
-.latex-content h1[id^="why-this-is-here"],
-.latex-content h1[id^="what-we-do-about-it"] {
+.latex-content h3[id^="why-this-is-here"],
+.latex-content h3[id^="what-we-do-about-it"] {
     color: var(--secondary-color);
 }
 
@@ -279,12 +284,34 @@ th {
     color: var(--secondary-color);
 }
 
+@media (min-width: 1440px) and (max-width: 1620px) {
+    .header-main-content {
+        gap: 50px
+    }
+
+    .main-group-photo {
+        max-width: 40rem;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .header-main-content {
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .main-group-photo {
+        max-width: 20rem;
+    }
+}
+
 @media screen and (max-width: 1279px) {
     .header-main-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 15px
     }
 
     .team-meta-list ul {
@@ -329,7 +356,7 @@ th {
     }
 
     .member-photo-box img {
-        width: 100%;
+        width: 500px;
         height: 350px; 
         object-fit: cover; 
         object-position: center 15%;
