@@ -19,7 +19,7 @@ main {
 }
 
 header {
-    min-height: 93vh;
+    min-height: 70vh;
 }
 
 .header-main-content {
@@ -221,6 +221,7 @@ th, td {
     text-align: left;
     border-bottom: var(--yellow-border);
     border-right: var(--yellow-border);
+    font-size: var(--body-font-size);
 }
 
 th:last-child, td:last-child {
