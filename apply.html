@@ -4,10 +4,10 @@ filename: apply.html
 author: le ba cao minh
 
 created: October 8, 2026
-last modified: October 28, 2026
+last modified: October 29, 2026
 description: html file for apply page
 
-AI acknowledgement: Cao Minh use Claude for cross checking requirements with project descriptions.
+AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requirements with project descriptions.
 
 -->
 
@@ -42,7 +42,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
 <body>
     <a id="top"></a>
-    <!-- ---------  Navigation Row  ----------- -->
+    <!--Navigation Row-->
 
     <nav class="nav-row">
         <a href="index.html" class="logo-link"><img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency"
@@ -67,7 +67,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         </details>
     </nav>
     <header>
-        <!-- ----------Header Content---------- -->
+        <!--Header Content-->
         <h1 class="slogan yellow">APPLICATION</h1>
         <h1 class="slogan cyan">FORM</h1>
 
@@ -92,8 +92,8 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     </header>
 
     <div class="yel_bar_section"></div>
-
-    <!-- ----------Recruitment Process Content---------- -->
+    
+    <!--Recruitment Process Content-->
     <section id="recruit_process">
 
         <h2 class="heading cyan process">Our Recruitment Process</h2>
@@ -115,7 +115,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
     </section>
 
     <div class="yel_bar_section"></div>
-    <!-- ----------FAQ---------- -->
+    <!--FAQ-->
 
     <section id="collection_notice">
 
@@ -158,7 +158,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
 
     <div class="yel_bar_section"></div>
 
-    <!-- ----------Application Form Content---------- -->
+    <!--Application Form Content-->
     <section id="form_sec">
         <h2 class="heading form cyan">Form</h2>
         <div class="yel_bar form"></div>
@@ -172,7 +172,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <label for="F_name" class="norm_text yellow field_label">First name</label>
                     <div>
                         <input class="norm_text cyan input" type="text" id="F_name" name="F_name"
-                            pattern="^[a-zA-Z\s]{1,20}$" required>
+                            pattern="^[a-zA-Z]{1,20}$" maxlength="20" required>
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
 
@@ -181,7 +181,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <label for="L_name" class="norm_text yellow field_label">Last name</label>
                     <div>
                         <input class="norm_text cyan input" type="text" id="L_name" name="L_name"
-                            pattern="^[a-zA-Z\s]{1,20}$" required>
+                            pattern="^[a-zA-Z]{1,20}$" maxlength="20" required>
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
                 </div>
@@ -243,14 +243,14 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                     <div>
                         <select class="norm_text cyan input" name="state" id="state" required>
                             <option value="">Please select</option>
-                            <option>VIC</option>
-                            <option>NSW</option>
-                            <option>QLD</option>
-                            <option>NT</option>
-                            <option>WA</option>
-                            <option>SA</option>
-                            <option>TAS</option>
-                            <option>ACT</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
                         </select>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 <details class="norm_text cyan" id="des">
                     <summary>
                         <img src="Media/Apply/triangle.svg" alt="" class="icon">
-                        <h2 class="sub_heading cyan">Design</h2>
+                        <span class="sub_heading cyan">Design</span>
                     </summary>
                     <em>Select all that apply</em>
                     <p>
@@ -333,7 +333,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 <details class="norm_text cyan" id="fed">
                     <summary>
                         <img src="Media/Apply/triangle.svg" alt="" class="icon">
-                        <h2 class="sub_heading cyan">Front-end</h2>
+                        <span class="sub_heading cyan">Front-end</span>
                     </summary>
                     <em>Select all that apply</em>
                     <p>
@@ -396,7 +396,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
                 <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4" cols="40"
                     placeholder="Type anything that you think is valuable for this position..."></textarea>
                 <div id="consent_holder">
-                    <input type="checkbox" id="consent" value="consent" required>
+                    <input type="checkbox" id="consent" name="content" value="consent" required>
                     <label class="norm_text cyan"  for="consent">I have read the Collection Notice above and consent to
                         Meowdia using the information I provide in this form to assess my application.</label>
                 </div>
@@ -409,7 +409,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         </form>
     </section>
 
-    <!-- ----------End Button Content---------- -->
+    <!--End Button Content-->
 
     <div id="end_button">
         <a class="norm_text cyan button" href="./jobs.html">Return to Jobs</a>
@@ -417,7 +417,7 @@ AI acknowledgement: Cao Minh use Claude for cross checking requirements with pro
         <a class="norm_text cyan button" href="./about.html">About Meowdia</a>
     </div>
 
-    <!-- ----------Footer Content---------- -->
+    <!--Footer Content-->
 
 
 
