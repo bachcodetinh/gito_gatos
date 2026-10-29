@@ -67,10 +67,6 @@ a {
   width: auto;
 }
 
-.hero-text h1 {
-  letter-spacing: var(--iciel-letter-spacing);
-}
-
 .hero h1 {
   margin: 0;
   font-size: var(--slogan-font-size);
@@ -78,7 +74,7 @@ a {
   color: var(--main-color);
 }
 
-/* "OUR TEAM" in a yellow rounded box*/
+/* "OUR TEAM" in a yellow underlined link*/
 .hero h1 .highlight {
   line-height: 1.1;
   color: var(--secondary-color);
@@ -141,7 +137,7 @@ aside.benefits input.benefits-check {
   margin-right: 30%;
 }
 
-/* Rounded heading */
+/* Section heading */
 .pill-heading {
   width: fit-content;
   margin: 20px auto 35px;
@@ -198,6 +194,7 @@ aside.benefits input.benefits-check {
 }
 
 .job {
+  font-size: var(--body-font-size);
   display: none;
 }
 
@@ -208,10 +205,6 @@ aside.benefits input.benefits-check {
 }
 
 /* Job card */
-.job {
-  font-size: var(--body-font-size);
-}
-
 .job-title {
   margin: 0 0 15px;
   text-align: center;
@@ -277,7 +270,6 @@ aside.benefits input.benefits-check {
 
   .hero {
     min-height: 32rem;
-    background-image: none;
     text-align: center;
   }
 
