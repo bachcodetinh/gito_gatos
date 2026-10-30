@@ -18,6 +18,26 @@ main {
     max-width: 96.5%;
 }
 
+/* ----------  Section Divider Section  ---------- */
+.underline_title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.underline_title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* ----------  Header section  ---------- */
 header {
     min-height: 70vh;
 }
@@ -73,6 +93,7 @@ header {
     font-size: var(--body-font-size);
 }
 
+/* ----------  Body section  ---------- */
 .team-profiles-container {
     display: flex;
     flex-direction: column;
@@ -92,25 +113,6 @@ header {
     letter-spacing: var(--iciel-letter-spacing);
     margin-bottom: 20px;
     text-underline-offset: 6px;
-}
-
-.underline-title {
-    position: relative;
-    display: inline-table;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.underline-title::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background-color: var(--secondary-color);
-    border-radius: 2px;
 }
 
 .card-body {
@@ -181,12 +183,6 @@ header {
     flex-direction: row-reverse;
 }
 
-.table-container {
-    overflow-x: auto;
-    width: 100%;
-    margin-top: 20px;
-}
-
 .swin-email {
     display: flex;
     align-items: center;
@@ -199,6 +195,13 @@ header {
 
 .swin-email a:hover {
     color: var(--secondary-color);
+}
+
+/* ----------  Fun Fact Table  ---------- */
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 20px;
 }
 
 table {
@@ -243,6 +246,7 @@ tbody td:hover {
     color: var(--secondary-color);
 }
 
+/* ----------  Acknowledgement of Country Section  ---------- */
 .latex-content {
     font-size: var(--body-font-size);
     line-height: 1.7;
@@ -298,6 +302,7 @@ tbody td:hover {
     margin-top: 2em;
 }
 
+/* ----------  Responsive Layout  ---------- */
 @media (min-width: 1440px) and (max-width: 1620px) {
     .header-main-content {
         gap: 50px

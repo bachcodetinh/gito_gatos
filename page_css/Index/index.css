@@ -2,6 +2,7 @@ body {
     overflow-x: hidden;
 }
 
+/* ----------  Section Divider Section  ---------- */
 .underline_title {
     position: relative;
     display: inline-block;
@@ -20,6 +21,7 @@ body {
     border-radius: 2px;
 }
 
+/* ----------  Header Section  ---------- */
 header {
     min-height: 93vh;
     display: flex;
@@ -73,12 +75,13 @@ header h1::before {
     background-repeat: no-repeat;
 }
 
+/* ----------  Body Section  ---------- */
 main {
     margin: 0;
     text-align: center;
 }
 
-/* Who We Are layout */
+/* ----------  Who We Are layout  ---------- */
 .section_title {
     color: var(--main-color);
     font-family: var(--iciel-font);
@@ -138,7 +141,7 @@ main {
     color: var(--secondary-color);
 }
 
-/* Our Products layout */
+/* ----------  Our Products layout  ---------- */
 .product_gallery {
     width: 100%;
     display: grid;
@@ -163,6 +166,7 @@ main {
     overflow: hidden;
 }
 
+/* ----------  Description appear when hovering over  ---------- */
 .layer {
     width: 100%;
     height: 0;
@@ -197,6 +201,7 @@ main {
     overflow: visible;
 }
 
+/* ----------  Responsive Layout  ---------- */
 @media (min-width: 1280px) and (max-width: 1620px) {
     header {
         min-height: 93vh;
