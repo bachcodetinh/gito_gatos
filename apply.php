@@ -46,29 +46,8 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
 <body>
     <a id="top"></a>
     <!--Navigation Row-->
-
-    <nav class="nav-row">
-        <a href="index.html" class="logo-link"><img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency"
-                class="logo"></a>
-
-        <details class="main-nav norm_text" open>
-
-            <summary><img src="Media/Navigation_bar/Paw.svg" alt="navigation bar button" class="icon"></summary>
-
-            <div>
-                <a href="index.html" class="cyan" style="padding-left: 0.2em;">Home</a>
-                <a href="jobs.html" class="cyan">Jobs</a>
-                <a href="apply.html" class="active" aria-current="page">Apply</a>
-                <a href="about.html" class="cyan">About</a>
-                <form class="nav-search" action="#" role="search">
-                    <input type="search" class="norm_text cyan" id="search-box" name="search" placeholder="Search" aria-label="Search">
-                    <button type="submit">
-                        <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search button">
-                    </button>
-                </form>
-            </div>
-        </details>
-    </nav>
+    <?php include 'common_html/nav.inc' ?>
+    
     <header>
         <!--Header Content-->
         <h1 class="slogan yellow">APPLICATION</h1>
@@ -166,7 +145,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
         <h2 class="heading form cyan">Form</h2>
         <div class="yel_bar form"></div>
         <em class="norm_text cyan" style="align-self: flex-start;">Every field is required except for Other Skills</em>
-        <form class="form" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+        <form class="form" method="post" action="process_eoi.php">
 
 
             <h2 class="sub_heading yellow">Personal Information</h2>
@@ -421,46 +400,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
     </div>
 
     <!--Footer Content-->
-
-
-
-    <footer class="meowdia_footer">
-        <div class="footer_main">
-            <div class="footer_logo">
-                <img src="Media/Footer/logo-text.svg" alt="Meowdia with logo as the M">
-            </div>
-            <div class="footer_right">
-                <div class="footer_columns">
-                    <div class="footer_column contact_col">
-                        <h3>Contact us</h3>
-                        <a href="mailto:meowdia@company.com">meowdia@company.com</a>
-                        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
-                    </div>
-                    <div class="footer_column see_more_col">
-                        <h3>See more</h3>
-                        <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
-                        <a href="https://github.com/bachcodetinh/gito_gatos" target="_blank">GitHub Repository</a>
-                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
-                            Board</a>
-                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6"
-                            target="_blank">Figma Design Board</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div id="footer_last">
-            <div class="copyright">
-                &copy; 2026 Meowdia Agency. All rights reserved.
-            </div>
-            <div class="instructor_credit">
-                Instructed by Trung Kiểm Lâm #2611
-            </div>
-        </div>
-    </footer>
-    <img src="Media/Footer/catface.png" alt="footer_cat"
-        style="width: 80%; height: auto; display: block; margin: 0 auto;">
+    <?php include 'common_html/footer.inc' ?>
 </body>
 
 </html>
