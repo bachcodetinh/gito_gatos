@@ -1,3 +1,4 @@
+<?php $page = "jobs"; ?>
 <!--
 Filename: jobs.html
 Author: Yen Ngan Bui
@@ -34,28 +35,7 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
 <body>
 <a id="top"></a>
 <!--Navigation Row-->
-<nav class="nav-row">
-    <a href="index.html" class="logo-link" style="font-size: 1rem;"><img src="Media/Navigation_bar/logo-ngan.svg" alt="Meowdia Agency"
-            class="logo"></a>
-
-    <details class="main-nav" open>
-
-        <summary><img src="Media/Navigation_bar/Paw.svg" alt="navigation bar button" class="icon"></summary>
-
-        <div>
-            <a href="index.html" class="cyan" style="padding-left: 0.2em;">Home</a>
-            <a href="jobs.html" class="active" aria-current="page">Jobs</a>
-            <a href="apply.html" class="cyan">Apply</a>
-            <a href="about.html" class="cyan">About</a>
-            <form class="nav-search" action="#" role="search">
-                <input type="search" id="search-box" name="search" placeholder="Search" aria-label="Search">
-                <button type="submit">
-                    <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search button">
-                </button>
-            </form>
-        </div>
-    </details>
-</nav>
+<?php include "nav.inc"; ?>
 <header class="hero">
     <div class="hero-text">
       <!-- "OUR TEAM" is a link to the About page -->
