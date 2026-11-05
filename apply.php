@@ -1,3 +1,4 @@
+<?php $page = "jobs"; ?>
 <!-- 
 
 filename: apply.html
