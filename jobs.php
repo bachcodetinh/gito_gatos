@@ -35,7 +35,7 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
 <body>
 <a id="top"></a>
 <!--Navigation Row-->
-<?php include "nav.inc"; ?>
+<?php include "common_html/nav.inc"; ?>
 <header class="hero">
     <div class="hero-text">
       <!-- "OUR TEAM" is a link to the About page -->
