@@ -145,7 +145,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
         <h2 class="heading form cyan">Form</h2>
         <div class="yel_bar form"></div>
         <em class="norm_text cyan" style="align-self: flex-start;">Every field is required except for Other Skills</em>
-        <form class="form" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+        <form class="form" method="post" action="process_eoi.php">
 
 
             <h2 class="sub_heading yellow">Personal Information</h2>
