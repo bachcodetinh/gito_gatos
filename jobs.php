@@ -3,8 +3,8 @@
 Filename: jobs.html
 Author: Yen Ngan Bui
 Created: October 8, 2026
-Last modified: October 29, 2026
-Description: html file for jobs page
+Last modified: November 6, 2026
+Description: jobs page, converted from jobs.html to PHP (Project Part 2)
 AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against the assignment requirements.
 -->
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
 <header class="hero">
     <div class="hero-text">
       <!-- "OUR TEAM" is a link to the About page -->
-      <h1>JOIN <a href="about.html" class="highlight">OUR TEAM</a></h1>
+      <h1>JOIN <a href="about.php" class="highlight">OUR TEAM</a></h1>
       <!-- Inline CSS -->
       <p class="hero-sub">Are you the <span style="color: var(--secondary-color);">purr-fect cat</span><br>we're missing?</p>
     </div>
@@ -116,7 +116,7 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
           </ul>
         </section>
 
-        <a href="apply.html" class="apply-button">Apply now</a>
+        <a href="apply.php" class="apply-button">Apply now</a>
       </article>
 
       <!-- JOB 2: UI Designer -->
@@ -158,7 +158,7 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
           </ul>
         </section>
 
-        <a href="apply.html" class="apply-button">Apply now</a>
+        <a href="apply.php" class="apply-button">Apply now</a>
       </article>
     </section>
 
@@ -166,48 +166,12 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
 
   <!--End Button Content-->
     <div id="end_button">
-        <a class="button" href="index.html">Home</a>
+        <a class="button" href="index.php">Home</a>
         <a class="button" href="#top">Back to Top</a>
-        <a class="button" href="about.html">About Us</a>
+        <a class="button" href="about.php">About Us</a>
     </div>
  
     <!--Footer Content-->
-    <footer class="meowdia_footer">
-        <div class="footer_main">
-            <div class="footer_logo">
-                <img src="Media/Footer/logo-text.svg" alt="Meowdia with logo as the M">
-            </div>
-            <div class="footer_right">
-                <div class="footer_columns">
-                    <div class="footer_column contact_col">
-                        <h3>Contact us</h3>
-                        <a href="mailto:meowdia@company.com">meowdia@company.com</a>
-                        <a href="mailto:meowdia_hr@company.com">meowdia_hr@company.com</a>
-                    </div>
-                    <div class="footer_column see_more_col">
-                        <h3>See more</h3>
-                        <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
-                        <a href="https://github.com/bachcodetinh/gito_gatos" target="_blank">GitHub Repository</a>
-                        <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
-                            Board</a>
-                        <a href="https://www.figma.com/design/tgypKCZj9eWjr5lhzS2puq/Gito_Gatos-Meowdia-Web-Page?m=auto&t=MYzFcJfbGJHMmjrl-6"
-                            target="_blank">Figma Design Board</a>
-                    </div>
-                </div>
- 
-            </div>
- 
-        </div>
-        <div id="footer_last">
-            <div class="copyright">
-                &copy; 2026 Meowdia Agency. All rights reserved.
-            </div>
-            <div class="instructor_credit">
-                Instructed by Trung Kiểm Lâm #2611
-            </div>
-        </div>
-    </footer>
-    <img src="Media/Footer/catface.png" alt="footer_cat"
-        style="width: 80%; height: auto; display: block; margin: 0 auto;">
+    <?php include 'common_html/footer.inc' ?> 
 </body>
 </html>
