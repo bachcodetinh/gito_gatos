@@ -1,3 +1,4 @@
+<?php $page = "apply"; ?>
 <!-- 
 
 filename: apply.html
