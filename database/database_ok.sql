@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `database_mon`
+-- Database: `database_gito_gatos`
 --
-CREATE DATABASE IF NOT EXISTS `database_mon` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `database_mon`;
+CREATE DATABASE IF NOT EXISTS `database_gito_gatos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `database_gito_gatos`;
 -- --------------------------------------------------------
 
 --
