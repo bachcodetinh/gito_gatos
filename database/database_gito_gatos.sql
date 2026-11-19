@@ -35,7 +35,7 @@ CREATE TABLE `contributions` (
   `student_id` varchar(10) NOT NULL,
   `project_part` int(11) NOT NULL,
   `project_contributions` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `contributions`
@@ -101,7 +101,7 @@ CREATE TABLE `members` (
   `student_id` varchar(10) NOT NULL,
   `member_name` varchar(100) NOT NULL,
   `role` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `members`
