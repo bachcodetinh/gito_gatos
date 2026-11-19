@@ -1,12 +1,12 @@
 <?php $page = "apply"; ?>
 <!-- 
 
-filename: apply.html
+filename: apply.php
 author: le ba cao minh
 
 created: October 8, 2026
-last modified: October 29, 2026
-description: html file for apply page
+last modified: November 19, 2026
+description: php file for apply page
 
 AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requirements with project descriptions.
 
@@ -38,6 +38,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                     #000000, var(--background-color),
                     #000000);
         }
+
         a {
             z-index: 9999;
         }
@@ -48,7 +49,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
     <a id="top"></a>
     <!--Navigation Row-->
     <?php include 'common_html/nav.inc' ?>
-    
+
     <header>
         <!--Header Content-->
         <h1 class="slogan yellow">APPLICATION</h1>
@@ -75,7 +76,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
     </header>
 
     <div class="yel_bar_section"></div>
-    
+
     <!--Recruitment Process Content-->
     <section id="recruit_process">
 
@@ -146,7 +147,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
         <h2 class="heading form cyan">Form</h2>
         <div class="yel_bar form"></div>
         <em class="norm_text cyan" style="align-self: flex-start;">Every field is required except for Other Skills</em>
-        <form class="form" method="post" action="process_eoi.php">
+        <form class="form" method="post" action="process_eoi.php" novalidate>
 
 
             <h2 class="sub_heading yellow">Personal Information</h2>
@@ -154,8 +155,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="first_name_holder">
                     <label for="F_name" class="norm_text yellow field_label">First name</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="F_name" name="F_name"
-                            pattern="^[a-zA-Z]{1,20}$" maxlength="20" required>
+                        <input class="norm_text cyan input" type="text" id="F_name" name="F_name">
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
 
@@ -163,26 +163,24 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="last_name_holder">
                     <label for="L_name" class="norm_text yellow field_label">Last name</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="L_name" name="L_name"
-                            pattern="^[a-zA-Z]{1,20}$" maxlength="20" required>
+                        <input class="norm_text cyan input" type="text" id="L_name" name="L_name">
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
                 </div>
                 <div class="field" id="dob_holder">
                     <label for="dob" class="norm_text yellow field_label">Date of birth</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="dob" pattern="^\d{2}/\d{2}/\d{4}$"
-                            name="bdate" placeholder="dd/mm/yyyy" required>
+                        <input class="norm_text cyan input" type="text" id="dob" name="bdate" placeholder="dd/mm/yyyy">
                         <p class="norm_text cyan">Used to verify you meet the legal working-age requirement</p>
                     </div>
                 </div>
                 <fieldset class="norm_text cyan input container" id="gender_holder">
                     <legend class="norm_text yellow">Gender</legend>
-                    <input class="checkmark" type="radio" id="Female" name="gender" value="Female" required />
+                    <input class="checkmark" type="radio" id="Female" name="gender" value="Female" />
                     <label for="Female" class="norm_text cyan">Female</label>
-                    <input class="checkmark" type="radio" id="Male" name="gender" value="Male" required />
+                    <input class="checkmark" type="radio" id="Male" name="gender" value="Male" />
                     <label for="Male" class="norm_text cyan">Male</label>
-                    <input class="checkmark" type="radio" id="Others" name="gender" value="Others" required />
+                    <input class="checkmark" type="radio" id="Others" name="gender" value="Others" />
                     <label for="Others" class="norm_text cyan">Others</label>
                 </fieldset>
             </div>
@@ -193,38 +191,35 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="email_holder">
                     <label for="email" class="norm_text yellow field_label">Email</label>
                     <div>
-                        <input class="norm_text cyan input" type="email" id="email" name="email" required>
+                        <input class="norm_text cyan input" type="text" id="email" name="email">
                         <p class="norm_text cyan">Where you receive the result</p>
                     </div>
                 </div>
                 <div class="field" id="phone_holder">
                     <label for="phone" class="norm_text yellow field_label">Phone</label>
                     <div>
-                        <input class="norm_text cyan input" type="tel" id="phone" name="phone" pattern="^\d{8,12}$"
-                            maxlength="12" required>
+                        <input class="norm_text cyan input" type="text" id="phone" name="phone">
                         <p class="norm_text cyan">8 to 12 digits, no space</p>
                     </div>
                 </div>
                 <div class="field" id="address_holder">
                     <label for="street" class="norm_text yellow field_label">Street Address</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="street" name="street" maxlength="40"
-                            required>
+                        <input class="norm_text cyan input" type="text" id="street" name="street">
                         <p class="norm_text cyan">Up to 40 characters</p>
                     </div>
                 </div>
                 <div class="field" id="suburb_holder">
                     <label for="suburb" class="norm_text yellow field_label">Suburb/Town</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="suburb" name="suburb" maxlength="40"
-                            required>
+                        <input class="norm_text cyan input" type="text" id="suburb" name="suburb">
                         <p class="norm_text cyan">Up to 40 characters</p>
                     </div>
                 </div>
                 <div class="field" id="state_holder">
                     <label for="state" class="norm_text yellow field_label">State</label>
                     <div>
-                        <select class="norm_text cyan input" name="state" id="state" required>
+                        <select class="norm_text cyan input" name="state" id="state">
                             <option value="">Please select</option>
                             <option value="VIC">VIC</option>
                             <option value="NSW">NSW</option>
@@ -240,8 +235,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="postcode_holder">
                     <label for="postcode" class="norm_text yellow field_label">Postcode</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="postcode" name="postcode" pattern="^\d{4}$"
-                            maxlength="4" required>
+                        <input class="norm_text cyan input" type="text" id="postcode" name="postcode">
                         <p class="norm_text cyan">4 digits</p>
                     </div>
                 </div>
@@ -250,8 +244,7 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
             <h2 class="sub_heading yellow pos_skill">Position & Skills</h2>
             <div id="ref_num_holder">
                 <label class="norm_text yellow" for="ref_num">Job reference number</label>
-                <input class="norm_text cyan input" id="ref_num" type="text" name="ref_num" pattern="^[A-Za-z0-9]{5}$" maxlength="5"
-                    required>
+                <input class="norm_text cyan input" id="ref_num" type="text" name="ref_num">
                 <div>
                     <p class="norm_text cyan">Front-end Developer: FED01</p>
                     <p class="norm_text cyan">UI/UX Designer: UID02</p>
@@ -379,8 +372,8 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4" cols="40"
                     placeholder="Type anything that you think is valuable for this position..."></textarea>
                 <div id="consent_holder">
-                    <input type="checkbox" id="consent" name="consent" value="consent" required>
-                    <label class="norm_text cyan"  for="consent">I have read the Collection Notice above and consent to
+                    <input type="checkbox" id="consent" name="consent" value="consent">
+                    <label class="norm_text cyan" for="consent">I have read the Collection Notice above and consent to
                         Meowdia using the information I provide in this form to assess my application.</label>
                 </div>
             </div>
@@ -395,9 +388,9 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
     <!--End Button Content-->
 
     <div id="end_button">
-        <a class="norm_text cyan button" href="./jobs.html">Return to Jobs</a>
+        <a class="norm_text cyan button" href="./jobs.php">Return to Jobs</a>
         <a class="norm_text cyan button" href="#top">Back to Top</a>
-        <a class="norm_text cyan button" href="./about.html">About Meowdia</a>
+        <a class="norm_text cyan button" href="./about.php">About Meowdia</a>
     </div>
 
     <!--Footer Content-->
