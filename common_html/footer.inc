@@ -14,7 +14,6 @@
                     </div>
                     <div class="footer_column see_more_col">
                         <h3>See more</h3>
-                        <a href="https://bachcodetinh.github.io/gito_gatos/" target="_blank">Live Site</a>
                         <a href="https://github.com/bachcodetinh/gito_gatos" target="_blank">GitHub Repository</a>
                         <a href="https://btyenngan6608.atlassian.net/browse/COS26P1" target="_blank">Jira Scrum
                             Board</a>
