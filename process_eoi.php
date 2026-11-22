@@ -56,7 +56,7 @@
         $errors['L_name'] = 'Last name must contain only letters (max 20 characters).';
     }
 
-    // 4. Date of birth: Required, valid dd/mm/yyyy
+    // 4. Date of birth: valid dd/mm/yyyy
     $bdate = isset($_POST['bdate']) && is_string($_POST['bdate']) ? trim($_POST['bdate']) : '';
     if ($bdate === '') {
         $errors['bdate'] = 'Date of birth is required.';
@@ -66,7 +66,7 @@
         $errors['bdate'] = 'Please enter a real calendar date.';
     }
 
-    // 5. Gender: Required radio allowlist
+    // 5. Gender: radio allowlist
     $allowed_genders = ['Female', 'Male', 'Others'];
     $gender = isset($_POST['gender']) && is_string($_POST['gender']) ? trim($_POST['gender']) : '';
     if ($gender === '') {
@@ -75,7 +75,7 @@
         $errors['gender'] = 'Invalid gender selected.';
     }
 
-    // 6. Street Address: Required, max 40 chars
+    // 6. Street Address: max 40 chars
     $street = clean_string_input('street');
     if ($street === '') {
         $errors['street'] = 'Street address is required.';
@@ -85,7 +85,7 @@
         $errors['street'] = 'Street address contains invalid characters.';
     }
 
-    // 7. Suburb/Town: Required, max 40 chars
+    // 7. Suburb/Town: max 40 chars
     $suburb = clean_string_input('suburb');
     if ($suburb === '') {
         $errors['suburb'] = 'Suburb/Town is required.';
@@ -95,7 +95,7 @@
         $errors['suburb'] = 'Suburb/Town contains invalid characters.';
     }
 
-    // 8. State: Required dropdown allowlist
+    // 8. State: dropdown allowlist
     $allowed_states = ['VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT'];
     $state = isset($_POST['state']) && is_string($_POST['state']) ? trim($_POST['state']) : '';
     if ($state === '') {
@@ -104,7 +104,7 @@
         $errors['state'] = 'Invalid state selected.';
     }
 
-    // 9. Postcode: Required, exactly 4 digits
+    // 9. Postcode: exactly 4 digits
     $postcode = isset($_POST['postcode']) && is_string($_POST['postcode']) ? trim($_POST['postcode']) : '';
     if ($postcode === '') {
         $errors['postcode'] = 'Postcode is required.';
@@ -112,7 +112,7 @@
         $errors['postcode'] = 'Postcode must be exactly 4 digits.';
     }
 
-    // 10. Email: Required, valid format
+    // 10. Email: valid format
     $email = isset($_POST['email']) && is_string($_POST['email']) ? trim($_POST['email']) : '';
     if ($email === '') {
         $errors['email'] = 'Email is required.';
@@ -120,7 +120,7 @@
         $errors['email'] = 'Please enter a valid email address.';
     }
 
-    // 11. Phone number: Required, 8-12 digits, no spaces
+    // 11. Phone number: 8-12 digits, no spaces
     $phone = isset($_POST['phone']) && is_string($_POST['phone']) ? trim($_POST['phone']) : '';
     if ($phone === '') {
         $errors['phone'] = 'Phone number is required.';
@@ -128,7 +128,7 @@
         $errors['phone'] = 'Phone number must be 8 to 12 digits with no spaces.';
     }
 
-    // 12. Skill list: Required (at least 1 checkbox across skill_des[] and skill_fed[])
+    // 12. Skill list: Required at least 1
     $allowed_des = array_map(fn($n) => "skill_des$n", range(1, 12));
     $allowed_fed = array_map(fn($n) => "skill_fed$n", range(1, 13));
 
