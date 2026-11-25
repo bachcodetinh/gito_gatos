@@ -205,6 +205,11 @@ aside.benefits input.benefits-check {
 }
 
 /* Job card */
+.job-message {
+  margin: 2em auto;
+  text-align: center;
+}
+
 .job-title {
   margin: 0 0 15px;
   text-align: center;
