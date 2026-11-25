@@ -1,9 +1,13 @@
-<?php $page = "jobs"; ?>
+<?php $page = "jobs"; 
+  require_once "settings.php";
+  mysqli_report(MYSQLI_REPORT_OFF);
+  $conn = mysqli_connect($host, $user, $pwd, $sql_db);
+?>
 <!--
 Filename: jobs.html
 Author: Yen Ngan Bui
 Created: October 8, 2026
-Last modified: November 6, 2026
+Last modified: November 25, 2026
 Description: jobs page, converted from jobs.html to PHP (Project Part 2)
 AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against the assignment requirements.
 -->
@@ -66,53 +70,89 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
     <section class="positions" aria-labelledby="positions-heading">
       <h2 id="positions-heading" class="pill-heading">Available Positions</h2>
 
+<?php
+  if (!$conn) {
+    echo "<p class='job-message'>Meow! Our cat chewed through the database cable. Try again later!</p>";
+  } else {
+    $sql = "SELECT * FROM jobs ORDER BY job_ref";
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+      echo "<p class='job-message'>A cat walked across the keyboard and broke the query. Debugging meow...</p>";
+    } elseif (mysqli_num_rows($result) == 0) {
+      echo "<p class='job-message'>No positions open. We are simply too purr-fect to hire right now.</p>";
+    } else {
+
+      $fed = mysqli_fetch_assoc($result);
+      $uid = mysqli_fetch_assoc($result);
+?>
       <!-- Hidden radio buttons -->
       <input type="radio" name="job" id="tab-fed" class="tab-radio" checked>
       <input type="radio" name="job" id="tab-uid" class="tab-radio">
 
       <!-- Switch bar: clicking a label checks its radio button -->
       <div class="switch-bar">
-        <label for="tab-fed">Front-End Developer</label>
-        <label for="tab-uid">UI Designer</label>
+        <label for="tab-fed"><?php echo htmlspecialchars($fed["title"]);?></label>
+        <label for="tab-uid"><?php echo htmlspecialchars($uid["title"]);?></label>
         <span class="slider"></span>
       </div>
 
       <!-- JOB 1: Front-End Developer -->
       <article class="job" id="job-fed">
-        <h3 class="job-title">Front-End Developer</h3>
-        <p class="job-desc">We are looking for a Front-End Developer to build interactive, responsive websites for our diverse client projects.</p>
+        <h3 class="job-title"><?php echo htmlspecialchars($fed["title"]);?></h3>
+        <p class="job-desc"><?php echo htmlspecialchars($fed["description"]);?></p>
 
         <ul class="job-tags">
-          <li>Ref code: FED01</li>
-          <li>3.500,0 AUD/month</li>
-          <li>Reports to: Technical Lead</li>
-          <li>Senior</li>
+          <li>Ref code: <?php echo htmlspecialchars($fed["job_ref"]);?></li>
+          <li><?php echo $fed["salary"];?> AUD/month</li>
+          <li>Reports to: <?php echo htmlspecialchars($fed["reporting_to"]);?></li>
+          <li><?php echo htmlspecialchars($fed["job_level"]);?></li>
         </ul>
 
         <section class="job-part">
           <h4 class="yellow-text">Key Responsibilities</h4>
           <ol>
-            <li>Develop user interface features using HTML5, CSS3 and JavaScript.</li>
-            <li>Collaborate closely with the design team to translate graphic designs into actual web interfaces.</li>
-            <li>Optimize websites to ensure fast loading times and the best possible user experience.</li>
+             <?php
+              //Responsibilities of FED01
+              $sql = "SELECT responsibility FROM job_responsibilities WHERE job_ref = 'FED01' ORDER BY id";
+              $list = mysqli_query($conn, $sql);
+              if ($list) {
+                while ($item = mysqli_fetch_assoc($list)) {
+                  echo "<li>" . htmlspecialchars($item["responsibility"]) . "</li>";
+                }
+              }
+            ?>
           </ol>
         </section>
 
         <section class="job-part">
           <h4>Essential <span class="yellow-text">Requirements</span></h4>
           <ul>
-            <li>5+ years of experience.</li>
-            <li>Proficient in HTML, CSS, and pure JavaScript.</li>
-            <li>Has practical experience with Responsive Web Design (works well on all devices).</li>
-            <li>Strong problem-solving and teamwork skills.</li>
-          </ul>
+            <?php
+              //Essential requirements of FED01
+              $sql = "SELECT requirement FROM job_requirements WHERE job_ref = 'FED01' AND type = 'essential' ORDER BY id";
+              $list = mysqli_query($conn, $sql);
+              if ($list) {
+                while ($item = mysqli_fetch_assoc($list)) {
+                  echo "<li>" . htmlspecialchars($item["requirement"]) . "</li>";
+                }
+              }
+            ?>
         </section>
 
         <section class="job-part">
           <h4>Preferred <span class="yellow-text">Requirements</span></h4>
           <ul>
-            <li>Has basic knowledge of search engine optimization (SEO).</li>
-            <li>Has experience using Git and GitHub for source code management.</li>
+             <?php
+              //Preferable requirements of FED01
+              $sql = "SELECT requirement FROM job_requirements WHERE job_ref = 'FED01' AND type = 'preferable' ORDER BY id";
+              $list = mysqli_query($conn, $sql);
+              if ($list) {
+                while ($item = mysqli_fetch_assoc($list)) {
+                  echo "<li>" . htmlspecialchars($item["requirement"]) . "</li>";
+                }
+              }
+            ?>
           </ul>
         </section>
 
@@ -121,45 +161,71 @@ AI acknowledgement: Yen Ngan used Claude and Gemini to check the page against th
 
       <!-- JOB 2: UI Designer -->
       <article class="job" id="job-uid">
-        <h3 class="job-title">UI Designer</h3>
-        <p class="job-desc">Join our creative team to design visually appealing, interactive, and intuitive interfaces for our web and digital products.</p>
+        <h3 class="job-title"><?php echo htmlspecialchars($uid["title"]);?></h3>
+        <p class="job-desc"><?php echo htmlspecialchars($uid["description"]); ?></p>
 
         <ul class="job-tags">
-          <li>Ref code: UID02</li>
-          <li>3.200,0 AUD/month</li>
-          <li>Reports to: Creative Director</li>
-          <li>Senior</li>
+          <li>Ref code: <?php echo htmlspecialchars($uid["job_ref"]);?></li>
+          <li><?php echo $uid["salary"];?> AUD/month</li>
+          <li>Reports to: <?php echo htmlspecialchars($uid["reporting_to"]);?></li>
+          <li><?php echo htmlspecialchars($uid["job_level"]);?></li>
         </ul>
 
         <section class="job-part">
           <h4 class="yellow-text">Key Responsibilities</h4>
           <ol>
-            <li>Collaborate with UX designers and product teams to translate wireframes and user flows into high-fidelity visual designs.</li>
-            <li>Create high-quality mockups, interactive prototypes, and maintain design systems/style guides for web projects.</li>
-            <li>Design and refine visual interface components such as menus, tabs, icons, and widgets, ensuring visual consistency across all screens.</li>
+            <?php
+              //Responsibilities of UID02
+              $sql = "SELECT responsibility FROM job_responsibilities WHERE job_ref = 'UID02' ORDER BY id";
+              $list = mysqli_query($conn, $sql);
+              if ($list) {
+                while ($item = mysqli_fetch_assoc($list)) {
+                  echo "<li>" . htmlspecialchars($item["responsibility"]) . "</li>";
+                }
+              }
+            ?>
           </ol>
         </section>
 
         <section class="job-part">
           <h4>Essential <span class="yellow-text">Requirements</span></h4>
           <ul>
-            <li>5+ years of experience.</li>
-            <li>Proven experience in UI design with a strong portfolio demonstrating web design, aesthetics, and visual skills.</li>
-            <li>Proficient in design software such as Figma, Adobe XD or Sketch.</li>
-            <li>Deep understanding of visual design principles (including typography, color theory, layout, and grid systems).</li>
+            <?php
+              //Essential requirements of UID02
+              $sql = "SELECT requirement FROM job_requirements WHERE job_ref = 'UID02' AND type = 'essential' ORDER BY id";
+              $list = mysqli_query($conn, $sql);
+              if ($list) {
+                while ($item = mysqli_fetch_assoc($list)) {
+                  echo "<li>" . htmlspecialchars($item["requirement"]) . "</li>";
+                }
+              }
+            ?>
           </ul>
         </section>
 
         <section class="job-part">
           <h4>Preferred <span class="yellow-text">Requirements</span></h4>
           <ul>
-            <li>Has basic knowledge of implementing HTML5 and CSS3 from designs.</li>
-            <li>Has experience working in an agency environment, which is a significant advantage.</li>
+            <?php
+              //Preferable requirements of UID02
+              $sql = "SELECT requirement FROM job_requirements WHERE job_ref = 'UID02' AND type = 'preferable' ORDER BY id";
+              $list = mysqli_query($conn, $sql);
+              if ($list) {
+                while ($item = mysqli_fetch_assoc($list)) {
+                  echo "<li>" . htmlspecialchars($item["requirement"]) . "</li>";
+                }
+              }
+            ?>
           </ul>
         </section>
 
         <a href="apply.php" class="apply-button">Apply now</a>
       </article>
+<?php
+    }
+    mysqli_close($conn);
+  }
+?>
     </section>
 
   </main>
