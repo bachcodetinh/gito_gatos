@@ -16,12 +16,16 @@
             <a href="jobs.php" <?php if ($page == "jobs") echo 'class = "active" aria-current="page"'; else echo 'class="cyan"'; ?>>Jobs</a>
             <a href="apply.php" <?php if ($page == "apply") echo 'class = "active" aria-current="page"'; else echo 'class="cyan"'; ?>>Apply</a>
             <a href="about.php" <?php if ($page == "about") echo 'class="active" aria-current="page"'; else echo 'class="cyan"'; ?>>About</a>
-            <form class="nav-search" action="#" role="search">
+
+            <?php if ($page == "jobs") {?>
+            <!--Search box is only on the jobs page-->
+            <form class="nav-search" action="search.php" method="get" role="search">
                 <input type="search" class="norm-text cyan" id="search-box" name="search" placeholder="Search">
                 <button type="submit">
                     <img src="Media/Navigation_bar/maginifying-glass-navbar.svg" alt="Search button">
                 </button>
             </form>
+            <?php }?>
         </div>
     </details>
 </nav>
