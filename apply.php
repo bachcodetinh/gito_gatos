@@ -1,4 +1,19 @@
-<?php $page = "apply"; ?>
+<?php 
+    // page tag
+    $page = "apply"; 
+
+    // error and valid input handling
+    $error = $_SESSION['flash_error'] ?? [];
+    $valid = $_SESSION['flash_valid'] ?? [];
+
+    // delete old inputs (if there's any) and then INSERT into MySQL
+    unset($_SESSION['flash_error'], $_SESSION['flash_valid']);
+
+    // helper neutralize html function
+    function neutral_html(string $str): string {
+        return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+    }
+?>
 <!-- 
 
 filename: apply.php
@@ -377,6 +392,15 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                         Meowdia using the information I provide in this form to assess my application.</label>
                 </div>
             </div>
+
+            <!-- Loop to print all error messages -->
+            <?php if (!empty($error)): ?>
+            <div class='norm_text yellow' id='error messages'>
+                <?php foreach ($error as $err):?>
+                    <li><?php echo neutral_html($err) ?></li>
+                <?php endforeach ?>
+            </div>
+            <?php endif ?>
 
             <div id="submit_reset">
                 <input class=" imp_text cyan button input" id="submit" type="submit" value="Apply">
