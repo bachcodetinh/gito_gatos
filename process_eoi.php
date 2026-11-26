@@ -1,156 +1,223 @@
 <?php
-    // 1. Block direct URL or Get method and
-    if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') 
-    // if the request method is null, return an empty string
-    {
-        header('Location: apply.php');
+    session_start();
+    /*
+    filename: process_eoi.php
+    author: le ba cao minh
+
+    created: October 8, 2026
+    last modified: November 27, 2026
+    description: process file for EOIs submitted from apply page
+
+    AI acknowledgement: Cao Minh use Claude and Gemini for:
+                        - cross checking requirements with project descriptions.
+                        - debugging
+                        - program task planning
+                        - technical solution search
+                        - syntax and technical explain
+    */
+    // Block direct URL or Get method
+    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+        header("Location: apply.php#form_sec");
         exit;
     }
 
-    // neutralize all HTML output
-    function neutral_html(string $value): string
+    // Input cleaning functions
+    function clean_string(string $data): string
     {
-        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
-    }
-
-    // Helper for normalizing free-text fields (street, suburb, other_skill)
-    function clean_string_input(string $input): string
-    {
-        if (!isset($_POST[$input]) || !is_string($_POST[$input])) {
-            // If the input is empty or not a string, return empty string
+        if (!isset($_POST[$data]) || !is_string($_POST[$data])) {
             return '';
         }
-        $cleaned_input = trim($_POST[$input]);
-        // Remove white spaces from both ends
-        $cleaned_input = preg_replace('/\s+/u', ' ', $cleaned_input);
-        // Replace multiple spaces with a space. /u is for unicode multi-byte characters like vietnamese
-        $cleaned_input= preg_replace('/[\x00-\x1F\x7F]/u', '', $cleaned_input);
-        return $cleaned_input;
-        // Remove invisible ASCII characters
+        $a = trim($_POST[$data]);
+        $b = stripslashes($a);
+        return $b;
     }
 
-    // array to store all errored inputs
-    $errors = [];
-
-    // 1. Job reference number: exactly 5 alphanumeric characters
-    $ref_num = isset($_POST['ref_num']) && is_string($_POST['ref_num']) ? trim($_POST['ref_num']) : '';
-    if ($ref_num === '') {
-        $errors['ref_num'] = 'Job reference number is required.';
-    } elseif (preg_match('/^[A-Za-z0-9]{5}$/', $ref_num) !== 1) {
-        $errors['ref_num'] = 'Job reference number must be exactly 5 alphanumeric characters.';
+    function clean_array(string $data): array
+    {
+        if (!isset($_POST[$data]) || !is_array($_POST[$data])) {
+            return [];
+        }
+        $clean_array = [];
+        foreach ($_POST[$data] as $a) {
+            if (is_string($a)) {
+                $b = stripslashes($a);
+                $c = trim($b);
+                if ($c !== '') {
+                    $clean_array[] = $c;
+                }
+            }
+        }
+        return $clean_array;
     }
 
-    // 2. First name: max 20 alpha characters
-    $f_name = isset($_POST['F_name']) && is_string($_POST['F_name']) ? trim($_POST['F_name']) : '';
-    if ($f_name === '') {
-        $errors['F_name'] = 'First name is required.';
-    } elseif (mb_strlen($f_name, 'UTF-8') > 20 || preg_match('/^[A-Za-z]+$/', $f_name) !== 1) {
-        $errors['F_name'] = 'First name must contain only letters (max 20 characters).';
+    // helper functions
+    function string_max_length(string $str, int $max): bool
+    {
+        $length = mb_strlen($str, 'UTF-8');
+        if ($length > $max) {
+            return TRUE;
+        };
+        return FALSE;
     }
 
-    // 3. Last name: max 20 alpha characters
-    $l_name = isset($_POST['L_name']) && is_string($_POST['L_name']) ? trim($_POST['L_name']) : '';
-    if ($l_name === '') {
-        $errors['L_name'] = 'Last name is required.';
-    } elseif (mb_strlen($l_name, 'UTF-8') > 20 || preg_match('/^[A-Za-z]+$/', $l_name) !== 1) {
-        $errors['L_name'] = 'Last name must contain only letters (max 20 characters).';
+    // error array 
+    $error = [];
+
+    // everything the user filled in the form
+    $filled = [
+        'last_name' => clean_string('L_name'),
+        'first_name' => clean_string('F_name'),
+        'dob' => clean_string('bdate'),
+        'gender' => clean_string('gender'),
+        'email' => clean_string('email'),
+        'phone' => clean_string('phone'),
+        'street' => clean_string('street'),
+        'suburb' => clean_string('suburb'),
+        'state' => clean_string('state'),
+        'post_code' => clean_string('postcode'),
+        'ref_num' => clean_string('ref_num'),
+        'skill_des' => clean_array('skill_des'),
+        'skill_fed' => clean_array('skill_fed'),
+        'other_skill' => clean_string('other_skill'),
+        'consent' => clean_string('consent'),
+    ];
+
+    // input validation
+    // first name
+    if ($filled['first_name'] === '') {
+        $error[] = 'You need to enter your first name.';
+    } elseif (!preg_match('/^[A-Za-z]+$/', $filled['first_name'])) {
+        $error[] = 'Your first name contain non-letter character.';
+    } elseif (string_max_length($filled['first_name'], 20) == TRUE) {
+        $error[] = 'Your first name is longer than 20 characters.';
+    };
+
+    // last name
+    if ($filled['last_name'] === '') {
+        $error[] = 'You need to enter your last name.';
+    } elseif (!preg_match('/^[A-Za-z]+$/', $filled['last_name'])) {
+        $error[] = 'Your last name contain non-letter character.';
+    } elseif (string_max_length($filled['last_name'], 20) === TRUE) {
+        $error[] = 'Your last name is longer than 20 characters.';
+    };
+
+    // date of birth
+    $min_age = 15;
+    $max_age = 80;
+    $format = 'd/m/Y';
+    $dob = DateTime::createFromFormat($format, $filled['dob']);
+
+    if ($filled['dob'] === '') {
+        $error[] = 'You need to enter your birth date.';
+    } elseif (!$dob || $dob->format($format) !== $filled['dob']) {
+        $error[] = 'Your birth date is not valid or wrong format.';
+    } else {
+        $dob->setTime(0, 0, 0);
+        $today = new DateTime('today');
+        $age = $today->diff($dob)->y;
+        if ($dob > $today) {
+            $error[] = 'Your birth date is in the future.';
+        } elseif ($age < $min_age) {
+            $error[] = 'You are too young for this position.';
+        } elseif ($age > $max_age) {
+            $error[] = 'You are too old for this position.';
+        }
     }
 
-    // 4. Date of birth: valid dd/mm/yyyy
-    $bdate = isset($_POST['bdate']) && is_string($_POST['bdate']) ? trim($_POST['bdate']) : '';
-    if ($bdate === '') {
-        $errors['bdate'] = 'Date of birth is required.';
-    } elseif (preg_match('/^(\d{2})\/(\d{2})\/(\d{4})$/', $bdate, $matches) !== 1) {
-        $errors['bdate'] = 'Date of birth must be in dd/mm/yyyy format.';
-    } elseif (!checkdate((int)$matches[2], (int)$matches[1], (int)$matches[3])) {
-        $errors['bdate'] = 'Please enter a real calendar date.';
+    // gender
+    $allowed_gender = ['Female', 'Male', 'Others'];
+    if ($filled['gender'] === '') {
+        $error[] = 'You need to choose your gender.';
+    } elseif (!in_array($filled['gender'], $allowed_gender, TRUE)) {
+        $error[] = 'Your gender choice is not valid.';
+    };
+    // email
+    if ($filled['email'] === '') {
+        $error[] = 'You need to enter your email.';
+    } elseif (strlen($filled['email']) > 254) {
+        $error[] = 'Your email is too long.';
+    } elseif (filter_var($filled['email'], FILTER_VALIDATE_EMAIL) === FALSE) {
+        $error[] = 'Your email format is not valid.';
+    };
+    // phone number
+    $pattern = '/^[0-9]{8,12}$/';
+    if ($filled['phone'] === '') {
+        $error[] = 'You need to enter your phone number.';
+    } elseif (!preg_match($pattern, $filled['phone'])) {
+        $error[] = 'Your phone number must be 8 to 12 digits.';
+    };
+    // street
+    if ($filled['street'] === '') {
+        $error[] = 'You need to enter your street address.';
+    } elseif (mb_strlen($filled['street']) > 40) {
+        $error[] = 'Your street address is longer than 40 characters.';
+    }
+    // suburb
+    if ($filled['suburb'] === '') {
+        $error[] = 'You need to enter your sub-urban address.';
+    } elseif (mb_strlen($filled['suburb']) > 40) {
+        $error[] = 'Your sub-urban address is longer than 40 characters.';
+    }
+    // state $ post code 
+    $allowed_state = ['VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT'];
+    $state_valid = FALSE;
+    if ($filled['state'] === '') {
+        $error[] = 'You need to choose your state.';
+    } elseif (!in_array($filled['state'], $allowed_state, TRUE)) {
+        $error[] = 'Your state choice is not valid.';
+    } else {
+        $state_valid = TRUE;
+    };
+    $pattern = '/^[0-9]{4}$/';
+    $post_code_valid = FALSE;
+    if ($filled['post_code'] === '') {
+        $error[] = 'You need to enter your post code.';
+    } elseif (!preg_match($pattern, $filled['post_code'])) {
+        $error[] = 'Your post code must be 4 digits.';
+    } else {
+        $post_code_valid = TRUE;
+    };
+    // cross check matched state % post code
+    $post_code_prefix = [
+        'VIC' => ['3', '8'],
+        'NSW' => ['1', '2'],
+        'QLD' => ['4', '9'],
+        'NT' => ['0'],
+        'WA' => ['6'],
+        'SA' => ['5'],
+        'TAS' => ['7'],
+        'ACT' => ['0'],
+    ];
+    if ($post_code_valid && $state_valid) {
+        $first_number = $filled['post_code'][0];
+        if (!in_array($first_number, $post_code_prefix[$filled['state']], TRUE)) {
+            $error[] = 'Your post code does not match your state.';
+        }
+    };
+    // reference number
+    $allowed_ref_num = ['FED01', 'UID02'];
+    if ($filled['ref_num'] === '') {
+        $error[] = 'You need to choose your job reference number.';
+    } elseif (!in_array($filled['ref_num'], $allowed_ref_num, TRUE)) {
+        $error[] = 'Your job reference number is not valid.';
+    }
+    // reference number
+    if ($filled['consent'] === '') {
+        $error[] = 'You need tick to agree to consent terms.';
+    } elseif ($filled['consent'] !== 'consent') {
+        $error[] = 'Your consent input is not valid.';
+    };
+
+    // send error and valid inputs back to apply
+    if (!empty($error)) {
+        $_SESSION['flash_error'] = $error;
+        $_SESSION['flash_valid'] = $filled;
+        header("Location: apply.php#form_sec");
+        exit;
     }
 
-    // 5. Gender: radio allowlist
-    $allowed_genders = ['Female', 'Male', 'Others'];
-    $gender = isset($_POST['gender']) && is_string($_POST['gender']) ? trim($_POST['gender']) : '';
-    if ($gender === '') {
-        $errors['gender'] = 'Please select a gender.';
-    } elseif (!in_array($gender, $allowed_genders, true)) {
-        $errors['gender'] = 'Invalid gender selected.';
-    }
-
-    // 6. Street Address: max 40 chars
-    $street = clean_string_input('street');
-    if ($street === '') {
-        $errors['street'] = 'Street address is required.';
-    } elseif (mb_strlen($street, 'UTF-8') > 40) {
-        $errors['street'] = 'Street address must be 40 characters or fewer.';
-    } elseif (preg_match('/^[\p{L}\p{N}\s\.,#\-\/\'()&]+$/u', $street) !== 1) {
-        $errors['street'] = 'Street address contains invalid characters.';
-    }
-
-    // 7. Suburb/Town: max 40 chars
-    $suburb = clean_string_input('suburb');
-    if ($suburb === '') {
-        $errors['suburb'] = 'Suburb/Town is required.';
-    } elseif (mb_strlen($suburb, 'UTF-8') > 40) {
-        $errors['suburb'] = 'Suburb/Town must be 40 characters or fewer.';
-    } elseif (preg_match('/^[\p{L}\s\.\-\']+$/u', $suburb) !== 1) {
-        $errors['suburb'] = 'Suburb/Town contains invalid characters.';
-    }
-
-    // 8. State: dropdown allowlist
-    $allowed_states = ['VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT'];
-    $state = isset($_POST['state']) && is_string($_POST['state']) ? trim($_POST['state']) : '';
-    if ($state === '') {
-        $errors['state'] = 'Please select a state.';
-    } elseif (!in_array($state, $allowed_states, true)) {
-        $errors['state'] = 'Invalid state selected.';
-    }
-
-    // 9. Postcode: exactly 4 digits
-    $postcode = isset($_POST['postcode']) && is_string($_POST['postcode']) ? trim($_POST['postcode']) : '';
-    if ($postcode === '') {
-        $errors['postcode'] = 'Postcode is required.';
-    } elseif (preg_match('/^[0-9]{4}$/', $postcode) !== 1) {
-        $errors['postcode'] = 'Postcode must be exactly 4 digits.';
-    }
-
-    // 10. Email: valid format
-    $email = isset($_POST['email']) && is_string($_POST['email']) ? trim($_POST['email']) : '';
-    if ($email === '') {
-        $errors['email'] = 'Email is required.';
-    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-        $errors['email'] = 'Please enter a valid email address.';
-    }
-
-    // 11. Phone number: 8-12 digits, no spaces
-    $phone = isset($_POST['phone']) && is_string($_POST['phone']) ? trim($_POST['phone']) : '';
-    if ($phone === '') {
-        $errors['phone'] = 'Phone number is required.';
-    } elseif (preg_match('/^[0-9]{8,12}$/', $phone) !== 1) {
-        $errors['phone'] = 'Phone number must be 8 to 12 digits with no spaces.';
-    }
-
-    // 12. Skill list: Required at least 1
-    $allowed_des = array_map(fn($n) => "skill_des$n", range(1, 12));
-    $allowed_fed = array_map(fn($n) => "skill_fed$n", range(1, 13));
-
-    $raw_des = (isset($_POST['skill_des']) && is_array($_POST['skill_des'])) ? $_POST['skill_des'] : [];
-    $raw_fed = (isset($_POST['skill_fed']) && is_array($_POST['skill_fed'])) ? $_POST['skill_fed'] : [];
-
-    $valid_des = array_values(array_filter($raw_des, fn($s) => is_string($s) && in_array($s, $allowed_des, true)));
-    $valid_fed = array_values(array_filter($raw_fed, fn($s) => is_string($s) && in_array($s, $allowed_fed, true)));
-    $all_skills = array_merge($valid_des, $valid_fed);
-
-    if (empty($all_skills)) {
-        $errors['skills'] = 'Please select at least one skill.';
-    }
-
-    // 13. Other skills: Optional textarea
-    $other_skill = clean_string_input('other_skill');
-
-    // 14. Consent checkbox (present in apply.php)
-    $consent = isset($_POST['consent']) && $_POST['consent'] === 'consent';
-    if (!$consent) {
-        $errors['consent'] = 'You must agree to the Collection Notice before applying.';
-    }
+    // delete old inputs (if there's any) and then INSERT into MySQL
+    unset($_SESSION['flash_error'], $_SESSION['flash_valid']);
 ?>
 
 <!DOCTYPE html>
@@ -159,24 +226,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link href="page_css/Apply/apply_var_style.css" rel="stylesheet">
+    <link href="page_css/process_eoi.css" rel="stylesheet">
     <title>EOI</title>
 </head>
 
 <body>
-    <?php if (!empty($errors)): ?>
-        <h1>Application Could Not Be Submitted</h1>
-        <p>Please fix the following errors:</p>
-        <ul>
-            <?php foreach ($errors as $message): ?>
-                <li><?= neutral_html($message) ?></li>
-            <?php endforeach; ?>
-        </ul>
-        <p><a href="apply.php">Go back to the form</a></p>
-    <?php else: ?>
-        <h1>Application Received</h1>
-        <p>Thank you, <?= neutral_html($f_name . ' ' . $l_name) ?>. Your application for <strong><?= neutral_html($ref_num) ?></strong> passed validation.</p>
-        <!-- Next user story: insert cleaned fields into MySQL eoi table using PDO/mysqli prepared statements -->
-    <?php endif; ?>
+
 </body>
 
 </html>
