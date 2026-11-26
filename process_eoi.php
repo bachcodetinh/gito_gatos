@@ -1,7 +1,23 @@
 <?php
+    session_start();
+    /*
+    filename: process_eoi.php
+    author: le ba cao minh
+
+    created: October 8, 2026
+    last modified: November 27, 2026
+    description: process file for EOIs submitted from apply page
+
+    AI acknowledgement: Cao Minh use Claude and Gemini for:
+                        - cross checking requirements with project descriptions.
+                        - debugging
+                        - program task planning
+                        - technical solution search
+                        - syntax and technical explain
+    */
     // Block direct URL or Get method
     if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-        header("Location: apply.php");
+        header("Location: apply.php#form_sec");
         exit;
     }
 
@@ -49,21 +65,21 @@
 
     // everything the user filled in the form
     $filled = [
-        'last_name' => clean_string('L_name' ?? ''),
-        'first_name' => clean_string('F_name' ?? ''),
-        'dob' => clean_string('bdate' ?? ''),
-        'gender' => clean_string('gender' ?? ''),
-        'email' => clean_string('email' ?? ''),
-        'phone' => clean_string('phone' ?? ''),
-        'street' => clean_string('street' ?? ''),
-        'suburb' => clean_string('suburb' ?? ''),
-        'state' => clean_string('state' ?? ''),
-        'post_code' => clean_string('postcode' ?? ''),
-        'ref_num' => clean_string('ref_num' ?? ''),
-        'skill_des' => clean_array('skill_des' ?? []),
-        'skill_fed' => clean_array('skill_fed' ?? []),
-        'other_skill' => clean_string('other_skill' ?? ''),
-        'consent' => clean_string('consent' ?? ''),
+        'last_name' => clean_string('L_name'),
+        'first_name' => clean_string('F_name'),
+        'dob' => clean_string('bdate'),
+        'gender' => clean_string('gender'),
+        'email' => clean_string('email'),
+        'phone' => clean_string('phone'),
+        'street' => clean_string('street'),
+        'suburb' => clean_string('suburb'),
+        'state' => clean_string('state'),
+        'post_code' => clean_string('postcode'),
+        'ref_num' => clean_string('ref_num'),
+        'skill_des' => clean_array('skill_des'),
+        'skill_fed' => clean_array('skill_fed'),
+        'other_skill' => clean_string('other_skill'),
+        'consent' => clean_string('consent'),
     ];
 
     // input validation
@@ -86,8 +102,8 @@
     };
 
     // date of birth
-    $min_age = 16;
-    $max_age = 85;
+    $min_age = 15;
+    $max_age = 80;
     $format = 'd/m/Y';
     $dob = DateTime::createFromFormat($format, $filled['dob']);
 
@@ -124,11 +140,10 @@
         $error[] = 'Your email format is not valid.';
     };
     // phone number
-    $cleaned_phone = preg_replace('/[\s\-\.\(\)]+/', '', $filled['phone']);
-    $pattern = '/^\+?[0-9]{8,12}$/';
-    if ($cleaned_phone === '') {
+    $pattern = '/^[0-9]{8,12}$/';
+    if ($filled['phone'] === '') {
         $error[] = 'You need to enter your phone number.';
-    } elseif (!preg_match($pattern, $cleaned_phone)) {
+    } elseif (!preg_match($pattern, $filled['phone'])) {
         $error[] = 'Your phone number must be 8 to 12 digits.';
     };
     // street
@@ -153,12 +168,11 @@
     } else {
         $state_valid = TRUE;
     };
-    $cleaned_post_code = preg_replace('/[\s\-\.\(\)]+/', '', $filled['post_code']);
     $pattern = '/^[0-9]{4}$/';
     $post_code_valid = FALSE;
-    if ($cleaned_post_code === '') {
+    if ($filled['post_code'] === '') {
         $error[] = 'You need to enter your post code.';
-    } elseif (!preg_match($pattern, $cleaned_post_code)) {
+    } elseif (!preg_match($pattern, $filled['post_code'])) {
         $error[] = 'Your post code must be 4 digits.';
     } else {
         $post_code_valid = TRUE;
@@ -175,7 +189,7 @@
         'ACT' => ['0'],
     ];
     if ($post_code_valid && $state_valid) {
-        $first_number = $cleaned_post_code[0];
+        $first_number = $filled['post_code'][0];
         if (!in_array($first_number, $post_code_prefix[$filled['state']], TRUE)) {
             $error[] = 'Your post code does not match your state.';
         }
@@ -198,7 +212,7 @@
     if (!empty($error)) {
         $_SESSION['flash_error'] = $error;
         $_SESSION['flash_valid'] = $filled;
-        header("Location: apply.php");
+        header("Location: apply.php#form_sec");
         exit;
     }
 

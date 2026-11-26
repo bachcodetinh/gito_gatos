@@ -1,6 +1,22 @@
-<?php 
+<?php
+    session_start();
+    /*
+    filename: apply.php
+    author: le ba cao minh
+
+    created: October 8, 2026
+    last modified: November 27, 2026
+    description: php file for apply page
+
+    AI acknowledgement: Cao Minh use Claude and Gemini for:
+                        - cross checking requirements with project descriptions.
+                        - debugging
+                        - program task planning
+                        - technical solution search
+                        - syntax and technical explain
+    */
     // page tag
-    $page = "apply"; 
+    $page = "apply";
 
     // error and valid input handling
     $error = $_SESSION['flash_error'] ?? [];
@@ -10,22 +26,11 @@
     unset($_SESSION['flash_error'], $_SESSION['flash_valid']);
 
     // helper neutralize html function
-    function neutral_html(string $str): string {
+    function neutral_html(string $str): string
+    {
         return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
     }
 ?>
-<!-- 
-
-filename: apply.php
-author: le ba cao minh
-
-created: October 8, 2026
-last modified: November 19, 2026
-description: php file for apply page
-
-AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requirements with project descriptions.
-
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -170,7 +175,8 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="first_name_holder">
                     <label for="F_name" class="norm_text yellow field_label">First name</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="F_name" name="F_name">
+                        <input class="norm_text cyan input" type="text" id="F_name" name="F_name" 
+                        value="<?php echo neutral_html($valid['first_name'] ?? '') ?>">
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
 
@@ -178,24 +184,29 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="last_name_holder">
                     <label for="L_name" class="norm_text yellow field_label">Last name</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="L_name" name="L_name">
+                        <input class="norm_text cyan input" type="text" id="L_name" name="L_name" 
+                        value="<?php echo neutral_html($valid['last_name'] ?? '') ?>">
                         <p class="norm_text cyan">Letters only, up to 20 characters</p>
                     </div>
                 </div>
                 <div class="field" id="dob_holder">
                     <label for="dob" class="norm_text yellow field_label">Date of birth</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="dob" name="bdate" placeholder="dd/mm/yyyy">
+                        <input class="norm_text cyan input" type="text" id="dob" name="bdate" 
+                        value="<?php echo neutral_html($valid['dob'] ?? '') ?>" placeholder="dd/mm/yyyy">
                         <p class="norm_text cyan">Used to verify you meet the legal working-age requirement</p>
                     </div>
                 </div>
                 <fieldset class="norm_text cyan input container" id="gender_holder">
                     <legend class="norm_text yellow">Gender</legend>
-                    <input class="checkmark" type="radio" id="Female" name="gender" value="Female" />
+                    <input class="checkmark" type="radio" id="Female" name="gender" 
+                    value="Female" <?php echo (($valid['gender'] ?? '') === 'Female') ? 'checked' : '' ?> />
                     <label for="Female" class="norm_text cyan">Female</label>
-                    <input class="checkmark" type="radio" id="Male" name="gender" value="Male" />
+                    <input class="checkmark" type="radio" id="Male" name="gender" 
+                    value="Male" <?php echo (($valid['gender'] ?? '') === 'Male') ? 'checked' : '' ?> />
                     <label for="Male" class="norm_text cyan">Male</label>
-                    <input class="checkmark" type="radio" id="Others" name="gender" value="Others" />
+                    <input class="checkmark" type="radio" id="Others" name="gender" 
+                    value="Others" <?php echo (($valid['gender'] ?? '') === 'Others') ? 'checked' : '' ?> />
                     <label for="Others" class="norm_text cyan">Others</label>
                 </fieldset>
             </div>
@@ -206,28 +217,32 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                 <div class="field" id="email_holder">
                     <label for="email" class="norm_text yellow field_label">Email</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="email" name="email">
+                        <input class="norm_text cyan input" type="text" id="email" name="email" 
+                        value="<?php echo neutral_html($valid['email'] ?? '') ?>">
                         <p class="norm_text cyan">Where you receive the result</p>
                     </div>
                 </div>
                 <div class="field" id="phone_holder">
                     <label for="phone" class="norm_text yellow field_label">Phone</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="phone" name="phone">
+                        <input class="norm_text cyan input" type="text" id="phone" name="phone" 
+                        value="<?php echo neutral_html($valid['phone'] ?? '') ?>">
                         <p class="norm_text cyan">8 to 12 digits, no space</p>
                     </div>
                 </div>
                 <div class="field" id="address_holder">
                     <label for="street" class="norm_text yellow field_label">Street Address</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="street" name="street">
+                        <input class="norm_text cyan input" type="text" id="street" name="street" 
+                        value="<?php echo neutral_html($valid['street'] ?? '') ?>">
                         <p class="norm_text cyan">Up to 40 characters</p>
                     </div>
                 </div>
                 <div class="field" id="suburb_holder">
                     <label for="suburb" class="norm_text yellow field_label">Suburb/Town</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="suburb" name="suburb">
+                        <input class="norm_text cyan input" type="text" id="suburb" name="suburb" 
+                        value="<?php echo neutral_html($valid['suburb'] ?? '') ?>">
                         <p class="norm_text cyan">Up to 40 characters</p>
                     </div>
                 </div>
@@ -236,21 +251,22 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
                     <div>
                         <select class="norm_text cyan input" name="state" id="state">
                             <option value="">Please select</option>
-                            <option value="VIC">VIC</option>
-                            <option value="NSW">NSW</option>
-                            <option value="QLD">QLD</option>
-                            <option value="NT">NT</option>
-                            <option value="WA">WA</option>
-                            <option value="SA">SA</option>
-                            <option value="TAS">TAS</option>
-                            <option value="ACT">ACT</option>
+                            <option value="VIC" <?php echo (($valid['state'] ?? '') === 'VIC') ? 'selected' : '' ?>>VIC</option>
+                            <option value="NSW" <?php echo (($valid['state'] ?? '') === 'NSW') ? 'selected' : '' ?>>NSW</option>
+                            <option value="QLD" <?php echo (($valid['state'] ?? '') === 'QLD') ? 'selected' : '' ?>>QLD</option>
+                            <option value="NT" <?php echo (($valid['state'] ?? '') === 'NT') ? 'selected' : '' ?>>NT</option>
+                            <option value="WA" <?php echo (($valid['state'] ?? '') === 'WA') ? 'selected' : '' ?>>WA</option>
+                            <option value="SA" <?php echo (($valid['state'] ?? '') === 'SA') ? 'selected' : '' ?>>SA</option>
+                            <option value="TAS" <?php echo (($valid['state'] ?? '') === 'TAS') ? 'selected' : '' ?>>TAS</option>
+                            <option value="ACT" <?php echo (($valid['state'] ?? '') === 'ACT') ? 'selected' : '' ?>>ACT</option>
                         </select>
                     </div>
                 </div>
                 <div class="field" id="postcode_holder">
                     <label for="postcode" class="norm_text yellow field_label">Postcode</label>
                     <div>
-                        <input class="norm_text cyan input" type="text" id="postcode" name="postcode">
+                        <input class="norm_text cyan input" type="text" id="postcode" name="postcode" 
+                        value="<?php echo neutral_html($valid['post_code'] ?? '') ?>">
                         <p class="norm_text cyan">4 digits</p>
                     </div>
                 </div>
@@ -259,7 +275,8 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
             <h2 class="sub_heading yellow pos_skill">Position & Skills</h2>
             <div id="ref_num_holder">
                 <label class="norm_text yellow" for="ref_num">Job reference number</label>
-                <input class="norm_text cyan input" id="ref_num" type="text" name="ref_num">
+                <input class="norm_text cyan input" id="ref_num" type="text" name="ref_num" 
+                value="<?php echo neutral_html($valid['ref_num'] ?? '') ?>">
                 <div>
                     <p class="norm_text cyan">Front-end Developer: FED01</p>
                     <p class="norm_text cyan">UI/UX Designer: UID02</p>
@@ -385,9 +402,11 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
             <div id="other">
                 <label class="norm_text yellow" for="other_skill">Other Skills Optional</label>
                 <textarea class="norm_text cyan input" id="other_skill" name="other_skill" rows="4" cols="40"
-                    placeholder="Type anything that you think is valuable for this position..."></textarea>
+                    placeholder="Type anything that you think is valuable for this position..." ><?php echo neutral_html($valid['other_skill'] ?? '') ?>
+                </textarea>
                 <div id="consent_holder">
-                    <input type="checkbox" id="consent" name="consent" value="consent">
+                    <input type="checkbox" id="consent" name="consent" 
+                    value="consent" <?php echo (neutral_html($valid['consent'] ?? '') === 'consent') ? 'checked' : '' ?>>
                     <label class="norm_text cyan" for="consent">I have read the Collection Notice above and consent to
                         Meowdia using the information I provide in this form to assess my application.</label>
                 </div>
@@ -395,11 +414,13 @@ AI acknowledgement: Cao Minh use Claude and Gemini for cross checking requiremen
 
             <!-- Loop to print all error messages -->
             <?php if (!empty($error)): ?>
-            <div class='norm_text yellow' id='error messages'>
-                <?php foreach ($error as $err):?>
-                    <li><?php echo neutral_html($err) ?></li>
-                <?php endforeach ?>
-            </div>
+                <div class='norm_text yellow' id='error_messages'>
+                    <ul>
+                    <?php foreach ($error as $err): ?>
+                        <li><?php echo neutral_html($err) ?></li>
+                    <?php endforeach ?>
+                    </ul>
+                </div>
             <?php endif ?>
 
             <div id="submit_reset">
