@@ -1,4 +1,31 @@
-<?php $page = "about"; ?>
+<?php
+    require_once "settings.php";
+    mysqli_report(MYSQLI_REPORT_OFF);
+    $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+    $page = "about";
+
+    $contributions = [];
+    $db_error = "";
+
+if (!$conn) {
+    $db_error = "Meow! Our cat chewed through the database cable. Try again later!";
+} else {
+    $sql = "SELECT student_id, project_part, project_contributions FROM contributions ORDER BY project_part ASC";
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+        $db_error = "A cat walked across the keyboard and broke the query. Debugging meow...";
+    } elseif (mysqli_num_rows($result) == 0) {
+        $db_error = "No purr-ject contributions found yet.";
+    } else {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $contributions[$row['student_id']][] = $row;
+        }
+        mysqli_free_result($result);
+    }
+    mysqli_close($conn);
+}
+?>
 <!-- 
 
 filename: about.html
@@ -123,12 +150,23 @@ AI acknowledgement: Dang Duong use Gemini (Google, October 2026) for brain storm
                 <div class="card-body">
                     <div class="member-info">
                         <h3>Contribution</h3>
-                        <dl>
-                            <dt>Roles</dt>
-                            <dd>Project Manager (Scrum Master), Developer, UI/UX co-designer</dd>
-                            <dt>Sections</dt>
-                            <dd>jobs.html, style.css</dd>
-                        </dl>
+                            <dl>
+                                <dt>Roles</dt>
+                                <dd>Project Manager (Scrum Master), Developer, UI/UX co-designer</dd>
+                                <dt>Sections</dt>
+                                <dd>jobs.html, style.css</dd>
+                                <?php
+                                    if ($db_error) {
+                                        echo "<dt>Project contributions</dt>";
+                                        echo "<dd>" . htmlspecialchars($db_error) . "</dd>";
+                                    } else {
+                                        foreach ($contributions['106913256'] ?? [] as $item) {
+                                            echo "<dt>Project part " . htmlspecialchars($item['project_part']) . "</dt>";
+                                            echo "<dd>" . htmlspecialchars($item['project_contributions']) . "</dd>";
+                                        }
+                                    }
+                                ?>
+                            </dl>
                         <h3>Personal Information</h3>
                         <dl>
                             <dt>Full name</dt>
@@ -164,6 +202,17 @@ AI acknowledgement: Dang Duong use Gemini (Google, October 2026) for brain storm
                             <dd>Developer</dd>
                             <dt>Sections</dt>
                             <dd>index.html, about.html, style.css</dd>
+                            <?php
+                                if ($db_error) {
+                                    echo "<dt>Project contributions</dt>";
+                                    echo "<dd>" . htmlspecialchars($db_error) . "</dd>";
+                                } else {
+                                    foreach ($contributions['106913104'] ?? [] as $item) {
+                                        echo "<dt>Project part " . htmlspecialchars($item['project_part']) . "</dt>";
+                                        echo "<dd>" . htmlspecialchars($item['project_contributions']) . "</dd>";
+                                    }
+                                }
+                            ?>
                         </dl>
                         <h3>Personal Information</h3>
                         <dl>
@@ -200,6 +249,17 @@ AI acknowledgement: Dang Duong use Gemini (Google, October 2026) for brain storm
                             <dd>Tech Lead (Git Master), Developer, UI/UX co-designer</dd>
                             <dt>Sections</dt>
                             <dd>apply.html, style.css</dd>
+                            <?php
+                                if ($db_error) {
+                                    echo "<dt>Project contributions</dt>";
+                                    echo "<dd>" . htmlspecialchars($db_error) . "</dd>";
+                                } else {
+                                    foreach ($contributions['106913544'] ?? [] as $item) {
+                                        echo "<dt>Project part " . htmlspecialchars($item['project_part']) . "</dt>";
+                                        echo "<dd>" . htmlspecialchars($item['project_contributions']) . "</dd>";
+                                    }
+                                }
+                            ?>
                         </dl>
                         <h3>Personal Information</h3>
                         <dl>
